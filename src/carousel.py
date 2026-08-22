@@ -87,7 +87,7 @@ def _remember_hook(cfg: Config, narration: str, n: int = 30) -> None:
                                        encoding="utf-8")
 
 
-def _weak_hook(cfg: Config, narration: str) -> str:
+def _weak_hook(cfg: Config, narration: str, strict: bool = True) -> str:
     """Why this opening would be scrolled past — empty string when it is fine.
 
     Checked in code, not just asked for in the prompt: on 21/08 the model was
@@ -120,7 +120,10 @@ def _weak_hook(cfg: Config, narration: str) -> str:
     # virou produto de farmácia."); the number/question/contrast test is for
     # sentences long enough to ramble.
     punchy = len(first.split()) <= 7
-    if not (has_number or has_question or has_contrast or punchy):
+    # strict=False (last attempt): a clean, short, non-repeated opening is
+    # accepted even without a number/question/contrast. Two whole days were
+    # lost to three rejections in a row — a decent hook beats no video.
+    if strict and not (has_number or has_question or has_contrast or punchy):
         return f"first sentence has no number, question or contradiction: {first!r}"
     # Same opening as a recent day: the model likes to recycle whatever
     # worked (or whatever the prompt's examples say). Rejected here so the
@@ -276,7 +279,7 @@ Return ONLY JSON: {{"slides": [{{"role": "hook", "headline": "...",
             ))
 
         words = sum(len(sl.narration.split()) for sl in slides)
-        hook_issue = _weak_hook(cfg, slides[0].narration) if slides else ""
+        hook_issue = _weak_hook(cfg, slides[0].narration, strict=attempt < attempts) if slides else ""
         if len(slides) < min_slides:
             reason = f"only {len(slides)} usable slides (minimum {min_slides})"
         elif hook_issue:
