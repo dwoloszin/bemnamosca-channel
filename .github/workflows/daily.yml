@@ -51,21 +51,42 @@ jobs:
       - name: Dependencias
         run: pip install -q -r requirements.txt
 
-      - name: Videos do rodizio (cache do release loop-v1)
-        id: loopcache
+      - name: Videos do rodizio (cache)
         uses: actions/cache@v4
         with:
           path: videos/loop
-          key: loop-v1
+          key: loop-${{ github.run_id }}
+          restore-keys: loop-
 
-      - name: Baixar videos do rodizio (so quando o cache esta vazio)
-        if: steps.loopcache.outputs.cache-hit != 'true'
+      - name: Videos do rodizio e promos avulsos (so o que falta)
+        # Baixa de cada release apenas os arquivos que ainda nao estao no disco,
+        # e apaga do disco o que saiu do release. Assim um pitch novo enviado por
+        # scripts/sync.py entra no dia seguinte sem mexer em chave de cache.
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          mkdir -p videos/loop
-          gh release download loop-v1 --repo ${{ github.repository }} --dir videos/loop --pattern "*.mp4"
-          ls videos/loop | wc -l
+          python - <<'EOF'
+          import json, os, subprocess
+          from pathlib import Path
+          repo = os.environ["GITHUB_REPOSITORY"]
+          def assets(tag):
+              r = subprocess.run(["gh", "release", "view", tag, "--repo", repo, "--json", "assets"],
+                                 capture_output=True, text=True)
+              return {a["name"]: a["size"] for a in json.loads(r.stdout).get("assets", [])} if r.returncode == 0 else {}
+          for tag, folder, prune in (("loop-v1", "videos/loop", True), ("oneuse", "videos/oneuse", False)):
+              d = Path(folder); d.mkdir(parents=True, exist_ok=True)
+              remote = assets(tag)
+              have = {p.name: p.stat().st_size for p in d.iterdir() if p.is_file() and p.name != "README.md"}
+              missing = [n for n, s in remote.items() if have.get(n) != s]
+              for n in missing:
+                  subprocess.run(["gh", "release", "download", tag, "--repo", repo, "--dir", folder,
+                                  "--pattern", n, "--clobber"], check=True)
+              if prune:
+                  for n in have:
+                      if n not in remote and n != "README.md":
+                          (d / n).unlink()
+              print(f"{folder}: {len(remote)} no release, {len(missing)} baixado(s)")
+          EOF
 
       - name: Segredos -> arquivos
         env:
@@ -114,6 +135,17 @@ jobs:
           PYTHONIOENCODING: utf-8
           IMAGEIO_FFMPEG_EXE: /usr/bin/ffmpeg
         run: python -u main.py daily 2>&1 | tee output/daily_run.log
+
+      - name: Promos avulsos publicados saem do release
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          shopt -s nullglob
+          for f in videos/oneuse/posted/*; do
+            n=$(basename "$f")
+            gh release delete-asset oneuse "$n" --repo ${{ github.repository }} --yes 2>/dev/null && echo "removido do release: $n" || true
+          done
 
       - name: Pacote do dia (slides, linkedin.jpg/.txt, video) como artefato
         if: always()

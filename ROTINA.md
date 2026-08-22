@@ -210,7 +210,15 @@ para trazer o estado (rodízio/histórico) que o runner gravou.
 
 Rodar na mão, sem publicar (teste): *Actions → daily → Run workflow → dry_run*.
 
-**Pegar o pacote do dia no PC** (vídeo para TikTok/LinkedIn, `linkedin.jpg` +
+**Um comando para tudo (PC ↔ GitHub):**
+```powershell
+python scripts\sync.py
+```
+Faz o `git pull` do estado, sobe vídeos novos de `videos\loop\` (e apaga do
+release os que você removeu), sobe promos avulsos de `videos\oneuse\` (o runner
+posta e tira do release), e baixa o pacote do dia. `--dry` só mostra.
+
+**Pegar só o pacote do dia no PC** (vídeo para TikTok/LinkedIn, `linkedin.jpg` +
 `linkedin.txt` para o perfil, slides):
 ```powershell
 python scriptsetch_today.py            # última execução
