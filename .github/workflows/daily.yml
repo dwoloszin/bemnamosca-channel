@@ -127,7 +127,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Token do Instagram renovado -> secret
-        if: always() && env.GH_PAT != ''
+        if: always() && !inputs.dry_run && env.GH_PAT != ''
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
@@ -137,7 +137,9 @@ jobs:
           fi
 
       - name: Estado de volta no repositorio
-        if: always()
+        # Never after a dry run: nothing was published, so nothing may be
+        # recorded as done (rotation, history, slots, daily_state).
+        if: always() && !inputs.dry_run
         run: |
           git config user.name "bemnamosca-bot"
           git config user.email "bot@bemnamosca.local"
