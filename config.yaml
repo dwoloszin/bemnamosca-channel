@@ -1,0 +1,915 @@
+# ==========================================================================
+# Bem na Mosca — cloned project. BEFORE THE FIRST RUN, review:
+#   theme.keywords / search_queries / rss_feeds / subreddits
+#   theme.must_match_any / block_words   (they still filter the OLD topic)
+#   posts.topics, youtube.tag_pool, youtube.default_tags, description_template
+# ==========================================================================
+# ============================================================================
+#  AUTO YOUTUBE CHANNEL — main configuration
+#  Edit this file to change the theme, style, and behaviour of the channel.
+#  Everything below is read at runtime; no code changes are needed.
+# ============================================================================
+
+channel:
+  name: "Bem na Mosca"
+  handle: "@bemnamosc4"
+  # Short handle used in file names / logs
+  slug: "bemnamosca"
+  language: "pt"                 # pt = roteiro, SEO e posts em portugues do Brasil
+  # Text always appended to titles/descriptions (branding, disclaimers).
+  brand_tagline: "Compare precos de medicamentos de alto custo e economize"
+  # Links oficiais. Use {links} no youtube.description_template e em legendas.
+  # site = destino final de toda chamada; as redes servem de cross-promo.
+  # 17/08: dominio proprio no ar. Serve o mesmo app do bemnamosca.web.app (que
+  # continua sendo o alvo do Firebase Hosting, e por isso segue nos documentos
+  # de recuperacao em assets/docs/interno/). Em conteudo, use so o dominio.
+  site: "https://bemnamosca.com/"
+  # Rastreio: cada plataforma recebe o link do app com UTM proprio, para o
+  # analytics do app dizer de onde veio a visita. Sem isso, todo ajuste de
+  # conteudo era palpite. Os links de rede social NAO sao marcados — apontam
+  # para perfil, nao para o produto.
+  tracking:
+    enabled: true
+    medium: "social"
+    campaign: "conteudo-diario"
+  links:
+    site: "https://bemnamosca.com/"
+    youtube: "https://www.youtube.com/@bemnamosc4"
+    instagram: "https://www.instagram.com/bemnamosc4"
+    tiktok: "https://www.tiktok.com/@bemnamosc4"
+    linkedin: "https://www.linkedin.com/company/bem-na-mosca"
+
+# --------------------------------------------------------------------------
+# THEME — what the channel is about. Change these to pivot to any topic.
+# --------------------------------------------------------------------------
+theme:
+  topic: "medicamentos de alto custo"
+  # Search terms used to find news + stock media.
+  keywords:
+    - "medicamento de alto custo"
+    - "preco de medicamentos"
+    - "farmacia popular"
+    - "remedio caro"
+    - "economizar em medicamentos"
+  # Google News searches (via SERPER_API_KEYS -> SERPAPI_API_KEYS pools).
+  # Angulos que fazem o publico parar de rolar: preco, direito, economia.
+  # Os resultados sao noticias REAIS indexadas — nunca inventadas.
+  search_queries:
+    - "preco de medicamentos aumento CMED"
+    - "medicamento de alto custo SUS"
+    - "remedio mais barato farmacia comparacao de precos"
+    - "ANVISA novo medicamento aprovado"
+    - "medicamento generico economia preco"
+    - "farmacia popular programa medicamentos"
+    - "reajuste preco remedios Brasil"
+    - "tratamento de alto custo plano de saude"
+  # RESERVA: usadas so quando TODAS as noticias do dia ja foram cobertas.
+  # O objetivo e nunca pular um dia — se nao ha pauta de preco/regulacao,
+  # vale uma descoberta ou um tema de saude que traga gente para a plataforma.
+  # Sao mais amplas de proposito; nao passam pelo filtro must_match_any.
+  fallback_queries:
+    - "nova descoberta medicina Brasil"
+    - "novo tratamento aprovado pesquisa"
+    - "estudo cientifico saude resultado"
+    - "avanco no tratamento de diabetes"
+    - "avanco no tratamento de cancer"
+    - "saude publica Brasil noticia hoje"
+    - "novo medicamento pesquisa clinica"
+  # Reddit tem pouco volume nesse tema em portugues; as listas TOP 5 vao se
+  # apoiar nas noticias. Esvazie a lista se as fontes vierem fora de contexto.
+  subreddits:
+    - "brasil"
+    - "farmacia"
+  # RSS feeds are the copyright-safe, key-free news source (headlines + links).
+  rss_feeds:
+    - "https://news.google.com/rss/search?q=%22medicamento+de+alto+custo%22+OR+%22pre%C3%A7o+de+medicamentos%22&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+    - "https://news.google.com/rss/search?q=ANVISA+medicamento+OR+%22farm%C3%A1cia+popular%22&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+    - "https://news.google.com/rss/search?q=CMED+reajuste+pre%C3%A7o+rem%C3%A9dio&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+  # Skip a story if its headline matches none of these (case-insensitive).
+  # Empty list = accept everything the feeds return.
+  must_match_any:
+    - "medicament"
+    - "remedio"
+    - "remédio"
+    - "farmacia"
+    - "farmácia"
+    - "anvisa"
+    - "generico"
+    - "genérico"
+    - "tratamento"
+    - "saude"
+    - "saúde"
+  # Never publish a story whose headline contains any of these.
+  # Saude e tema sensivel: bloqueia promessa de cura, automedicacao e golpes.
+  block_words:
+    - "cura milagrosa"
+    - "milagre"
+    - "sorteio"
+    - "cupom"
+    - "golpe"
+    - "falsificado"
+    - "emagrecer rapido"
+
+# --------------------------------------------------------------------------
+# SCRIPT — how the narration is written.
+#   provider: auto  -> Claude if ANTHROPIC_API_KEY is set, else Groq key pool
+#                      (GROQ_API_KEY in .env, comma-separated, auto-rotating),
+#                      else simple templates.
+# --------------------------------------------------------------------------
+script:
+  provider: "auto"                 # auto | claude | gemini | groq
+  # Chain order on auto: Claude (if key) -> Gemini pool -> Groq pool -> templates.
+  model: "claude-opus-4-8"         # Claude model (used when ANTHROPIC_API_KEY set)
+  # Modelo FIXO, nao o alias "-latest". Em 14, 15 e 16/08 o alias respondeu 503
+  # ("overloaded") nas tres chaves, todo dia, e o pipeline caia para o Groq —
+  # que devolve texto raso e chegou a gerar video de 38 palavras. Testado em
+  # 16/08: gemini-flash-latest e gemini-3.5-flash dao 503, gemini-2.5-flash da
+  # 404 (aposentado), gemini-3.6-flash responde em 2s.
+  # Se voltar a dar 503, liste os modelos disponiveis e fixe o mais novo que
+  # responder — nao volte para o alias.
+  gemini_model: "gemini-3.6-flash"
+  # 17/08: a Groq aposentou llama-3.3-70b-versatile e as cinco chaves passaram a
+  # dar 404 model_not_found — o tier de fallback inteiro estava morto em silencio
+  # (o log so mostrava "404 Not Found", que parece problema de chave, nao de
+  # modelo). Testado com response_format json_object, como o pipeline usa:
+  # openai/gpt-oss-120b devolve JSON valido e nao vaza raciocinio;
+  # qwen/qwen3.6-27b tambem serve, mas em texto puro emite <think>.
+  groq_model: "openai/gpt-oss-120b"  # Groq model (GROQ_API_KEY pool)
+  # Persona / editorial voice for the narration.
+  style: >
+    Apresentador brasileiro claro e confiavel falando de saude e economia.
+    Direto, acolhedor, sem sensacionalismo e sem prometer cura. Frases curtas,
+    linguagem simples, como quem explica para um familiar. Nunca da conselho
+    medico nem indica dose: informa sobre precos, direitos e onde economizar.
+  # Approx words. TTS ~= 165 wpm. The prompt enforces a min/max band around
+  # this number, and a runtime guard speeds narration up (max 1.2x) if it
+  # still runs past video.short.max_seconds. 125 words ~= 46s speech.
+  short_words: 125
+  listicle_count: 5                # items in "TOP N" countdown shorts
+  long_section_words: 160          # words per news item inside a long video
+  # Always spoken at the end (call to action).
+  outro: "Procure o seu remedio no Bem na Mosca e veja de graca quanto da para economizar. Se inscreve para mais."
+  # Outro usado quando o roteiro NAO cita o produto — ou seja, quando o modelo
+  # corretamente recusou o pitch (noticia sobre pessoa doente, vaquinha, luto).
+  # Sem isto o outro acima colava propaganda no fim mesmo assim, anulando a
+  # regra de "nao pitchar". Esvazie para voltar a usar sempre o outro padrao.
+  outro_neutral: "Se inscreve para mais noticias de saude e economia."
+  # Fala de abertura do video LONGO. Estava hardcoded em INGLES no codigo
+  # ("Welcome back. Here is everything new in..."), entao o canal em portugues
+  # abria a narracao em ingles. Esvazie para voltar ao texto antigo.
+  long_hook: "Ola! Aqui estao as noticias de saude e economia que mexem no seu bolso hoje. Vamos direto ao ponto."
+  # Quem esta do outro lado. Substitui o publico herdado do canal antigo
+  # ("hardcore fans who love leaks"), que era de games e brigava com o style.
+  audience: >
+    brasileiros que compram remedio e querem gastar menos: quem tem receita de
+    uso continuo, quem cuida de alguem em tratamento, e quem simplesmente
+    cansou de pagar caro sem saber que dava para pagar menos.
+
+# --------------------------------------------------------------------------
+# PRODUCT — a noticia e a ISCA, a solucao do app e o DESFECHO.
+#
+# Cada roteiro abre numa noticia real de saude/economia e fecha em UM recurso
+# concreto do Bem na Mosca. O texto do produto vem SOMENTE dos arquivos abaixo,
+# que ficam em assets/docs/conteudo (a camada liberada para uso publico).
+#
+# NUNCA aponte docs_dir para assets/docs/interno: la estao dados de Firestore,
+# metricas por usuario e incidentes de billing. O loader recusa caminho que
+# escape de docs_dir, mas a primeira defesa e nao apontar para la.
+# --------------------------------------------------------------------------
+product:
+  enabled: true
+  name: "Bem na Mosca"
+  docs_dir: "assets/docs/conteudo"
+  files:
+    - "BRIEF_DE_MARCA.md"          # destilado: o que pode e o que nao pode
+  max_chars: 7000                  # teto do que entra no prompt
+  # O MOTIVO para agir hoje. O fecho anterior era "Compare antes de comprar":
+  # verdadeiro, mas nao da razao nenhuma para abrir o app agora. Esta frase e
+  # o argumento de conversao mais forte do proprio material da marca.
+  cta_reason: >-
+    De graça você já vê o tamanho da economia. Assinando, descobre em qual
+    farmácia ela está — e cada nota fiscal que você importa vira desconto na
+    renovação.
+  bridge:
+    enabled: true                  # false = volta a ser canal de noticia puro
+    cta: "No Bem na Mosca você vê de graça quanto dá para economizar. Assinando, descobre em qual farmácia."
+    # Se QUALQUER um destes termos aparecer na noticia, o pitch e desligado no
+    # codigo — o modelo nem chega a ver a instrucao de fechar com o produto.
+    # Existe porque pedir no prompt nao bastou: num teste o modelo recusou
+    # corretamente numa morte na fila do SUS e, na mesma rodada, emendou o app
+    # numa crianca de 4 anos internada com prognostico reservado.
+    # Bloquear demais custa uma mencao perdida. Bloquear de menos custa o canal.
+    # Sem acento e em minusculas — a comparacao normaliza os dois lados.
+    block_terms:
+      - "vaquinha"
+      - "internad"          # internado, internada, internacao
+      - "prognostico"
+      - "uti"
+      - "estado grave"
+      - "morre"             # morre, morreu, morrer
+      - "morte"
+      - "faleceu"
+      - "obito"
+      - "luto"
+      - "velorio"
+      - "enterro"
+      - "terminal"
+      - "crianca"
+      - "bebe"
+      - "doacao"
+      - "doe "
+      - "ajude"
+      - "campanha para custear"
+      - "campanha solidariedade"     # varias palavras = todas presentes,
+      - "custear tratamento"         #   em qualquer ordem
+      - "vaquinha online"
+      - "solidariedade"
+      - "arrecad"                    # arrecada, arrecadar, arrecadacao
+      - "custear"
+      - "rifa"
+      - "tragedia"
+      - "vitima"
+
+# --------------------------------------------------------------------------
+# PROMO — videos JA PRONTOS (divulgacao do app), publicados como estao.
+# Nada e gerado, narrado ou re-renderizado aqui.
+#
+#   python main.py oneuse      publica tudo de videos/oneuse/ e move para
+#                              videos/oneuse/posted/ (nunca repete)
+#   python main.py loop        publica o proximo do rodizio em videos/loop/
+#                              (arquivo fica; quando todos rodam, novo ciclo)
+#
+# Limite as plataformas na chamada:  python main.py oneuse ig
+#
+# NAO confundir com assets/videos/, que e pool de B-ROLL: aquele e mudo,
+# cortado e usado como imagem de fundo. Aqui o video sobe inteiro.
+#
+# Legenda/titulo: coloque um arquivo com o MESMO nome ao lado do video —
+#   meu_video.txt   (texto inteiro vira a legenda; 1a linha vira o titulo)
+#   meu_video.json  ({"title": "...", "description": "...", "tags": [...]})
+# Sem isso, o titulo sai do nome do arquivo.
+# --------------------------------------------------------------------------
+# --------------------------------------------------------------------------
+# KEYWORDS — o que as pessoas realmente digitam, via autocomplete do Google.
+#
+# Usado para ORDENAR as noticias do dia: se uma fala de algo que as pessoas ja
+# procuram (nomes de remedio, principalmente), ela vira o post.
+#
+# Testados em 16/08/2026 e DESCARTADOS: autocomplete do YouTube (o nicho quase
+# nao tem volume la), relatedSearches/peopleAlsoAsk do Serper (nao vem na
+# resposta do plano), Google Trends (endpoint interno deu 429 na 1a chamada) e
+# Keyword Planner (exige developer token do Google Ads aprovado).
+# --------------------------------------------------------------------------
+keywords:
+  enabled: true
+  # Cada padrao vira uma consulta por semente de theme.keywords (as 6 primeiras).
+  patterns:
+    - "{seed}"
+    - "preço {seed}"
+    - "quanto custa {seed}"
+    - "{seed} mais barato"
+    - "onde comprar {seed}"
+  # Termos que o autocomplete traz mas NAO podem virar pauta nem tag:
+  #  - marcas de farmacia: o doc de video proibe citar concorrente (risco juridico)
+  #  - localidade: busca por "perto de mim" nao serve para conteudo nacional
+  block_terms:
+    - "ultrafarma"
+    - "drogasil"
+    - "raia"
+    - "pacheco"
+    - "drogaria"
+    - "droga"
+    - "panvel"
+    - "pague"
+    - "menos"
+    - "venancio"
+    - "onofre"
+    - "extrafarma"
+    - "nissei"
+    - "araujo"
+    - "perto"
+    - "paulo"
+    - "guarulhos"
+    - "vila"
+    - "mariana"
+    - "maria"
+    - "zelia"
+    - "mundo"
+    - "campinas"
+    - "santos"
+    - "franca"
+    - "ribeirao"
+    - "preto"
+    - "curitiba"
+    - "joinville"
+    - "fotos"
+    - "whatsapp"
+    - "telefone"
+    - "lista"
+    - "endereco"
+    - "horario"
+
+# --------------------------------------------------------------------------
+# CAROUSEL — post de 5 slides, no MESMO padrao dos seus videos:
+#   1 hook  2 noticia  3 solucao  4 aplicacao  5 conclusao
+#
+#   python main.py carousel                gera o pacote completo
+#   python main.py carousel "diabetes"     filtra a noticia por termo
+#
+# Sai em output/carousels/carousel_<data>/:
+#   slide_1..5.jpg  imagens 4:5 para postar A MAO no Instagram e LinkedIn
+#   carousel.txt    legenda do carrossel
+#   post.txt        post UNICO com toda a informacao no texto
+#   video.mp4       o mesmo conteudo em video vertical para o YouTube
+# --------------------------------------------------------------------------
+# ROTINA DIARIA (python main.py daily / Agendador do Windows as 10:00)
+#
+# O carrossel depende de um LLM, e o Gemini responde 503 ("high demand") com
+# frequencia — em 16 e 17/08 as tres chaves falharam ao mesmo tempo e o dia
+# ficou sem carrossel. Entao a etapa 3/3 e re-tentada: 4 tentativas, 30 min de
+# espera entre elas (10:00, 10:30, 11:00, 11:30).
+#
+# SEGURANCA: so re-tenta quando make_carousel devolve None, o que acontece
+# APENAS antes de qualquer publicacao (sem noticia, sem slides). Se o video ja
+# subiu, a funcao devolve a pasta mesmo com falha parcial de plataforma, logo a
+# retentativa nunca duplica upload.
+#
+# As etapas 1/3 (oneuse) e 2/3 (loop) NAO sao re-tentadas: elas publicam na
+# primeira tentativa e repetir duplicaria o video no YouTube.
+# --------------------------------------------------------------------------
+daily:
+  carousel_attempts: 4             # tentativas da etapa 3/3 no mesmo dia
+  retry_wait_minutes: 30           # espera entre uma tentativa e a seguinte
+
+# --------------------------------------------------------------------------
+carousel:
+  width: 1080
+  height: 1350                     # 4:5 — maior altura que IG e LinkedIn aceitam
+  video: true                      # false = so as imagens, sem renderizar video
+  # Fracao do topo da captura de tela que e cortada, para tirar a barra de
+  # status do celular (relogio, wifi, bateria). 0 = nao cortar.
+  screenshot_crop_top: 0.05
+  # QUALIDADE DO ROTEIRO. Um texto raso passava com um aviso que ninguem le:
+  # em 16/08 cinco slides com 38 palavras narradas viraram um video que so lia
+  # titulos em voz alta. Agora, abaixo do minimo, o roteiro e RECUSADO e o
+  # modelo e perguntado de novo na hora (mesmo prompt, temperatura 0.7, resposta
+  # diferente). So depois de esgotar as tentativas o dia cai na escada de 30 min
+  # do daily — que existe para o provedor fora do ar, outro problema.
+  min_narrated_words: 60           # menos que isso, refaz o roteiro
+  min_slides: 3                    # slides aproveitaveis minimos
+  script_attempts: 3               # re-perguntas imediatas antes de desistir
+  # GANCHO. A primeira frase da narracao decide o scroll: curta, com numero,
+  # pergunta ou contradicao, e nunca comecando com "licao de moral". Abaixo
+  # disso o roteiro e recusado e o modelo e perguntado de novo (mesma escada).
+  hook_max_words: 12
+  hook_banned_openers:
+    - "tratar quem"
+    - "cuidar de quem"
+    - "cuidar da"
+    - "hoje"
+    - "olá"
+    - "oi"
+    - "você sabia"
+    - "vamos falar"
+    - "neste vídeo"
+    - "a saúde"
+    - "é importante"
+  # Sobe o video do carrossel para o YouTube como Short. Respeita
+  # youtube.privacy: com "scheduled" entra PRIVADO e publica sozinho no
+  # proximo horario livre (12:00 / 18:00), nao vai ao ar na hora.
+  # Elementos de retencao no video (21/08):
+  hook_card_seconds: 2.6           # manchete grande e centralizada na abertura; 0 desliga
+  # Imagens por bloco no VIDEO: 2 = troca de plano no meio do bloco (mais
+  # cortes, mais retencao). Blocos curtos (< 2 x min_seconds_per_visual)
+  # ficam com 1. Os slides do feed continuam com 1 imagem.
+  visuals_per_beat: 2
+  min_seconds_per_visual: 3.5
+  # Blocos do app (solucao/aplicacao/conclusao) usam SO as telas de remedio da
+  # lista linkedin.screens — a biblioteca inteira tem perfume e creme.
+  curated_screens_only: true
+  section_chips:                   # etiqueta no topo a cada bloco (por role)
+    noticia: "O QUE MUDOU"
+    impacto: "O QUE ISSO CUSTA"
+    solucao: "BEM NA MOSCA"
+    conclusao: "COMO USAR"
+  publish_youtube: true
+  # Publica o video do carrossel como Reel no Instagram. Exige TAMBEM
+  # instagram.enabled: true — sao dois interruptores de proposito, porque Reel
+  # vai ao ar na hora, sem agendamento e sem modo privado.
+  # As IMAGENS do carrossel continuam manuais (IG e LinkedIn).
+  publish_reel: true
+
+# --------------------------------------------------------------------------
+# LINKEDIN — um unico card por dia, gerado junto com o carrossel como
+# output/carousels/<pacote>/linkedin.jpg. Card editorial nas cores do logo
+# (verde #00301F / laranja #D05010), manchete real da noticia, os 4 pontos
+# numerados e uma tela REAL do app num celular. A postagem e manual: pagina de
+# empresa exige aprovacao da API de marketing do LinkedIn.
+# --------------------------------------------------------------------------
+linkedin:
+  enabled: true
+  # Telas do app que aparecem no card, em rodizio por dia. Lista curada A MAO
+  # e so com REMEDIOS: o seletor do carrossel escolhe por palavra-chave e ja
+  # colocou perfume e creme facial num post sobre medicamento prescrito.
+  # Quando tirar screenshots novas de remedios, acrescente aqui.
+  screens:
+    - "Screenshot_20260814_210030_Chrome.jpg"   # busca Mounjaro, 3 farmacias, 3 precos
+    - "Screenshot_20260815_142615_Chrome.jpg"   # Ajovy, queda de preco -61%
+    - "Screenshot_20260814_205936_Chrome.jpg"   # Prolia 60mg, venda sob prescricao
+    - "Screenshot_20260814_203938_Chrome.jpg"   # comparacao Koselugo -86%
+  # TEXTO do post (linkedin.txt). Regras do LinkedIn, nao do Instagram: nenhum
+  # link no corpo (vai no 1o comentario), uma ideia por linha, pergunta no fim
+  # para puxar comentario na primeira hora, e 3 hashtags — nao 8.
+  pitch: >-
+    No Bem na Mosca você busca o remédio, define quanto quer pagar e é avisado
+    quando o preço chegar lá. A compra é feita na farmácia.
+  # Uma pergunta por dia, em rodizio. Comentario vale mais que curtida.
+  questions:
+    - "Você compara preço de remédio antes de comprar?"
+    - "Quanto você pagou no último remédio de uso contínuo — e pesquisou antes?"
+    - "Na sua cidade, a diferença de preço entre farmácias é grande?"
+    - "Remédio é a única compra cara que a gente faz sem pesquisar. Concorda?"
+    - "Você já deixou de comprar um remédio por causa do preço?"
+  # Historia sensivel (pessoa em sofrimento): sem app, pergunta neutra.
+  questions_neutral:
+    - "O que você acha que deveria mudar nesse caso?"
+    - "Você já passou por algo parecido com alguém da família?"
+  hashtags: ["Medicamentos", "Farmácia", "SaúdeNoBrasil"]
+  comment: "Para comparar preços: {url}"
+
+promo:
+  # Titulo e legenda padrao dos videos de divulgacao (videos/loop e
+  # videos/oneuse) quando NAO existe um arquivo .txt/.json ao lado do video.
+  # Para uma legenda especifica, crie meu_video.txt na mesma pasta — ele vence.
+  # Conjunto de titulos genericos. A escolha e um hash do NOME DO ARQUIVO, entao
+  # cada video mantem sempre o mesmo titulo — reprocessar o loop nao renomeia
+  # nada que ja esta no ar, e nao existe arquivo de estado para sincronizar.
+  # Titulo unico para 16 Shorts o YouTube trata como conteudo duplicado.
+  default_titles:
+    - "Remédio é a única compra cara que a gente não pesquisa"
+    - "Você está pagando caro no remédio e nem desconfia"
+    - "O mesmo remédio, dois preços, dois quarteirões"
+    - "A farmácia mais barata não é a que você pensa"
+    - "A caixa econômica nem sempre é. Olha o preço por unidade"
+    - "Escaneou, descobriu, economizou"
+    - "Um cupom fiscal e a compra inteira fica registrada"
+    - "Diga quanto quer pagar. O app avisa quando chegar"
+    - "Antes de pagar no caixa, faz esse teste"
+    - "Quanto você gastou de remédio esse ano? Provavelmente demais"
+    - "Ninguém pesquisa preço de remédio. E deveria"
+    - "Você conferiu o preço ou só pagou?"
+    - "O que a etiqueta da farmácia não te conta"
+    - "Duas farmácias, o mesmo remédio, preços diferentes"
+    - "Tem gente pagando o dobro pelo seu remédio"
+    - "Seu remédio de uso contínuo custa isso mesmo?"
+    - "Farmácia da esquina ou a do outro lado? Depende do preço"
+  # Usado apenas se default_titles estiver vazio.
+  default_title: "Bem na Mosca: compare preços de remédios e economize"
+  default_caption: |
+    Voce ja parou para calcular quanto gasta com supermercado e remedios ao
+    longo de um ano inteiro? 💸 A diferenca de preco entre duas farmacias do
+    mesmo bairro costuma ser grande — e ninguem pesquisa remedio.
+
+    Neste video voce conhece o Bem na Mosca, uma plataforma colaborativa feita
+    para voce economizar de verdade nas compras do dia a dia.
+
+    🎯 O que e o Bem na Mosca?
+    Um aplicativo colaborativo onde a propria comunidade registra e atualiza
+    precos em tempo real. Com ele voce monta listas inteligentes que mostram
+    automaticamente qual farmacia ou supermercado da sua regiao oferece a maior
+    economia para a sua cesta completa.
+
+    ✨ Recursos que voce vai ver no video:
+    📋 Listas compartilhadas — edite a mesma lista com a familia em tempo real
+    📷 Scanner de codigo de barras — escaneie na gondola e veja onde esta mais barato
+    🔔 Alertas de menor preco — favorite e receba aviso quando o preco cair
+    🎯 Preco-alvo — defina quanto quer pagar e nos avisamos quando chegar la
+    🧾 Importacao de NFC-e (SP) — escaneie o QR do cupom, atualize a base e
+       ganhe desconto na assinatura
+
+    Chega de pagar caro por falta de informacao. Assista, veja como funciona na
+    pratica e comece a economizar hoje.
+
+    🚀 BAIXE AGORA: https://bemnamosca.com/
+
+    #BemNaMosca #Economizar #EconomiaDomestica #FinancasPessoais
+    #ComparadorDePrecos #ListaDeCompras #ScannerDePrecos #CupomFiscal
+    #DicasDeEconomia #RemedioMaisBarato #GestaoDeGastos #Farmacia
+    #PrecoDeMedicamentos #MedicamentoDeAltoCusto #Startups
+    #Oncologia #TratamentoOncologico #Cancer #Diabetes #Ozempic #Mounjaro
+  oneuse_dir: "videos/oneuse"
+  loop_dir: "videos/loop"
+  # Avisos antes de subir (nao bloqueiam, so alertam no terminal). No
+  # Instagram TODO video de feed vira Reel, e a API so reclama depois de
+  # hospedar o arquivo — melhor descobrir aqui.
+  limits:
+    min_seconds: 3                    # Reel muito curto e recusado
+    youtube_short_max_seconds: 180    # acima disso vira video normal, nao Short
+    instagram_max_seconds: 900        # teto do Reel via API
+
+# --------------------------------------------------------------------------
+# VOICE
+#   provider: elevenlabs -> human-quality voice via your ELEVENLABS_API_KEYS
+#             pool (auto-rotates keys as credits run out, falls back to edge).
+#   provider: edge       -> free Microsoft voices, no key needed.
+# --------------------------------------------------------------------------
+tts:
+  # edge = voz pt-BR NATIVA e gratuita (nao gasta creditos do ElevenLabs).
+  # As vozes do ElevenLabs configuradas abaixo (Chris, Adam...) sao locutores
+  # americanos: o modelo turbo_v2_5 fala portugues, mas com sotaque. Teste as
+  # duas com `python main.py short` antes de escolher.
+  # 21/08: Alice (premade, funciona no plano free) com language_code=pt — testada
+  # com ç/ão/lh/nh/dia-tia, aprovada. O teste anterior que "falou preco" era
+  # sem o idioma forcado. Cadeia: elevenlabs -> (groq, morto) -> edge Thalita.
+  provider: "elevenlabs"
+  elevenlabs:
+    # Voices VERIFIED to work on FREE keys (library voices like Josh need paid):
+    #   Adam    pNInz6obpgDQGcFmaJgB  deep, confident
+    #   Daniel  onwK4e9ZLuTAKqWW03F9  news anchor style
+    #   Chris   iP95p4xoKVk53GoZ742B  casual, energetic (closest to Josh)
+    #   Will    bIHbv24MWmeRgasZH58o  friendly, upbeat
+    #   Liam    TX3LPaxmHKxFdv7VOQHJ  young narrator
+    #   Callum  N2lVS1w4EtoT3dr4eOWO  intense
+    #   Brian   nPczCjzI2devNBz1zQrb  warm narrator
+    # Vozes FEMININAS testadas gerando audio real nesta chave gratuita
+    # (2026-08-14). As demais responderam 402 paid_plan_required:
+    #   Alice    Xb7hH8MSUJpSbSDYk0k2  britanica, firme  <- em uso
+    #   Matilda  XrExE9yKIg1WjnnlVkGX  calorosa
+    #   Bella    EXAVITQu4vr4xnSDxMaL  suave
+    #   Lily     pFZP5JQG7iQjIQuC4Bku  britanica, jovem
+    # Exigem plano pago: Rachel, Domi, Elli, Charlotte.
+    #
+    # RESSALVA: sao locutoras americanas/britanicas. O turbo_v2_5 fala
+    # portugues, mas com SOTAQUE — nenhuma soa nativa como a Francisca do
+    # edge-tts. Amostras em output/amostras_voz/ para comparar.
+    voice_id: "Xb7hH8MSUJpSbSDYk0k2"
+    model: "eleven_turbo_v2_5"     # half credit cost -> ~20k chars per 10k-credit key
+    language_code: "pt"            # forca pt nos modelos v2.5 (sem isso, "preço" virou "preco")
+    # Respiro entre os blocos da narracao (antes eram colados). Cada bloco e
+    # gerado sabendo o texto anterior e o seguinte (previous_text/next_text),
+    # para a entonacao continuar em vez de recomecar a cada corte.
+    # 21/08: 0.5/0.25 lia plano demais. 0.35/0.45 da subida e descida de frase
+    # sem virar teatro. Se a Alice comecar a 'atuar', volte para 0.45/0.3.
+    stability: 0.35                # lower = more expressive, higher = more even
+    similarity: 0.75
+    style: 0.45                    # expressividade (0.25 era monotono)
+  # Groq TTS — middle fallback slot in the chain (elevenlabs -> groq -> edge).
+  # NOTE: Groq decommissioned its playai-tts model (no TTS models are currently
+  # served), so this tier is dormant. If Groq ships a new TTS model, put its
+  # name here and the fallback activates automatically.
+  groq:
+    model: "playai-tts"
+    voice: "Fritz-PlayAI"
+  # edge-tts final fallback (also used when provider: edge)
+  # Voz feminina, como pede o doc de marca ("PT-BR feminina, 30-40 anos, tom
+  # de conversa"). Femininas pt-BR disponiveis no edge-tts:
+  #   pt-BR-FranciscaNeural            classica, calorosa e estavel  <- em uso
+  #   pt-BR-ThalitaMultilingualNeural  modelo mais novo, mais expressivo
+  # Amostras das duas: python main.py voices pt lista todas.
+  voice: "pt-BR-ThalitaMultilingualNeural"   # fallback edge-tts: a mais natural das pt-BR gratis
+  block_gap_seconds: 0.35          # pausa entre blocos da narracao (0 = colado)
+  rate: "+8%"                      # speak a little faster for shorts energy
+  volume: "+0%"
+
+# --------------------------------------------------------------------------
+# SUBTITLES — big, readable, burned into the video.
+# --------------------------------------------------------------------------
+subtitles:
+  enabled: true
+  style: "karaoke"                 # karaoke = spoken word lights up (TikTok/CapCut
+                                   # style, best retention) | simple = plain captions
+  uppercase: true                  # ALL CAPS reads faster at small sizes
+  words_per_caption: 4             # TETO por legenda; o corte segue a frase (ver phrase_pause)
+  font: "Archivo Black"            # fonte empacotada em assets/fonts (igual no Windows e no runner)
+  font_size_short: 6.5             # percent of frame HEIGHT (big for vertical shorts)
+  font_size_long: 5.0              # percent of frame HEIGHT
+  primary_color: "&H00FFFFFF"      # white  (ASS BGR hex)
+  highlight_color: "&H0000E5FF"    # amber — the word being spoken right now
+  outline_color: "&H00000000"      # black outline for readability
+  outline: 4
+  shadow: 2
+  margin_v: 340                    # distance from bottom — keeps captions above
+                                   # the YouTube Shorts UI (title/buttons overlay)
+  # Palavras-chave em LARANJA e 18% maiores enquanto estao na tela (a palavra
+  # falada continua ambar). Automatico para numero, R$ e % — e a lista abaixo.
+  emphasis_enabled: true
+  emphasis_auto: true
+  emphasis_color: "&H001050D0"     # laranja do logo (#D05010 em BGR)
+  emphasis_scale: 118
+  emphasis_words:
+    - "grátis"
+    - "gratuito"
+    - "economizar"
+    - "economia"
+    - "barato"
+    - "caro"
+    - "Anvisa"
+    - "genérico"
+    - "preço"
+    - "desconto"
+  # Manchete em tela cheia nos primeiros segundos (o hook). 0 desliga.
+  hook_size: 8.5                   # % da altura do quadro
+  # Fundo da legenda: glow | box | none.
+  #   glow = contorno grosso e suavizado em verde-escuro seguindo as letras (um
+  #          halo continuo, qualquer que seja a cor das palavras)
+  #   box  = caixa solida — o ASS desenha UMA CAIXA POR TRECHO DE COR, entao a
+  #          palavra amarela e a laranja viravam caixinhas sobrepostas
+  #   none = contorno preto fino classico
+  caption_backing: "glow"
+  glow_opacity: 0.85
+  glow_size: 0.16                  # espessura do halo, fracao do tamanho da fonte
+  box_opacity: 0.55                # so para caption_backing: box
+  # Legenda quebra por FRASE (pontuacao ou pausa >= phrase_pause s), com
+  # words_per_caption como teto — e nunca passa de uma linha (a fonte encolhe).
+  phrase_pause: 0.32
+
+# --------------------------------------------------------------------------
+# MEDIA — where visuals come from. Copyright-safe by default.
+# --------------------------------------------------------------------------
+media:
+  # Content folders (both orientations).
+  asset_dirs:
+    - "assets/images"
+    - "assets/videos"                # video clips: muted, cropped, duration-aware
+  # Orientation-specific image folders: vertical/ is used for Shorts (9:16),
+  # horizontal/ for long videos (16:9) — so art is never awkwardly cropped.
+  asset_dirs_vertical:
+    - "img-channel/vertical"
+  asset_dirs_horizontal:
+    - "img-channel/horizontal"
+  # Royalty-free stock (optional). Set PEXELS_API_KEY in .env to enable.
+  use_pexels: true
+  pexels_per_query: 6
+  # If false, images from news articles are NEVER downloaded (safest, default).
+  use_article_images: false
+  ken_burns: true                  # slow zoom/pan so stills feel like video
+  # FOTO GERADA POR IA para os blocos de NOTICIA do carrossel (slides 1-2), no
+  # lugar da foto de banco — que trazia botica vintage e farmaceutico generico.
+  # Os blocos do APP continuam capturas reais (regra 3 do brief). Uma imagem
+  # por noticia por dia, em cache: a escada de retentativas nao cobra de novo.
+  # Chave: GEMINI_API_KEY_IMG no .env (com billing; ~US$0,04 por imagem).
+  # Quando usada, o upload no YouTube marca containsSyntheticMedia.
+  ai_image:
+    enabled: true
+    models: ["gemini-3.1-flash-image", "gemini-2.5-flash-image"]   # ordem de tentativa
+    aspect_ratio: "9:16"
+    per_story: 2                   # gancho + noticia com foto IA; o bloco 3 usa banco/biblioteca
+    style: "warm tones, Brazilian pharmacy or home setting"
+    # Toda imagem gerada e guardada aqui. Sem credito/quota, o proximo video
+    # usa a mais parecida (por palavra-chave) em vez de foto de banco.
+    library_dir: "assets/images/ai"
+  # Skip the first/last N seconds of imported video clips (logo intros / end
+  # cards). Applied only when the clip is long enough to afford it.
+  video_edge_trim: 6
+
+# --------------------------------------------------------------------------
+# MUSIC — new soundtrack layered under the voice (helps avoid copyright).
+# Drop royalty-free .mp3 files into assets/music/. Leave empty to skip.
+# --------------------------------------------------------------------------
+music:
+  enabled: true
+  dir: "assets/music"
+  # 21/08: a pasta assets/music/ esteve VAZIA desde o inicio — nenhum video
+  # saiu com musica, apesar de enabled: true. Agora ha 4 loops de 22s gerados
+  # pelo ElevenLabs (Sound Effects, free) e um e sorteado por video.
+  volume: 0.22                     # 0..1 — o ducking segura a voz por cima
+  # Normalizacao final: os videos saiam a -22 dB, fracos no celular. Alvo
+  # -14 LUFS, o padrao das redes. 0 desliga.
+  loudness_lufs: -14
+  duck: true                       # lower music while the voice is speaking
+
+# --------------------------------------------------------------------------
+# VIDEO OUTPUT
+# --------------------------------------------------------------------------
+video:
+  fps: 30
+  # Transicao entre slides. 0 = corte seco (comportamento antigo). Cada corte
+  # sorteia uma transicao diferente da lista em src/video.py, para nao ficar
+  # repetitivo. Os clipes sao estendidos por este mesmo valor antes da
+  # sobreposicao — sem isso o video sairia (n-1)*valor mais curto que a
+  # narracao e a legenda dessincronizaria.
+  transition_seconds: 0.45
+  # transition_seed: 42            # descomente para transicoes reproduziveis
+  short:
+    width: 1080
+    height: 1920                   # 9:16 vertical
+    max_seconds: 58                # keep under 60s for a YouTube Short
+    intro_image: "img-channel/vertical/channelbanner_start.jpg"
+    outro_image: "img-channel/vertical/channelbanner_end.jpg"
+  long:
+    width: 1920
+    height: 1080                   # 16:9 horizontal
+    # Minimum length to qualify for mid-roll ads / better monetization.
+    min_seconds: 600               # 10 minutes
+    max_items: 8                   # cap news items per long video
+    intro_image: "img-channel/horizontal/channelbanner_start.jpg"
+    outro_image: "img-channel/horizontal/channelbanner_end.jpg"
+  # Small logo overlaid top-right on every frame. Apontava para logo.png, que
+  # nao existe nesta pasta — o watermark ficava silenciosamente desligado.
+  watermark: "img-channel/logo/bemNamosc4_v2.png"
+  # Barra de progresso laranja no rodape, cresce com o tempo. 0 desliga.
+  progress_bar_height: 12
+  progress_bar_color: "0xD05010"
+  # Som de transicao (whoosh) a cada MUDANCA DE BLOCO — nao a cada corte de
+  # imagem. Gerado pelo ElevenLabs (Sound Effects). Vazio = desligado.
+  transition_sfx: "assets/sfx/whoosh.mp3"
+  transition_sfx_volume: 0.35
+
+# --------------------------------------------------------------------------
+# COMPARISON MODE — for when GTA 6 is out: GTA 5 vs GTA 6 side-by-side.
+# --------------------------------------------------------------------------
+comparison:
+  enabled: false                   # flip to true once you have GTA 6 footage
+  left_label: "GTA 5"
+  right_label: "GTA 6"
+  # Pairs of clips/images to compare (left = old, right = new).
+  pairs:
+    - left: "assets/compare/gta5_scene1.mp4"
+      right: "assets/compare/gta6_scene1.mp4"
+      caption: "Same street, ten years later"
+  layout: "side_by_side"           # side_by_side | top_bottom
+
+# --------------------------------------------------------------------------
+# YOUTUBE UPLOAD (optional). Needs client_secret.json + first-run OAuth.
+# --------------------------------------------------------------------------
+youtube:
+  enabled: true                   # DESLIGADO ate voce revisar o primeiro video
+  category_id: "26"                # 26 = Howto & Style (guias e dicas)
+  # private   -> stays private until you flip it manually
+  # public    -> live immediately
+  # scheduled -> uploads now (visible only to you), auto-publishes at the next
+  #              free slot below. Review it in Studio before the slot; delete
+  #              or unschedule if you don't like it.
+  privacy: "scheduled"
+  schedule:
+    timezone: "America/Sao_Paulo"  # Brazilian local time
+    times: ["12:00", "18:00"]      # daily go-live slots, taken in order
+    # Quando a rotina termina tarde (o carrossel pode re-tentar ate 11:30 —
+    # veja a secao daily:), o slot das 12:00 fica dentro da margem de 20 min
+    # que o YouTube exige e nao da mais para usa-lo. Em vez de empurrar o video
+    # para as 18:00, ele vai para a PROXIMA HORA CHEIA livre (13:00, 14:00...).
+    # Um substituto por slot perdido, para nao juntar os dois videos do dia.
+    hourly_fallback: true
+  made_for_kids: false
+  upload_captions: true            # attach the word-timed .srt as closed captions
+  # Auto-posted first comment (engagement velocity). {topic} is substituted.
+  # Pin it manually in the YouTube app for extra effect. Empty = disabled.
+  first_comment: "Voce ja pagou caro em algum remedio? Conta aqui 👇 Dicas de economia todo dia — se inscreve 🔔"
+  default_tags:
+    - "medicamentos"
+    - "alto custo"
+    - "economizar remedio"
+    - "preco de medicamentos"
+    - "saude"
+  # Ordered tag pool: after the video-specific tags, the uploader fills the
+  # remaining tag budget from here, top to bottom. (YouTube's real limit is
+  # 500 CHARACTERS total across all tags — not 500 tags — so priority order
+  # matters; put the strongest search terms first.)
+  tag_pool:
+    - "medicamento de alto custo"
+    - "preco de medicamentos"
+    - "comparar preco de remedio"
+    - "economizar em remedio"
+    - "farmacia mais barata"
+    - "remedio caro"
+    - "medicamento generico"
+    - "farmacia popular"
+    - "medicamento pelo sus"
+    - "tratamento de alto custo"
+    - "anvisa"
+    - "cmed reajuste"
+    - "plano de saude medicamento"
+    - "direito do paciente"
+    - "onde comprar remedio barato"
+    - "desconto em medicamento"
+    - "programa de desconto laboratorio"
+    - "receita medica"
+    - "saude no brasil"
+    - "economia domestica"
+    - "dicas de economia"
+    - "app de farmacia"
+    - "comparador de precos"
+    - "bem na mosca"
+    - "medicamentos"
+    - "farmacia"
+    - "saude"
+    - "remedios"
+    - "sus"
+    - "economia"
+  # {title}, {topic}, {tagline} are substituted at upload time.
+  description_template: |
+    {title}
+
+    {tagline}
+
+    ⏱ Informacao sobre {topic}, atualizada todos os dias.
+    🔔 Se inscreva para mais dicas de economia.
+
+    {links}
+
+    ⚠️ Conteudo informativo. Nao substitui orientacao medica ou farmaceutica.
+    Consulte sempre um profissional de saude antes de trocar ou parar um
+    tratamento. Precos mudam por regiao e por farmacia.
+
+    #medicamentos #saude #economia #farmacia
+
+    ---
+    News headlines are summarized from public sources and linked below.
+    All footage/music is licensed or royalty-free.
+
+# --------------------------------------------------------------------------
+# PUBLISH STRATEGY — what `python main.py run` (and the daily scheduler) builds.
+# Current phase: Shorts-only, to grow subscribers toward monetization
+# (500 subs + 3M Shorts views in 90 days, or 4000 watch-hours from long videos).
+# When you pivot to watch-hours, set long: true.
+# --------------------------------------------------------------------------
+publish:
+  shorts: true
+  shorts_per_run: 2                # shorts per run — 2-3/day accelerates growth
+  listicle_shorts: true            # every 2nd short is a viral "TOP 5" countdown
+  long: false                      # off for now; enable for watch-hours phase
+  community_posts: true            # also prepare 1 ready-to-paste community post
+                                   # per run (YouTube's API can't post them itself)
+
+# --------------------------------------------------------------------------
+# COMMUNITY POSTS — trending-topic text+image packages (output/posts/).
+# Topics come from live Google "related searches" + "people also ask", with
+# these evergreen high-demand seeds mixed in.
+# --------------------------------------------------------------------------
+# --------------------------------------------------------------------------
+# CARS COMPARISON — manual mode: `python main.py cars [short|long]`.
+# You paste the research/theme when asked; visuals = official GTA art
+# (matched by car name) + real-car photos from Wikimedia Commons (credited).
+# --------------------------------------------------------------------------
+# --------------------------------------------------------------------------
+# AI IMAGE GENERATION — Cloudflare Workers AI (FLUX schnell), free tier:
+# 10k Neurons/day. Used for community-post backgrounds and as fallback for
+# car scenes; local art is always the fallback when quota runs out.
+# --------------------------------------------------------------------------
+images:
+  enabled: true
+  # lucid-origin (Leonardo) = best quality on Workers AI: cinematic, far less
+  # garbled text than flux-schnell. Costs more Neurons, but the 5-account pool
+  # (~50k/day) covers it easily. Other options: @cf/black-forest-labs/flux-2-dev,
+  # flux-2-klein-9b (multipart schema, handled automatically).
+  model: "@cf/leonardo/lucid-origin"
+  fallback_model: "@cf/black-forest-labs/flux-1-schnell"  # cheap, always works
+  steps: 6                         # only used by flux-1-schnell
+
+cars:
+  per_short: 3                     # cars in a Short
+  per_long: 10                     # cars in a long video (with chapters)
+  # Reference pages fetched automatically and given to the LLM as source
+  # material (community wikis; facts used with attribution, text not copied).
+  reference_urls:
+    - "https://gta.fandom.com/wiki/Vehicles_in_GTA_VI"
+    - "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI"
+    - "https://www.rockstargames.com/VI"
+    - "https://www.gta-6-wiki.com/vehicles"
+
+posts:
+  # true = so monta o pacote, sem publicar em lugar nenhum (seguro para testar)
+  sandbox: true
+  # Assuntos perenes de RESERVA — o seletor prefere manchetes reais e frescas,
+  # depois buscas em alta, e so entao rotaciona estes (menos usado primeiro).
+  topics:
+    - "como economizar em medicamentos de alto custo"
+    - "medicamento de alto custo pelo SUS como conseguir"
+    - "diferenca de preco de remedio entre farmacias"
+    - "medicamento generico funciona igual ao de marca"
+    - "farmacia popular quais remedios sao gratuitos"
+    - "reajuste anual do preco dos medicamentos"
+    - "plano de saude cobre medicamento de alto custo"
+    - "programa de desconto de laboratorio como funciona"
+
+# --------------------------------------------------------------------------
+# INSTAGRAM REELS — same Shorts, posted as Reels.
+# NOTE: Instagram's API has NO scheduling/private mode — a published Reel is
+# LIVE immediately. Keep enabled: false to publish manually with
+#   python main.py reels        (posts the newest short from output/)
+# and flip to true when you want every new Short auto-posted in the daily run.
+# --------------------------------------------------------------------------
+instagram:
+  enabled: true                   # ligue depois de autorizar a conta do canal
+  # Publica tambem o pacote de post (imagem + texto) como foto no feed,
+  # logo apos `python main.py post`. VAI AO AR na hora (IG nao agenda).
+  post_enabled: true
+  caption_suffix: "Siga @bemnamosc4 e economize nos seus medicamentos!"
+
+# --------------------------------------------------------------------------
+# TIKTOK — same Shorts via Content Posting API.
+# One-time auth: python main.py tiktok-auth
+# Manual post:   python main.py tiktok
+# While the app is unaudited/sandbox, TikTok forces SELF_ONLY (only you see
+# the post). After app review approval, switch to "PUBLIC_TO_EVERYONE".
+# --------------------------------------------------------------------------
+tiktok:
+  enabled: false                   # ligue depois de rodar: python main.py tiktok-auth
+  privacy_level: "SELF_ONLY"       # PUBLIC_TO_EVERYONE apos a aprovacao do app
+
+# --------------------------------------------------------------------------
+# SCHEDULING / OUTPUT
+# --------------------------------------------------------------------------
+output:
+  dir: "output"                    # rendered videos + metadata land here
+  keep_workdir: false              # delete temp files after each run

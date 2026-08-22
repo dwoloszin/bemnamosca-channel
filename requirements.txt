@@ -1,0 +1,26 @@
+# Core
+PyYAML>=6.0
+python-dotenv>=1.0
+requests>=2.31
+tzdata>=2024.1        # IANA timezones on Windows (scheduled publishing)
+
+# News fetching
+feedparser>=6.0
+beautifulsoup4>=4.12
+
+# Text-to-speech (free, no API key, gives word-level timing for subtitles)
+edge-tts>=6.1
+
+# Image handling
+Pillow>=10.0
+
+# ffmpeg — bundled static binary, so NO system install is required
+imageio-ffmpeg>=0.5
+
+# Script writing with Claude
+anthropic>=0.40
+
+# YouTube upload (optional — only needed if youtube.enabled = true)
+google-api-python-client>=2.100
+google-auth-oauthlib>=1.2
+google-auth-httplib2>=0.2

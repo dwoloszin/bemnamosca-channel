@@ -1,0 +1,50 @@
+# secrets
+.env
+client_secret.json
+token.json
+.claude/
+
+# outputs & temp
+output/
+**/_work/
+**/_work_cmp/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# stock/media caches
+assets/music/*
+!assets/music/README.md
+assets/images/*
+!assets/images/README.md
+assets/compare/*
+!assets/compare/README.md
+assets/videos/*
+!assets/videos/README.md
+assets/postimage/*
+!assets/postimage/README.md
+
+# promo videos (finished files, published as-is)
+videos/oneuse/*
+!videos/oneuse/README.md
+videos/loop/*
+!videos/loop/README.md
+
+# internal docs never go to the public repo (procedures, billing, brand brief)
+assets/docs/
+
+# bundled fonts ARE versioned (assets/fonts); the AI photo library too
+!assets/fonts/
+!assets/images/ai/
+!assets/images/ai/*.png
+!assets/images/ai/*.jpg
+# generated media that the runner recreates every day
+output/_work*/
+output/carousels/
+output/amostras_voz/
+
+# app demo videos (sources for promos; too large for git — keep local)
+videos/*.mp4

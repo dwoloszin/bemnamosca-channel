@@ -1,0 +1,486 @@
+{
+  "usage": {
+    "img-channel/vertical/Screenshot_20260815_142615_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:19:23"
+    },
+    "img-channel/vertical/Screenshot_20260814_204045_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-21 10:03:22"
+    },
+    "img-channel/vertical/Screenshot_20260814_205909_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:19:23"
+    },
+    "img-channel/vertical/Screenshot_20260814_203859_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:19:23"
+    },
+    "img-channel/vertical/Screenshot_20260814_204000_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:19:23"
+    },
+    "img-channel/vertical/Screenshot_20260814_203938_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-20 10:03:11"
+    },
+    "img-channel/vertical/Screenshot_20260814_203512_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:19:23"
+    },
+    "img-channel/vertical/Screenshot_20260814_203833_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-19 10:02:38"
+    },
+    "img-channel/vertical/Screenshot_20260814_210030_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:19:23"
+    },
+    "img-channel/vertical/Screenshot_20260814_203917_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-18 11:29:49"
+    },
+    "img-channel/vertical/Screenshot_20260814_203947_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-20 10:03:11"
+    },
+    "img-channel/vertical/Screenshot_20260815_143040_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-19 10:02:38"
+    },
+    "img-channel/vertical/Screenshot_20260814_203911_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-19 10:02:38"
+    },
+    "img-channel/vertical/Screenshot_20260815_195459_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-21 10:03:22"
+    },
+    "img-channel/vertical/Screenshot_20260815_112030_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-20 10:03:11"
+    },
+    "img-channel/vertical/Screenshot_20260815_143003_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-18 11:29:49"
+    },
+    "img-channel/vertical/Screenshot_20260815_143014_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:19:23"
+    },
+    "img-channel/vertical/Screenshot_20260815_143034_Chrome.jpg": {
+      "uses": 2,
+      "last": "2026-08-21 10:03:22"
+    },
+    "img-channel/vertical/Screenshot_20260814_203823_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:19:23"
+    },
+    "img-channel/vertical/Screenshot_20260814_205954_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:19:23"
+    },
+    "output/_work_carousel_feed/pexels/f087f124baa725cf.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:52:06"
+    },
+    "output/_work_carousel_feed/pexels/6a11cc0892fe232e.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:52:06"
+    },
+    "img-channel/vertical/Screenshot_20260815_143048_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:52:06"
+    },
+    "img-channel/vertical/Screenshot_20260814_203430_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:52:06"
+    },
+    "img-channel/vertical/Screenshot_20260814_203647_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-16 11:52:06"
+    },
+    "output/_work_carousel_feed/pexels/bf630253ca5712ca.jpg": {
+      "uses": 2,
+      "last": "2026-08-18 10:04:54"
+    },
+    "output/_work_carousel_feed/pexels/afafa0be2865c5e9.jpg": {
+      "uses": 1,
+      "last": "2026-08-17 13:51:02"
+    },
+    "img-channel/vertical/Screenshot_20260814_205841_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-17 13:51:02"
+    },
+    "img-channel/vertical/Screenshot_20260814_203801_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-17 13:51:02"
+    },
+    "img-channel/vertical/Screenshot_20260814_204104_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-17 13:51:02"
+    },
+    "output/_work_carousel_feed/pexels/5b47e818d19c4fd4.jpg": {
+      "uses": 1,
+      "last": "2026-08-18 10:04:54"
+    },
+    "img-channel/vertical/Screenshot_20260814_203559_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-18 10:04:54"
+    },
+    "img-channel/vertical/Screenshot_20260814_203659_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-18 10:04:54"
+    },
+    "img-channel/vertical/Screenshot_20260814_205936_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-18 10:04:54"
+    },
+    "output/_work_carousel_feed/pexels/cf83bda8486aa8eb.jpg": {
+      "uses": 2,
+      "last": "2026-08-21 10:03:22"
+    },
+    "output/_work_carousel_feed/pexels/4b46c036cb577bf9.jpg": {
+      "uses": 2,
+      "last": "2026-08-21 10:03:22"
+    },
+    "img-channel/vertical/Screenshot_20260814_205852_Chrome.jpg": {
+      "uses": 1,
+      "last": "2026-08-18 11:29:49"
+    },
+    "output/_work_carousel_feed/pexels/cd864ee391bcdec7.jpg": {
+      "uses": 1,
+      "last": "2026-08-19 10:02:38"
+    },
+    "output/_work_carousel_feed/pexels/5b52f03a156e87a5.jpg": {
+      "uses": 1,
+      "last": "2026-08-19 10:02:38"
+    },
+    "output/_work_carousel_feed/pexels/38976ea76b73c9a5.jpg": {
+      "uses": 1,
+      "last": "2026-08-20 10:03:11"
+    },
+    "output/_work_carousel_feed/pexels/2dd2228d6070a05a.jpg": {
+      "uses": 1,
+      "last": "2026-08-20 10:03:11"
+    },
+    "assets/music/bed_calm_piano.mp3": {
+      "uses": 4,
+      "last": "2026-08-21 21:52:21"
+    },
+    "assets/music/bed_upbeat_acoustic.mp3": {
+      "uses": 4,
+      "last": "2026-08-22 09:13:21"
+    },
+    "assets/music/bed_energetic_clap.mp3": {
+      "uses": 3,
+      "last": "2026-08-21 21:24:21"
+    },
+    "assets/music/bed_modern_pop.mp3": {
+      "uses": 3,
+      "last": "2026-08-21 21:32:43"
+    }
+  },
+  "log": [
+    {
+      "time": "2026-08-14 19:25:27",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-14 19:53:33",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-14 19:55:55",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-14 20:00:47",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-14 20:25:34",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-14 21:14:21",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-14 21:18:55",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-14 21:35:19",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-14 21:55:31",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-15 11:04:54",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-15 11:31:53",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-16 11:02:22",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-16 11:19:23",
+      "output": "r0.mp4",
+      "media": [
+        "img-channel/vertical/Screenshot_20260815_142615_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_204045_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_205909_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203859_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_204000_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-16 11:19:23",
+      "output": "r1.mp4",
+      "media": [
+        "img-channel/vertical/Screenshot_20260814_203938_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203512_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203833_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_210030_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203917_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-16 11:19:23",
+      "output": "r2.mp4",
+      "media": [
+        "img-channel/vertical/Screenshot_20260814_203947_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260815_143040_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203911_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260815_195459_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260815_112030_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-16 11:19:23",
+      "output": "r3.mp4",
+      "media": [
+        "img-channel/vertical/Screenshot_20260815_143003_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260815_143014_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260815_143034_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203823_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_205954_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-16 11:52:06",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/pexels/f087f124baa725cf.jpg",
+        "output/_work_carousel_feed/pexels/6a11cc0892fe232e.jpg",
+        "img-channel/vertical/Screenshot_20260815_143048_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203430_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203647_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-16 11:52:35",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-17 13:51:02",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/pexels/bf630253ca5712ca.jpg",
+        "output/_work_carousel_feed/pexels/afafa0be2865c5e9.jpg",
+        "img-channel/vertical/Screenshot_20260814_205841_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203801_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_204104_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-17 13:51:33",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-18 10:04:54",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/pexels/5b47e818d19c4fd4.jpg",
+        "output/_work_carousel_feed/pexels/bf630253ca5712ca.jpg",
+        "img-channel/vertical/Screenshot_20260814_203559_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203659_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_205936_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-18 11:29:49",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/pexels/cf83bda8486aa8eb.jpg",
+        "output/_work_carousel_feed/pexels/4b46c036cb577bf9.jpg",
+        "img-channel/vertical/Screenshot_20260814_205852_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203917_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260815_143003_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-18 11:30:36",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-19 10:02:38",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/pexels/cd864ee391bcdec7.jpg",
+        "output/_work_carousel_feed/pexels/5b52f03a156e87a5.jpg",
+        "img-channel/vertical/Screenshot_20260815_143040_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203833_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203911_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-19 10:03:02",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-20 10:03:11",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/pexels/38976ea76b73c9a5.jpg",
+        "output/_work_carousel_feed/pexels/2dd2228d6070a05a.jpg",
+        "img-channel/vertical/Screenshot_20260815_112030_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203947_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203938_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-20 10:03:41",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-21 10:03:22",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/pexels/cf83bda8486aa8eb.jpg",
+        "output/_work_carousel_feed/pexels/4b46c036cb577bf9.jpg",
+        "img-channel/vertical/Screenshot_20260815_143034_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260815_195459_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_204045_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-21 10:03:58",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-21 19:43:20",
+      "output": "video.mp4",
+      "media": []
+    },
+    {
+      "time": "2026-08-21 20:13:30",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_calm_piano.mp3"
+    },
+    {
+      "time": "2026-08-21 20:15:20",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_upbeat_acoustic.mp3"
+    },
+    {
+      "time": "2026-08-21 20:16:38",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_energetic_clap.mp3"
+    },
+    {
+      "time": "2026-08-21 20:32:40",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_modern_pop.mp3"
+    },
+    {
+      "time": "2026-08-21 20:54:07",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_calm_piano.mp3"
+    },
+    {
+      "time": "2026-08-21 20:55:23",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_upbeat_acoustic.mp3"
+    },
+    {
+      "time": "2026-08-21 21:11:26",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_energetic_clap.mp3"
+    },
+    {
+      "time": "2026-08-21 21:13:07",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_modern_pop.mp3"
+    },
+    {
+      "time": "2026-08-21 21:14:02",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_calm_piano.mp3"
+    },
+    {
+      "time": "2026-08-21 21:22:58",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_upbeat_acoustic.mp3"
+    },
+    {
+      "time": "2026-08-21 21:24:21",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_energetic_clap.mp3"
+    },
+    {
+      "time": "2026-08-21 21:32:43",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_modern_pop.mp3"
+    },
+    {
+      "time": "2026-08-21 21:52:21",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_calm_piano.mp3"
+    },
+    {
+      "time": "2026-08-22 09:13:21",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_upbeat_acoustic.mp3"
+    }
+  ]
+}
