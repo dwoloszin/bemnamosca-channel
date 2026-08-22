@@ -1,3 +1,10 @@
+
+> **Bem na Mosca — produção diária automática.** Este repositório roda a rotina
+> do canal no GitHub Actions (`.github/workflows/daily.yml`): busca a notícia do
+> dia, escreve o roteiro, narra, renderiza o Short e publica no YouTube
+> (agendado) e no Instagram (Reel). Detalhes operacionais em [ROTINA.md](ROTINA.md).
+> Segredos ficam em *Settings → Secrets*; nada sensível está versionado.
+
 # Auto YouTube Channel (GTA 6 news, fully automated)
 
 Builds and (optionally) uploads YouTube **Shorts** and **long videos** about a

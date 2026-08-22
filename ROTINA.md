@@ -180,3 +180,39 @@ type output\loop_rotation.json      ciclo e quais pitches já saíram
 dir videos\oneuse                   o que ainda vai sair
 dir output\carousels                pacotes gerados
 ```
+
+---
+
+## Rodando no GitHub Actions (sem PC ligado)
+
+O repositório público `dwoloszin/bemnamosca-channel` roda a mesma rotina
+pelo workflow `.github/workflows/daily.yml`:
+
+| | local (Agendador do Windows) | GitHub Actions |
+|---|---|---|
+| disparo | 10:00, uma vez | 10:00, 10:30, 11:00 e 11:30 (Brasília) |
+| retentativa | dorme 30 min, até 4x | o próximo disparo é a retentativa |
+| estado (rodízio, histórico, slots) | `output/*.json` no disco | os mesmos arquivos, commitados de volta no repo a cada execução |
+| segredos | `.env`, `token.json`, `client_secret.json` | *Settings → Secrets* (19 + `GH_PAT`) |
+| vídeos do rodízio | `videos/loop/` | release `loop-v1`, em cache no runner |
+| pacote manual do dia | `output/carousels/` | artefato da execução (14 dias) |
+| log | `output/daily_log.txt` | aba *Actions* da execução |
+
+**Nunca deixe os dois ligados no mesmo dia** — publicariam em dobro.
+
+Trocar para o GitHub:
+```powershell
+Disable-ScheduledTask -TaskName BemNaMoscaDaily
+gh workflow enable daily --repo dwoloszin/bemnamosca-channel
+```
+Voltar para o PC (backup): o inverso — e antes de rodar local, `git pull`,
+para trazer o estado (rodízio/histórico) que o runner gravou.
+
+Rodar na mão, sem publicar (teste): *Actions → daily → Run workflow → dry_run*.
+
+Token do Instagram: renova sozinho; o workflow grava o token novo no secret
+`INSTAGRAM_TOKEN_JSON` (por isso o `GH_PAT`). Token do YouTube: o app OAuth
+está *In production*, o refresh token não expira.
+
+O que NÃO vai para o repo público: `.env`, tokens, `assets/docs/` (procedimentos
+internos e brief), os vídeos-fonte em `videos/*.mp4`.
