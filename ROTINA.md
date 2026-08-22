@@ -210,6 +210,15 @@ para trazer o estado (rodízio/histórico) que o runner gravou.
 
 Rodar na mão, sem publicar (teste): *Actions → daily → Run workflow → dry_run*.
 
+**Pegar o pacote do dia no PC** (vídeo para TikTok/LinkedIn, `linkedin.jpg` +
+`linkedin.txt` para o perfil, slides):
+```powershell
+python scriptsetch_today.py            # última execução
+python scriptsetch_today.py 2026-08-23 # um dia específico
+```
+Cai em `output\carousels\carousel_<data>\`, igual a uma execução local.
+Ou no navegador: *Actions → execução do dia → Artifacts → pacote-….zip* (14 dias).
+
 Token do Instagram: renova sozinho; o workflow grava o token novo no secret
 `INSTAGRAM_TOKEN_JSON` (por isso o `GH_PAT`). Token do YouTube: o app OAuth
 está *In production*, o refresh token não expira.
