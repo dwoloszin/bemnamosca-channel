@@ -94,12 +94,18 @@ jobs:
         if: ${{ inputs.dry_run }}
         run: |
           python - <<'EOF'
-          import re, pathlib
-          p = pathlib.Path("config.yaml"); s = p.read_text(encoding="utf-8")
-          s = re.sub(r"(?m)^(  enabled: )true(\s+#.*)?$", r"\1false\2", s, count=2)  # youtube + instagram
-          p.write_text(s, encoding="utf-8")
+          # Flip exactly the publishing switches. (The first version used a
+          # regex on "enabled: true" and hit tracking/subtitles instead — the
+          # "dry run" of 22/08 published for real.)
+          import yaml, pathlib
+          p = pathlib.Path("config.yaml"); c = yaml.safe_load(p.read_text(encoding="utf-8"))
+          c.setdefault("youtube", {})["enabled"] = False
+          c.setdefault("instagram", {})["enabled"] = False
+          c.setdefault("carousel", {})["publish_youtube"] = False
+          c["carousel"]["publish_reel"] = False
+          p.write_text(yaml.safe_dump(c, allow_unicode=True, sort_keys=False), encoding="utf-8")
+          print("dry run: youtube.enabled / instagram.enabled / carousel.publish_* = False")
           EOF
-          grep -n "^  enabled:" config.yaml
 
       - name: Rotina diaria
         env:

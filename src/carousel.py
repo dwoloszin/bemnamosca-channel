@@ -107,7 +107,13 @@ def _weak_hook(cfg: Config, narration: str) -> str:
     for opener in (cfg.get("carousel.hook_banned_openers", []) or []):
         if low.startswith(str(opener).lower()):
             return f"opens with '{opener}'"
-    has_number = bool(re.search(r"[0-9]|R\$|%", first))
+    # Digits, R$, %, and numbers WRITTEN OUT: "Setenta por cento a menos" is a
+    # number hook in Portuguese and was rejected three times on 22/08.
+    has_number = bool(re.search(
+        r"[0-9]|R[$]|%|por cento|(^|[^a-zà-ÿ])(um|uma|dois|duas|três|tres|quatro|cinco|seis|sete|oito|nove|dez|"
+        r"onze|doze|quinze|vinte|trinta|quarenta|cinquenta|sessenta|setenta|oitenta|noventa|cem|cento|"
+        r"duzentos|trezentos|quinhentos|mil|milhão|milhões|bilhão|bilhões|metade|dobro|triplo)([^a-zà-ÿ]|$)",
+        first.lower()))
     has_question = "?" in first
     has_contrast = bool(re.search(r"(^|[^a-zà-ÿ])(mas|mesmo|porém|só que|nem sempre|diferen|três|dois|duas|nunca|ninguém|errad|virou|mudou|agora|primeira vez|mais caro|mais barato|dobr|metade|tão |igual|quanto)", low))
     # A very short fragment is a hook by its shape alone ("Remédio de pet
