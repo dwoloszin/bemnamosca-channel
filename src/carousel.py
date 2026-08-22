@@ -119,11 +119,14 @@ def _weak_hook(cfg: Config, narration: str, strict: bool = True) -> str:
     # A very short fragment is a hook by its shape alone ("Remédio de pet
     # virou produto de farmácia."); the number/question/contrast test is for
     # sentences long enough to ramble.
-    punchy = len(first.split()) <= 7
+    # Money words are the channel's whole stake: "de graça no SUS", "mais
+    # caro" — a hook in themselves. Rejected three good ones on 22/08.
+    has_money = bool(re.search(r"de graça|grátis|gratuit|caro|barat|preço|custa|reais|bolso", low))
+    punchy = len(first.split()) <= 9
     # strict=False (last attempt): a clean, short, non-repeated opening is
     # accepted even without a number/question/contrast. Two whole days were
     # lost to three rejections in a row — a decent hook beats no video.
-    if strict and not (has_number or has_question or has_contrast or punchy):
+    if strict and not (has_number or has_question or has_contrast or has_money or punchy):
         return f"first sentence has no number, question or contradiction: {first!r}"
     # Same opening as a recent day: the model likes to recycle whatever
     # worked (or whatever the prompt's examples say). Rejected here so the
