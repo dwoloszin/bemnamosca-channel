@@ -10,7 +10,8 @@
     "semaglutidanobrasilcomoatuasubstnciagenricaaprovadapelaanvis": 1787063548.437537,
     "anvisaaprovanovomedicamentoparadistrofiadeduchennetratamento": 1787144636.6823244,
     "farmciapopularentraemnovafasecomnovasregras": 1787231088.6291473,
-    "petloveavananaconsolidaodasadepeteentranomedicamentoprescrit": 1787317513.676246
+    "petloveavananaconsolidaodasadepeteentranomedicamentoprescrit": 1787317513.676246,
+    "anvisaaprovaprimeirogenricodesemaglutidaprincpioativoparadia": 1787403872.3509107
   },
   "entries": [
     {
@@ -336,6 +337,32 @@
             "pet",
             "petlove",
             "prescrito"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1787403872.3509107,
+      "date": "2026-08-22 10:04",
+      "kind": "carousel",
+      "title": "Semaglutida vai ter vers\u00e3o gen\u00e9rica",
+      "stories": [
+        {
+          "key": "anvisaaprovaprimeirogenricodesemaglutidaprincpioativoparadia",
+          "title": "Anvisa aprova primeiro gen\u00e9rico de semaglutida, princ\u00edpio ativo para diabetes e obesidade",
+          "tokens": [
+            "anvisa",
+            "aprova",
+            "ativo",
+            "diabetes",
+            "gen",
+            "obesidade",
+            "para",
+            "pio",
+            "primeiro",
+            "princ",
+            "rico",
+            "semaglutida"
           ]
         }
       ]

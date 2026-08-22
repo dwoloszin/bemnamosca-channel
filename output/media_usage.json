@@ -1,8 +1,8 @@
 {
   "usage": {
     "img-channel/vertical/Screenshot_20260815_142615_Chrome.jpg": {
-      "uses": 1,
-      "last": "2026-08-16 11:19:23"
+      "uses": 2,
+      "last": "2026-08-22 10:01:43"
     },
     "img-channel/vertical/Screenshot_20260814_204045_Chrome.jpg": {
       "uses": 2,
@@ -21,8 +21,8 @@
       "last": "2026-08-16 11:19:23"
     },
     "img-channel/vertical/Screenshot_20260814_203938_Chrome.jpg": {
-      "uses": 2,
-      "last": "2026-08-20 10:03:11"
+      "uses": 3,
+      "last": "2026-08-22 10:01:43"
     },
     "img-channel/vertical/Screenshot_20260814_203512_Chrome.jpg": {
       "uses": 1,
@@ -33,8 +33,8 @@
       "last": "2026-08-19 10:02:38"
     },
     "img-channel/vertical/Screenshot_20260814_210030_Chrome.jpg": {
-      "uses": 1,
-      "last": "2026-08-16 11:19:23"
+      "uses": 2,
+      "last": "2026-08-22 10:01:43"
     },
     "img-channel/vertical/Screenshot_20260814_203917_Chrome.jpg": {
       "uses": 2,
@@ -133,12 +133,12 @@
       "last": "2026-08-18 10:04:54"
     },
     "img-channel/vertical/Screenshot_20260814_205936_Chrome.jpg": {
-      "uses": 1,
-      "last": "2026-08-18 10:04:54"
+      "uses": 2,
+      "last": "2026-08-22 10:01:43"
     },
     "output/_work_carousel_feed/pexels/cf83bda8486aa8eb.jpg": {
-      "uses": 2,
-      "last": "2026-08-21 10:03:22"
+      "uses": 3,
+      "last": "2026-08-22 10:01:43"
     },
     "output/_work_carousel_feed/pexels/4b46c036cb577bf9.jpg": {
       "uses": 2,
@@ -173,12 +173,32 @@
       "last": "2026-08-22 09:13:21"
     },
     "assets/music/bed_energetic_clap.mp3": {
-      "uses": 3,
-      "last": "2026-08-21 21:24:21"
+      "uses": 4,
+      "last": "2026-08-22 10:02:11"
     },
     "assets/music/bed_modern_pop.mp3": {
       "uses": 3,
       "last": "2026-08-21 21:32:43"
+    },
+    "output/_work_carousel_feed/ai/ai_20260822_b6a78e4b37.png": {
+      "uses": 1,
+      "last": "2026-08-22 10:01:43"
+    },
+    "output/_work_carousel_feed/ai/ai_20260822_e6b1a29974.png": {
+      "uses": 1,
+      "last": "2026-08-22 10:01:43"
+    },
+    "output/_work_carousel_feed/pexels/55624c930711f5df.jpg": {
+      "uses": 1,
+      "last": "2026-08-22 10:01:43"
+    },
+    "output/_work_carousel_feed/pexels/65b92ad215c11416.jpg": {
+      "uses": 1,
+      "last": "2026-08-22 10:01:43"
+    },
+    "output/_work_carousel_feed/pexels/b0fa69fa477e3e29.jpg": {
+      "uses": 1,
+      "last": "2026-08-22 10:01:43"
     }
   },
   "log": [
@@ -481,6 +501,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_upbeat_acoustic.mp3"
+    },
+    {
+      "time": "2026-08-22 10:01:43",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20260822_b6a78e4b37.png",
+        "output/_work_carousel_feed/ai/ai_20260822_e6b1a29974.png",
+        "output/_work_carousel_feed/pexels/55624c930711f5df.jpg",
+        "img-channel/vertical/Screenshot_20260814_210030_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260815_142615_Chrome.jpg",
+        "output/_work_carousel_feed/pexels/cf83bda8486aa8eb.jpg",
+        "output/_work_carousel_feed/pexels/65b92ad215c11416.jpg",
+        "output/_work_carousel_feed/pexels/b0fa69fa477e3e29.jpg",
+        "img-channel/vertical/Screenshot_20260814_205936_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203938_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-08-22 10:02:11",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_energetic_clap.mp3"
     }
   ]
 }
