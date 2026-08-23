@@ -11,7 +11,8 @@
     "anvisaaprovanovomedicamentoparadistrofiadeduchennetratamento": 1787144636.6823244,
     "farmciapopularentraemnovafasecomnovasregras": 1787231088.6291473,
     "petloveavananaconsolidaodasadepeteentranomedicamentoprescrit": 1787317513.676246,
-    "anvisaaprovaprimeirogenricodesemaglutidaprincpioativoparadia": 1787403872.3509107
+    "anvisaaprovaprimeirogenricodesemaglutidaprincpioativoparadia": 1787403872.3509107,
+    "primeirogenricodecanetasemagrecedorasaprovadoeadiferenaparao": 1787491251.6842313
   },
   "entries": [
     {
@@ -363,6 +364,30 @@
             "princ",
             "rico",
             "semaglutida"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1787491251.6842313,
+      "date": "2026-08-23 10:20",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio caro finalmente ganha gen\u00e9rico",
+      "stories": [
+        {
+          "key": "primeirogenricodecanetasemagrecedorasaprovadoeadiferenaparao",
+          "title": "Primeiro gen\u00e9rico de canetas emagrecedoras \u00e9 aprovado \u2014 e a diferen\u00e7a para o original n\u00e3o \u00e9 s\u00f3 o pre\u00e7o",
+          "tokens": [
+            "aprovado",
+            "canetas",
+            "diferen",
+            "emagrecedoras",
+            "gen",
+            "original",
+            "para",
+            "pre",
+            "primeiro",
+            "rico"
           ]
         }
       ]
