@@ -35,24 +35,36 @@ def main() -> int:
     if not runs:
         print("nenhuma execucao bem-sucedida" + (f" em {day}" if day else ""))
         return 1
-    run = runs[0]
-    rid = run["databaseId"]
-    print(f"execucao {rid} ({run['createdAt'][:16].replace('T', ' ')} UTC, {run['event']})")
-    tmp = DEST / "_artifact"
-    tmp.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["gh", "run", "download", str(rid), "--repo", REPO, "--dir", str(tmp)],
-                   check=True)
-    # gh already unzips: tmp/pacote-<id>/carousels/<pkg>/...
-    pkgs = sorted(tmp.glob("pacote-*/carousels/carousel_*"))
-    if not pkgs:
-        zips = list(tmp.glob("**/*.zip"))
-        for z in zips:
-            zipfile.ZipFile(z).extractall(z.parent)
-        pkgs = sorted(tmp.glob("**/carousels/carousel_*"))
-    if not pkgs:
-        print("o artefato nao tem pacote (o carrossel nao saiu nesse dia?)")
-        return 1
+    # Several windows run per morning; only one of them builds the package,
+    # the others exit with "already ran today". Walk the successful runs of
+    # the day, newest first, until one carries a carousel.
     import shutil
+    tmp = DEST / "_artifact"
+    pkgs: list[Path] = []
+    for run in runs:
+        rid = run["databaseId"]
+        print(f"execucao {rid} ({run['createdAt'][:16].replace('T', ' ')} UTC, {run['event']})", end=" ")
+        shutil.rmtree(tmp, ignore_errors=True)
+        tmp.mkdir(parents=True, exist_ok=True)
+        r = subprocess.run(["gh", "run", "download", str(rid), "--repo", REPO, "--dir", str(tmp)],
+                           capture_output=True, text=True)
+        if r.returncode != 0:
+            print("— sem artefato"); continue
+        pkgs = sorted(tmp.glob("pacote-*/carousels/carousel_*"))
+        if not pkgs:
+            for z in tmp.glob("**/*.zip"):
+                zipfile.ZipFile(z).extractall(z.parent)
+            pkgs = sorted(tmp.glob("**/carousels/carousel_*"))
+        if pkgs:
+            print("— pacote encontrado"); break
+        print("— sem pacote (execucao sem carrossel)")
+        if not day:
+            # without an explicit day, never walk past the day of the newest run
+            if run["createdAt"][:10] != runs[0]["createdAt"][:10]:
+                break
+    if not pkgs:
+        print("nenhuma execucao com pacote" + (f" em {day}" if day else " hoje"))
+        return 1
     for pkg in pkgs:
         target = DEST / "carousels" / pkg.name
         if target.exists():
