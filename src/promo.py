@@ -267,6 +267,15 @@ def run_oneuse(cfg: Config, *, to_youtube: bool = True,
     failures = 0
     for video in videos:
         print(f"\n[oneuse] {video.name}")
+        # Default: a promo with its own narration gets the channel's captions
+        # and LLM-written texts before it goes out (idempotent via the
+        # sidecar's "captioned" flag). A failure here must not block the post.
+        if cfg.get("promo.auto_caption", True):
+            try:
+                from .oneuse_prep import prepare
+                prepare(cfg, video)
+            except Exception as exc:  # noqa: BLE001
+                print(f"  [prep] failed ({exc}) — publishing without captions")
         results = publish_one(cfg, video, to_youtube=to_youtube,
                               to_instagram=to_instagram)
         attempted = {k: v for k, v in results.items() if v is not None}

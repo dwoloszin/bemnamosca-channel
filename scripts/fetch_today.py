@@ -65,6 +65,10 @@ def main() -> int:
     if not pkgs:
         print("nenhuma execucao com pacote" + (f" em {day}" if day else " hoje"))
         return 1
+    # promos prepared that day (captioned final cut + texts) travel too
+    for pr in tmp.glob("**/promos/*"):
+        dest = DEST / "promos" / pr.name; dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(pr, dest); print(f"-> {dest}")
     for pkg in pkgs:
         target = DEST / "carousels" / pkg.name
         if target.exists():

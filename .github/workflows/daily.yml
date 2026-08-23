@@ -154,6 +154,7 @@ jobs:
           name: pacote-${{ github.run_id }}
           path: |
             output/carousels/**
+            output/promos/**
             output/daily_run.log
           retention-days: 14
           if-no-files-found: ignore

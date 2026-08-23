@@ -498,6 +498,12 @@ promo:
     #PrecoDeMedicamentos #MedicamentoDeAltoCusto #Startups
     #Oncologia #TratamentoOncologico #Cancer #Diabetes #Ozempic #Mounjaro
   oneuse_dir: "videos/oneuse"
+  # Todo video com narracao que entra em videos/oneuse/ e transcrito (Groq
+  # Whisper), recebe a legenda karaoke do canal + marca d'agua, e ganha
+  # titulo/descricao/hashtags escritos pelo LLM a partir da fala, antes de
+  # publicar. O original fica em videos/oneuse/_raw/. false = publica como esta.
+  auto_caption: true
+  auto_caption_tags: []            # hashtags extras sempre presentes (sem #)
   loop_dir: "videos/loop"
   # Avisos antes de subir (nao bloqueiam, so alertam no terminal). No
   # Instagram TODO video de feed vira Reel, e a API so reclama depois de
