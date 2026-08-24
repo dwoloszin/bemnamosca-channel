@@ -12,7 +12,8 @@
     "farmciapopularentraemnovafasecomnovasregras": 1787231088.6291473,
     "petloveavananaconsolidaodasadepeteentranomedicamentoprescrit": 1787317513.676246,
     "anvisaaprovaprimeirogenricodesemaglutidaprincpioativoparadia": 1787403872.3509107,
-    "primeirogenricodecanetasemagrecedorasaprovadoeadiferenaparao": 1787491251.6842313
+    "primeirogenricodecanetasemagrecedorasaprovadoeadiferenaparao": 1787491251.6842313,
+    "insulinaglarginaconheaonovomedicamentoparadiabetesofertadoem": 1787578094.751107
   },
   "entries": [
     {
@@ -388,6 +389,34 @@
             "pre",
             "primeiro",
             "rico"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1787578094.751107,
+      "date": "2026-08-24 10:28",
+      "kind": "carousel",
+      "title": "Sua insulina mudou no posto?",
+      "stories": [
+        {
+          "key": "insulinaglarginaconheaonovomedicamentoparadiabetesofertadoem",
+          "title": "Insulina glargina: conhe\u00e7a o novo medicamento para diabetes ofertado em Bel\u00e9m e saiba quem pode usar | Bel\u00e9m | O Liberal",
+          "tokens": [
+            "bel",
+            "conhe",
+            "diabetes",
+            "glargina",
+            "insulina",
+            "liberal",
+            "medicamento",
+            "novo",
+            "ofertado",
+            "para",
+            "pode",
+            "quem",
+            "saiba",
+            "usar"
           ]
         }
       ]
