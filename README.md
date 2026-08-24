@@ -189,3 +189,8 @@ em sofrimento saem sem o app.
 | ElevenLabs sem crédito | cai para edge-tts (Thalita) sozinho; `python main.py setup` mostra o pool |
 | Instagram `code 190` | token invalidado (troca de senha): gere outro, atualize o secret `INSTAGRAM_ACCESS_TOKEN` |
 | YouTube `uploadLimitExceeded` | quota diária do app Cloud (dividida com outro canal); espera o reset |
+
+
+
+# run this cmd to fetch processed file from todAY
+python scripts\fetch_today.py

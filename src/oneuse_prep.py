@@ -201,6 +201,11 @@ def prepare(cfg: Config, video: Path, extra_tags: list[str] | None = None, *,
     meta = json.loads(sidecar.read_text(encoding="utf-8"))
     meta["captioned"] = bool(burn_captions)
     meta["transcript"] = text
+    from .social_captions import build_tiktok_caption
+    first = re.split(r"(?<=[.!?])", text.strip(), maxsplit=1)[0].strip()
+    meta["tiktok"] = build_tiktok_caption(cfg, meta["title"], first, tags=meta.get("tags", [])[:6])
+    (cfg.output_dir / "promos").mkdir(parents=True, exist_ok=True)
+    (cfg.output_dir / "promos" / (video.stem + ".tiktok.txt")).write_text(meta["tiktok"], encoding="utf-8")
     sidecar.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     final_dir = cfg.output_dir / "promos"; final_dir.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(sidecar, final_dir / sidecar.name)      # texts travel with the video

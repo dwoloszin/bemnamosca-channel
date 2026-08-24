@@ -871,6 +871,12 @@ def make_carousel(cfg: Config, topic: str | None = None,
 
     (pkg / "carousel.txt").write_text(build_caption(cfg, slides, item), encoding="utf-8")
     (pkg / "post.txt").write_text(build_single_post(cfg, slides, item), encoding="utf-8")
+    # TikTok gets its own caption (no links, no drug-brand hashtags) — using
+    # post.txt there got posts locked for "community guidelines violation".
+    from .social_captions import build_tiktok_caption
+    (pkg / "tiktok.txt").write_text(build_tiktok_caption(
+        cfg, slides[0].headline, slides[1].body if len(slides) > 1 else ""),
+        encoding="utf-8")
     (pkg / "meta.json").write_text(json.dumps({
         "created": time.strftime("%Y-%m-%d %H:%M"),
         "headline": item.clean_title,
