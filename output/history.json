@@ -13,7 +13,8 @@
     "petloveavananaconsolidaodasadepeteentranomedicamentoprescrit": 1787317513.676246,
     "anvisaaprovaprimeirogenricodesemaglutidaprincpioativoparadia": 1787403872.3509107,
     "primeirogenricodecanetasemagrecedorasaprovadoeadiferenaparao": 1787491251.6842313,
-    "insulinaglarginaconheaonovomedicamentoparadiabetesofertadoem": 1787578094.751107
+    "insulinaglarginaconheaonovomedicamentoparadiabetesofertadoem": 1787578094.751107,
+    "procondeportoalegrenotificafarmciasainformarempreosporunidad": 1787664450.416885
   },
   "entries": [
     {
@@ -417,6 +418,31 @@
             "quem",
             "saiba",
             "usar"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1787664450.416885,
+      "date": "2026-08-25 10:27",
+      "kind": "carousel",
+      "title": "Pre\u00e7o escondido na caixa do rem\u00e9dio",
+      "stories": [
+        {
+          "key": "procondeportoalegrenotificafarmciasainformarempreosporunidad",
+          "title": "Procon de Porto Alegre notifica farm\u00e1cias a informarem pre\u00e7os por unidade de medida",
+          "tokens": [
+            "alegre",
+            "cias",
+            "farm",
+            "informarem",
+            "medida",
+            "notifica",
+            "por",
+            "porto",
+            "pre",
+            "procon",
+            "unidade"
           ]
         }
       ]
