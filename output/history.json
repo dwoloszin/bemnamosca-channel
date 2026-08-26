@@ -14,7 +14,8 @@
     "anvisaaprovaprimeirogenricodesemaglutidaprincpioativoparadia": 1787403872.3509107,
     "primeirogenricodecanetasemagrecedorasaprovadoeadiferenaparao": 1787491251.6842313,
     "insulinaglarginaconheaonovomedicamentoparadiabetesofertadoem": 1787578094.751107,
-    "procondeportoalegrenotificafarmciasainformarempreosporunidad": 1787664450.416885
+    "procondeportoalegrenotificafarmciasainformarempreosporunidad": 1787664450.416885,
+    "anvisaaprovasegundogenricodesemaglutidaemcanetainjetvelparan": 1787750949.246698
   },
   "entries": [
     {
@@ -443,6 +444,31 @@
             "pre",
             "procon",
             "unidade"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1787750949.246698,
+      "date": "2026-08-26 10:29",
+      "kind": "carousel",
+      "title": "Segundo gen\u00e9rico de semaglutida \u00e9 aprovado",
+      "stories": [
+        {
+          "key": "anvisaaprovasegundogenricodesemaglutidaemcanetainjetvelparan",
+          "title": "Anvisa aprova segundo gen\u00e9rico de semaglutida em caneta injet\u00e1vel - Paran\u00e1 Central",
+          "tokens": [
+            "anvisa",
+            "aprova",
+            "caneta",
+            "central",
+            "gen",
+            "injet",
+            "paran",
+            "rico",
+            "segundo",
+            "semaglutida",
+            "vel"
           ]
         }
       ]
