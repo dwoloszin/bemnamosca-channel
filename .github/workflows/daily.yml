@@ -16,6 +16,8 @@ on:
     - cron: "30 13 * * *"
     - cron: "0 14 * * *"
     - cron: "30 14 * * *"
+    # rede extra: em 27/08 o GitHub nao entregou NENHUMA das janelas da manha
+    - cron: "0 15 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
