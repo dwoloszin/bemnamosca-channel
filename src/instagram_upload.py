@@ -158,9 +158,39 @@ def _git_force_push(repo: str, files: dict[str, Path | str], message: str) -> bo
         shutil.rmtree(tmp, ignore_errors=True)
 
 
+def _stageable(video_path: Path) -> Path:
+    """A copy that fits GitHub's 100 MB push limit, when the original does not.
+
+    26/08: videosPromocional.mp4 (158 MB) hit the limit and the Reel silently
+    became a post-by-hand. A CRF-26 re-encode at the same resolution is
+    indistinguishable on a phone and lands well under the cap; the transcode
+    is cached next to the work files so a retry does not pay it again."""
+    limit = 95 * 1024 * 1024
+    if video_path.stat().st_size <= limit:
+        return video_path
+    from .ffmpeg import ffmpeg_exe
+    import subprocess
+    out = video_path.parent / f"_stage_{video_path.stem}.mp4"
+    if out.exists() and 0 < out.stat().st_size <= limit:
+        return out
+    print(f"  [instagram] {video_path.name} is "
+          f"{video_path.stat().st_size // 1048576} MB (> 95 MB git limit) — compressing a staging copy")
+    r = subprocess.run([ffmpeg_exe(), "-y", "-hide_banner", "-loglevel", "error",
+                        "-i", str(video_path), "-c:v", "libx264", "-preset", "fast",
+                        "-crf", "26", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k",
+                        "-movflags", "+faststart", str(out)],
+                       capture_output=True, text=True, timeout=900)
+    if r.returncode != 0 or not out.exists():
+        print("  [instagram] compression failed — trying the original anyway")
+        return video_path
+    print(f"  [instagram] staging copy: {out.stat().st_size // 1048576} MB")
+    return out
+
+
 def _host_temp_video(video_path: Path) -> tuple[str, str, str] | None:
     """Stage the mp4 in the public media repo via a real git push (the JSON
     APIs cap out far below video sizes). Returns (raw_url, repo, filename)."""
+    video_path = _stageable(Path(video_path))
     h = _gh_headers()
     if not h:
         print("  [instagram] DB_ARCHIVE_GITHUB_TOKEN missing (needed for temp hosting)")
