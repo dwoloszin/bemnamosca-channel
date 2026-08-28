@@ -16,7 +16,8 @@
     "insulinaglarginaconheaonovomedicamentoparadiabetesofertadoem": 1787578094.751107,
     "procondeportoalegrenotificafarmciasainformarempreosporunidad": 1787664450.416885,
     "anvisaaprovasegundogenricodesemaglutidaemcanetainjetvelparan": 1787750949.246698,
-    "muncipesdecubatopodemobtermedicamentosgratuitospelofarmciapo": 1787841061.022981
+    "muncipesdecubatopodemobtermedicamentosgratuitospelofarmciapo": 1787841061.022981,
+    "remdiosvoficarat381maiscarosnobrasilvejareajusteportipodemed": 1787928143.3606014
   },
   "entries": [
     {
@@ -495,6 +496,31 @@
             "pelo",
             "podem",
             "popular"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1787928143.3606014,
+      "date": "2026-08-28 11:42",
+      "kind": "carousel",
+      "title": "Rem\u00e9dios sobem 3,81% este m\u00eas",
+      "stories": [
+        {
+          "key": "remdiosvoficarat381maiscarosnobrasilvejareajusteportipodemed",
+          "title": "Rem\u00e9dios v\u00e3o ficar at\u00e9 3,81% mais caros no Brasil; veja reajuste por tipo de medicamento",
+          "tokens": [
+            "brasil",
+            "caros",
+            "dios",
+            "ficar",
+            "mais",
+            "medicamento",
+            "por",
+            "reajuste",
+            "rem",
+            "tipo",
+            "veja"
           ]
         }
       ]
