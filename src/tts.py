@@ -88,6 +88,16 @@ def synthesize_auto(text: str, out_path: str | Path, cfg, *,
     Start the chain at whichever provider config selects."""
     provider = cfg.get("tts.provider", "edge")
 
+    # Numbers as words: TTS voices (especially an English voice speaking
+    # Portuguese) misread "3,81%" — see src/tts_text.py. Audio and captions
+    # only; titles/descriptions keep the digits.
+    if cfg.get("tts.normalize_numbers", True):
+        try:
+            from .tts_text import normalize_numbers_pt
+            text = normalize_numbers_pt(text)
+        except Exception as exc:  # noqa: BLE001
+            print(f"  [tts] number normalization failed ({exc}) — using raw text")
+
     if provider == "elevenlabs":
         try:
             from .tts_elevenlabs import synthesize_elevenlabs

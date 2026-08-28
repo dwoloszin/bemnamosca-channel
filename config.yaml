@@ -575,6 +575,9 @@ tts:
   voice: "pt-BR-ThalitaMultilingualNeural"   # fallback edge-tts: a mais natural das pt-BR gratis
   block_gap_seconds: 0.35          # pausa entre blocos da narracao (0 = colado)
   rate: "+8%"                      # speak a little faster for shorts energy
+  # "3,81%" vira "tres virgula oitenta e um por cento" antes da voz (28/08 a
+  # Alice falou a virgula errada). So audio+legenda; titulos mantem algarismos.
+  normalize_numbers: true
   volume: "+0%"
 
 # --------------------------------------------------------------------------

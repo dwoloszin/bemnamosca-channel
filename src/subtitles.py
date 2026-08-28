@@ -288,7 +288,7 @@ def build_ass(
     if cfg.get("subtitles.emphasis_enabled", True):
         pats = []
         if cfg.get("subtitles.emphasis_auto", True):
-            pats.append(r"[0-9]|R[$]|%")
+            pats.append(r"[0-9]|R[$]|%|por cento|reais|centavos|vírgula")
         words_cfg = [str(x).strip() for x in (cfg.get("subtitles.emphasis_words", []) or []) if str(x).strip()]
         if words_cfg:
             pats.append("^[^0-9A-Za-zÀ-ÿ]*(" + "|".join(re.escape(x) for x in words_cfg) + ")[^0-9A-Za-zÀ-ÿ]*$")

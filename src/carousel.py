@@ -226,7 +226,10 @@ For EACH slide return:
                 like speech: at most ONE ellipsis in the whole script, only
                 for a real dramatic pause, and never inside a sentence to
                 split it. No bullet rhythm, no headline voice: flowing
-                sentences that connect to each other.
+                sentences that connect to each other. In the NARRATION write
+                every number OUT IN WORDS as a Brazilian says it ("três vírgula
+                oitenta e um por cento", "mil e duzentos reais") — digits stay
+                in headline and body only.
 - "keyword"   : 2-4 words describing a visual for this slide, IN ENGLISH.
 
 Rules: strictly factual to the story, invent no numbers, no medical advice,
