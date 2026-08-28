@@ -23,6 +23,13 @@ if exist ".venv\Scripts\python.exe" (
 
 set "LOG=output\daily_log.txt"
 set "RUNLOG=%TEMP%\bemnamosca_run.txt"
+
+REM Retaguarda do GitHub Actions: antes de rodar, puxa o estado que o runner
+REM gravou. Se o GitHub ja publicou hoje, daily_state.json diz "feito" e o
+REM `python main.py daily` termina sem publicar nada — por isso esta tarefa
+REM pode ficar LIGADA junto com os crons sem risco de post duplicado.
+git pull --rebase origin main >nul 2>&1
+
 if not exist "output" mkdir "output"
 
 echo ===== %date% %time% ===== > "%RUNLOG%"
