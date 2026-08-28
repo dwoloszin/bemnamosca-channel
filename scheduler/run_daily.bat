@@ -28,7 +28,9 @@ REM Retaguarda do GitHub Actions: antes de rodar, puxa o estado que o runner
 REM gravou. Se o GitHub ja publicou hoje, daily_state.json diz "feito" e o
 REM `python main.py daily` termina sem publicar nada — por isso esta tarefa
 REM pode ficar LIGADA junto com os crons sem risco de post duplicado.
-git pull --rebase origin main >nul 2>&1
+REM (fetch+checkout em vez de pull: funciona mesmo com o working tree sujo)
+git fetch origin main >nul 2>&1
+git checkout origin/main -- output/daily_state.json output/loop_rotation.json output/schedule_state.json output/history.json output/hook_history.json >nul 2>&1
 
 if not exist "output" mkdir "output"
 
@@ -48,6 +50,11 @@ powershell -NoProfile -Command ^
 set "RC=%errorlevel%"
 
 type "%RUNLOG%" >> "%LOG%"
+
+REM Se ESTA maquina publicou algo agora, devolve o estado para o repositorio —
+REM senao o runner de amanha nao sabe do que saiu hoje. Melhor esforco.
+git add -f output/daily_state.json output/loop_rotation.json output/schedule_state.json output/history.json output/hook_history.json >nul 2>&1
+git commit -m "state: backstop local %date% [skip ci]" >nul 2>&1 && git push >nul 2>&1
 
 REM Falhou de duas formas possiveis: codigo de saida != 0, ou uma plataforma
 REM especifica que falhou sem derrubar a execucao inteira (o oneuse arquiva o
