@@ -12,12 +12,15 @@ name: daily
 
 on:
   schedule:
-    - cron: "0 13 * * *"
-    - cron: "30 13 * * *"
-    - cron: "0 14 * * *"
-    - cron: "30 14 * * *"
-    # rede extra: em 27/08 o GitHub nao entregou NENHUMA das janelas da manha
-    - cron: "0 15 * * *"
+    # Minutos "quebrados" de proposito: :00 e :30 sao os minutos mais
+    # congestionados do agendador do GitHub, e em 27-28/08 as janelas da manha
+    # chegaram com 3-4 h de atraso (ou nunca). Minutos fora do pico melhoram
+    # muito a entrega. Horarios ~10:17-12:47 em Brasilia.
+    - cron: "17 13 * * *"
+    - cron: "47 13 * * *"
+    - cron: "17 14 * * *"
+    - cron: "47 14 * * *"
+    - cron: "47 15 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
