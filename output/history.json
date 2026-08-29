@@ -17,7 +17,8 @@
     "procondeportoalegrenotificafarmciasainformarempreosporunidad": 1787664450.416885,
     "anvisaaprovasegundogenricodesemaglutidaemcanetainjetvelparan": 1787750949.246698,
     "muncipesdecubatopodemobtermedicamentosgratuitospelofarmciapo": 1787841061.022981,
-    "remdiosvoficarat381maiscarosnobrasilvejareajusteportipodemed": 1787928143.3606014
+    "remdiosvoficarat381maiscarosnobrasilvejareajusteportipodemed": 1787928143.3606014,
+    "novomedicamentoparaanemiahemolticaautoimuneaprovadopelaanvis": 1788009185.7075658
   },
   "entries": [
     {
@@ -521,6 +522,30 @@
             "rem",
             "tipo",
             "veja"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1788009185.7075658,
+      "date": "2026-08-29 10:13",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio novo e de alto custo",
+      "stories": [
+        {
+          "key": "novomedicamentoparaanemiahemolticaautoimuneaprovadopelaanvis",
+          "title": "Novo medicamento para anemia hemol\u00edtica autoimune \u00e9 aprovado pela Anvisa",
+          "tokens": [
+            "anemia",
+            "anvisa",
+            "aprovado",
+            "autoimune",
+            "hemol",
+            "medicamento",
+            "novo",
+            "para",
+            "pela",
+            "tica"
           ]
         }
       ]
