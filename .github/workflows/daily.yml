@@ -12,15 +12,17 @@ name: daily
 
 on:
   schedule:
-    # Minutos "quebrados" de proposito: :00 e :30 sao os minutos mais
-    # congestionados do agendador do GitHub, e em 27-28/08 as janelas da manha
-    # chegaram com 3-4 h de atraso (ou nunca). Minutos fora do pico melhoram
-    # muito a entrega. Horarios ~10:17-12:47 em Brasilia.
-    - cron: "17 13 * * *"
-    - cron: "47 13 * * *"
-    - cron: "17 14 * * *"
-    - cron: "47 14 * * *"
-    - cron: "47 15 * * *"
+    # Comecando as 8h de Brasilia (11h UTC): o agendador do GitHub entrega
+    # estas janelas com atrasos de ate 3-4 h (visto em 27-29/08, mesmo em
+    # minutos fora de pico), e o primeiro video PRECISA estar no ar antes das
+    # ~11:40 para agendar o slot das 12:00 no YouTube. Comecando cedo, ate uma
+    # janela atrasada chega a tempo. Minutos quebrados de proposito.
+    - cron: "7 11 * * *"
+    - cron: "37 11 * * *"
+    - cron: "7 12 * * *"
+    - cron: "37 12 * * *"
+    - cron: "7 13 * * *"
+    - cron: "7 14 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

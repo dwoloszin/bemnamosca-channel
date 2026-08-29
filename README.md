@@ -59,7 +59,7 @@ rodízio, normalização a -14 LUFS, barra de progresso, guard de 58 s.
 
 ### GitHub Actions (principal)
 
-`.github/workflows/daily.yml` dispara às **10:00, 10:30, 11:00 e 11:30** (Brasília).
+`.github/workflows/daily.yml` dispara às **8:07, 8:37, 9:07, 9:37, 10:07 e 11:07** (Brasília) — cedo de propósito: o agendador do GitHub atrasa, e o primeiro vídeo precisa subir antes das ~11:40 para pegar o slot das 12:00.
 Cada disparo é uma máquina nova; `python main.py daily` lê
 `output/daily_state.json` (commitado de volta no repo) e só executa as etapas
 que ainda não saíram hoje — o primeiro disparo que dá certo faz tudo, os
