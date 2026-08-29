@@ -58,3 +58,27 @@ def build_tiktok_caption(cfg: Config, headline: str, fact: str = "",
         if len(picked) >= 6:
             break
     return (body + "\n\n" + " ".join(f"#{t}" for t in picked)).strip()[:2200]
+
+
+def build_linkedin_page_caption(cfg: Config, headline: str, fact: str = "",
+                                question: str = "", tags: list[str] | None = None) -> str:
+    """Company-page post for the day's VIDEO. Deliberately different from
+    linkedin.txt (the personal-profile text): if page and profile post the
+    same words on the same day, LinkedIn suppresses one of them. Short, no
+    URL in the body (external links are down-ranked), a question for the
+    comments, and a few hashtags — drug/ingredient tags are fine here, this
+    is not TikTok's moderation."""
+    head = headline.strip().rstrip(".")
+    parts = [head + ("" if head.endswith(("?", "!", "…")) else ".")]
+    if fact.strip():
+        parts.append(fact.strip())
+    parts.append(question.strip() or "Você compara o preço antes de comprar?")
+    picked: list[str] = []
+    for t in (tags or []) + ["medicamentos", "farmacia", "saude", "economia"]:
+        c = _clean_tag(t)
+        if c and c not in picked:
+            picked.append(c)
+        if len(picked) >= 4:
+            break
+    body = "\n\n".join(parts) + "\n\n" + " ".join(f"#{t}" for t in picked)
+    return body.strip()[:1800]

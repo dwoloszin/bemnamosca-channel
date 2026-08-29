@@ -880,6 +880,12 @@ def make_carousel(cfg: Config, topic: str | None = None,
     (pkg / "tiktok.txt").write_text(build_tiktok_caption(
         cfg, slides[0].headline, slides[1].body if len(slides) > 1 else ""),
         encoding="utf-8")
+    # Company page gets its own short text for the video — never the same
+    # words as linkedin.txt (profile), or LinkedIn suppresses one of the two.
+    from .social_captions import build_linkedin_page_caption
+    (pkg / "linkedin_page.txt").write_text(build_linkedin_page_caption(
+        cfg, slides[0].headline, slides[1].body if len(slides) > 1 else ""),
+        encoding="utf-8")
     (pkg / "meta.json").write_text(json.dumps({
         "created": time.strftime("%Y-%m-%d %H:%M"),
         "headline": item.clean_title,
