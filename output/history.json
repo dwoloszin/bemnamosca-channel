@@ -18,7 +18,8 @@
     "anvisaaprovasegundogenricodesemaglutidaemcanetainjetvelparan": 1787750949.246698,
     "muncipesdecubatopodemobtermedicamentosgratuitospelofarmciapo": 1787841061.022981,
     "remdiosvoficarat381maiscarosnobrasilvejareajusteportipodemed": 1787928143.3606014,
-    "novomedicamentoparaanemiahemolticaautoimuneaprovadopelaanvis": 1788009185.7075658
+    "novomedicamentoparaanemiahemolticaautoimuneaprovadopelaanvis": 1788009185.7075658,
+    "anvisaaprovanovomedicamentoparainsniavejacomofuncionaanotcia": 1788088903.346671
   },
   "entries": [
     {
@@ -546,6 +547,33 @@
             "para",
             "pela",
             "tica"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1788088903.346671,
+      "date": "2026-08-30 08:21",
+      "kind": "carousel",
+      "title": "Novo rem\u00e9dio para ins\u00f4nia \u00e9 aprovado",
+      "stories": [
+        {
+          "key": "anvisaaprovanovomedicamentoparainsniavejacomofuncionaanotcia",
+          "title": "Anvisa aprova novo medicamento para ins\u00f4nia; veja como funciona - A Not\u00edcia do Cear\u00e1",
+          "tokens": [
+            "anvisa",
+            "aprova",
+            "cear",
+            "cia",
+            "como",
+            "funciona",
+            "ins",
+            "medicamento",
+            "nia",
+            "not",
+            "novo",
+            "para",
+            "veja"
           ]
         }
       ]
