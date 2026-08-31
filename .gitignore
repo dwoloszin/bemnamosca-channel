@@ -16,8 +16,9 @@ __pycache__/
 venv/
 
 # stock/media caches
-assets/music/*
-!assets/music/README.md
+# trilhas do canal SAO versionadas (o runner precisa delas; 23-31/08 os videos
+# do GitHub sairam SEM musica porque so o README estava no repo)
+!assets/music/
 assets/images/*
 !assets/images/README.md
 assets/compare/*
@@ -48,3 +49,5 @@ output/amostras_voz/
 
 # app demo videos (sources for promos; too large for git — keep local)
 videos/*.mp4
+
+!assets/sfx/

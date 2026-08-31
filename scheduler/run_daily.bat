@@ -54,7 +54,9 @@ type "%RUNLOG%" >> "%LOG%"
 REM Se ESTA maquina publicou algo agora, devolve o estado para o repositorio —
 REM senao o runner de amanha nao sabe do que saiu hoje. Melhor esforco.
 git add -f output/daily_state.json output/loop_rotation.json output/schedule_state.json output/history.json output/hook_history.json >nul 2>&1
-git commit -m "state: backstop local %date% [skip ci]" >nul 2>&1 && git push >nul 2>&1
+git commit -m "state: backstop local %date% [skip ci]" >nul 2>&1
+git pull --rebase --autostash origin main >>"%RUNLOG%" 2>&1
+git push origin main >>"%RUNLOG%" 2>&1 || echo AVISO: push do estado FALHOU - GitHub pode publicar em dobro amanha >>"%RUNLOG%"
 
 REM Falhou de duas formas possiveis: codigo de saida != 0, ou uma plataforma
 REM especifica que falhou sem derrubar a execucao inteira (o oneuse arquiva o
