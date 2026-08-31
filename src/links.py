@@ -17,7 +17,7 @@ from .config import Config
 # above and apart, because in a YouTube description the FIRST link takes
 # almost every click and four social links right under it only dilute.
 _LABELS = {"youtube": "▶️ YouTube", "instagram": "📸 Instagram",
-           "tiktok": "🎵 TikTok", "linkedin": "💼 LinkedIn"}
+           "tiktok": "🎵 TikTok", "linkedin": "💼 LinkedIn", "facebook": "👍 Facebook"}
 
 
 def app_url(cfg: Config, source: str, *, content: str | None = None) -> str:

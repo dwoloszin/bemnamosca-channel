@@ -7,7 +7,7 @@ O PC fica como backup.
 
 > O app promovido é o [Bem na Mosca](https://bemnamosca.com/), um buscador de
 > preços de medicamentos. Perfis: [@bemnamosc4](https://www.instagram.com/bemnamosc4)
-> no Instagram, [Bem na Mosca](https://www.youtube.com/@bemnamosc4) no YouTube.
+> no Instagram, [YouTube](https://www.youtube.com/@bemnamosc4) e [Facebook](https://www.facebook.com/bemnamosc4).
 
 ---
 
