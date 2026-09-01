@@ -20,7 +20,8 @@
     "remdiosvoficarat381maiscarosnobrasilvejareajusteportipodemed": 1787928143.3606014,
     "novomedicamentoparaanemiahemolticaautoimuneaprovadopelaanvis": 1788009185.7075658,
     "anvisaaprovanovomedicamentoparainsniavejacomofuncionaanotcia": 1788088903.346671,
-    "anvisaaprovaylumcnovacanetadesemaglutidadaemsparatratamentod": 1788175475.9762533
+    "anvisaaprovaylumcnovacanetadesemaglutidadaemsparatratamentod": 1788175475.9762533,
+    "oministriodasadeestconsiderandoaumentarovalordoreembolsodose": 1788261801.7182188
   },
   "entries": [
     {
@@ -600,6 +601,33 @@
             "tipo",
             "tratamento",
             "ylum"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1788261801.7182188,
+      "date": "2026-09-01 08:23",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio de alto custo",
+      "stories": [
+        {
+          "key": "oministriodasadeestconsiderandoaumentarovalordoreembolsodose",
+          "title": "O Minist\u00e9rio da Sa\u00fade est\u00e1 considerando aumentar o valor do reembolso do seguro de sa\u00fade para medicamentos especializado",
+          "tokens": [
+            "alto",
+            "aumentar",
+            "considerando",
+            "custo",
+            "especializados",
+            "est",
+            "medicamentos",
+            "minist",
+            "para",
+            "reembolso",
+            "rio",
+            "seguro",
+            "valor"
           ]
         }
       ]
