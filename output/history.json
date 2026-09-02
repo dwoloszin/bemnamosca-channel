@@ -21,7 +21,8 @@
     "novomedicamentoparaanemiahemolticaautoimuneaprovadopelaanvis": 1788009185.7075658,
     "anvisaaprovanovomedicamentoparainsniavejacomofuncionaanotcia": 1788088903.346671,
     "anvisaaprovaylumcnovacanetadesemaglutidadaemsparatratamentod": 1788175475.9762533,
-    "oministriodasadeestconsiderandoaumentarovalordoreembolsodose": 1788261801.7182188
+    "oministriodasadeestconsiderandoaumentarovalordoreembolsodose": 1788261801.7182188,
+    "atrasosnaatualizaodalistademedicamentoscobertospeloplanodesa": 1788348269.368594
   },
   "entries": [
     {
@@ -628,6 +629,31 @@
             "rio",
             "seguro",
             "valor"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1788348269.368594,
+      "date": "2026-09-02 08:24",
+      "kind": "carousel",
+      "title": "Plano n\u00e3o cobre seu rem\u00e9dio?",
+      "stories": [
+        {
+          "key": "atrasosnaatualizaodalistademedicamentoscobertospeloplanodesa",
+          "title": "Atrasos na atualiza\u00e7\u00e3o da lista de medicamentos cobertos pelo plano de sa\u00fade: aumentando o \u00f4nus para os pacientes.",
+          "tokens": [
+            "atrasos",
+            "atualiza",
+            "aumentando",
+            "cobertos",
+            "lista",
+            "medicamentos",
+            "nus",
+            "pacientes",
+            "para",
+            "pelo",
+            "plano"
           ]
         }
       ]
