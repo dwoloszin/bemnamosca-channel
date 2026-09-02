@@ -188,12 +188,12 @@ product:
   # verdadeiro, mas nao da razao nenhuma para abrir o app agora. Esta frase e
   # o argumento de conversao mais forte do proprio material da marca.
   cta_reason: >-
-    De graça você já vê o tamanho da economia. Assinando, descobre em qual
+    No app você vê o tamanho da economia. Assinando, descobre em qual
     farmácia ela está — e cada nota fiscal que você importa vira desconto na
     renovação.
   bridge:
     enabled: true                  # false = volta a ser canal de noticia puro
-    cta: "No Bem na Mosca você vê de graça quanto dá para economizar. Assinando, descobre em qual farmácia."
+    cta: "No Bem na Mosca você vê quanto dá para economizar. Assinando, descobre em qual farmácia."
     # Se QUALQUER um destes termos aparecer na noticia, o pitch e desligado no
     # codigo — o modelo nem chega a ver a instrucao de fechar com o produto.
     # Existe porque pedir no prompt nao bastou: num teste o modelo recusou
@@ -607,8 +607,6 @@ subtitles:
   emphasis_color: "&H001050D0"     # laranja do logo (#D05010 em BGR)
   emphasis_scale: 118
   emphasis_words:
-    - "grátis"
-    - "gratuito"
     - "economizar"
     - "economia"
     - "barato"

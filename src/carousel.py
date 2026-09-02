@@ -182,9 +182,13 @@ not mention any app or product; the brand appears only in slides 4-5:
  2 "noticia"   — what actually happened, told straight and factually. Who, what, when.
  3 "impacto"   — re-hook line, then what this means for the viewer: pocket or
                  routine, in concrete terms. Still the story. No product yet.
- 4 "solucao"   — present Bem na Mosca in one breath: what it is (a free price
-                 finder for medicines) and the ONE feature that answers slide 3.
+ 4 "solucao"   — present Bem na Mosca in one breath: what it is (a price finder
+                 for medicines) and the ONE feature that answers slide 3.
                  Plain and confident. No hype words, no urgency, no superlatives.
+                 NEVER call the app "gratuito", "grátis" or "de graça": the free
+                 tier shows the SIZE of the saving, the subscription shows WHERE —
+                 calling it free would promise more than the free tier delivers.
+                 If pricing comes up, state that split; otherwise omit it.
  5 "conclusao" — how to use that feature (what the person taps, in order), PAY OFF
                  the open loop from slide 1 by simply DELIVERING it ("Como prometi:
                  ..." is fine; never "pagar a promessa" or any talk about the
