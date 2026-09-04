@@ -23,7 +23,8 @@
     "anvisaaprovaylumcnovacanetadesemaglutidadaemsparatratamentod": 1788175475.9762533,
     "oministriodasadeestconsiderandoaumentarovalordoreembolsodose": 1788261801.7182188,
     "atrasosnaatualizaodalistademedicamentoscobertospeloplanodesa": 1788348269.368594,
-    "ministriodasadeautorizaadesodefarmciadealagoasaoprogramafarm": 1788434714.620832
+    "ministriodasadeautorizaadesodefarmciadealagoasaoprogramafarm": 1788434714.620832,
+    "anpolistemmaisde60farmciasondepossvelretirarmedicamentosdegr": 1788521216.443191
   },
   "entries": [
     {
@@ -678,6 +679,33 @@
             "popular",
             "programa",
             "rio"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1788521216.443191,
+      "date": "2026-09-04 08:26",
+      "kind": "carousel",
+      "title": "Pagando caro no rem\u00e9dio sem precisar?",
+      "stories": [
+        {
+          "key": "anpolistemmaisde60farmciasondepossvelretirarmedicamentosdegr",
+          "title": "An\u00e1polis tem mais de 60 farm\u00e1cias onde \u00e9 poss\u00edvel retirar medicamentos de gra\u00e7a; veja a lista",
+          "tokens": [
+            "cias",
+            "farm",
+            "gra",
+            "lista",
+            "mais",
+            "medicamentos",
+            "onde",
+            "polis",
+            "poss",
+            "retirar",
+            "tem",
+            "veja",
+            "vel"
           ]
         }
       ]
