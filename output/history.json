@@ -24,7 +24,8 @@
     "oministriodasadeestconsiderandoaumentarovalordoreembolsodose": 1788261801.7182188,
     "atrasosnaatualizaodalistademedicamentoscobertospeloplanodesa": 1788348269.368594,
     "ministriodasadeautorizaadesodefarmciadealagoasaoprogramafarm": 1788434714.620832,
-    "anpolistemmaisde60farmciasondepossvelretirarmedicamentosdegr": 1788521216.443191
+    "anpolistemmaisde60farmciasondepossvelretirarmedicamentosdegr": 1788521216.443191,
+    "anvisaliberaremdioexperimentalparalitosousapipocamoderna": 1788607348.8406136
   },
   "entries": [
     {
@@ -706,6 +707,30 @@
             "tem",
             "veja",
             "vel"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1788607348.8406136,
+      "date": "2026-09-05 08:22",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio experimental liberado pela Anvisa",
+      "stories": [
+        {
+          "key": "anvisaliberaremdioexperimentalparalitosousapipocamoderna",
+          "title": "Anvisa libera rem\u00e9dio experimental para Lito Sousa - Pipoca Moderna",
+          "tokens": [
+            "anvisa",
+            "dio",
+            "experimental",
+            "libera",
+            "lito",
+            "moderna",
+            "para",
+            "pipoca",
+            "rem",
+            "sousa"
           ]
         }
       ]
