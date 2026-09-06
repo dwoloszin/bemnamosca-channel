@@ -25,7 +25,8 @@
     "atrasosnaatualizaodalistademedicamentoscobertospeloplanodesa": 1788348269.368594,
     "ministriodasadeautorizaadesodefarmciadealagoasaoprogramafarm": 1788434714.620832,
     "anpolistemmaisde60farmciasondepossvelretirarmedicamentosdegr": 1788521216.443191,
-    "anvisaliberaremdioexperimentalparalitosousapipocamoderna": 1788607348.8406136
+    "anvisaliberaremdioexperimentalparalitosousapipocamoderna": 1788607348.8406136,
+    "farmciapopulartemnovasregrasem2026vejamedicamentosgratuitose": 1788693762.8752854
   },
   "entries": [
     {
@@ -731,6 +732,32 @@
             "pipoca",
             "rem",
             "sousa"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1788693762.8752854,
+      "date": "2026-09-06 08:22",
+      "kind": "carousel",
+      "title": "Voc\u00ea paga por rem\u00e9dio gratuito?",
+      "stories": [
+        {
+          "key": "farmciapopulartemnovasregrasem2026vejamedicamentosgratuitose",
+          "title": "Farm\u00e1cia Popular tem novas regras em 2026; veja medicamentos gratuitos e como retirar",
+          "tokens": [
+            "2026",
+            "cia",
+            "como",
+            "farm",
+            "gratuitos",
+            "medicamentos",
+            "novas",
+            "popular",
+            "regras",
+            "retirar",
+            "tem",
+            "veja"
           ]
         }
       ]
