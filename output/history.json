@@ -26,7 +26,8 @@
     "ministriodasadeautorizaadesodefarmciadealagoasaoprogramafarm": 1788434714.620832,
     "anpolistemmaisde60farmciasondepossvelretirarmedicamentosdegr": 1788521216.443191,
     "anvisaliberaremdioexperimentalparalitosousapipocamoderna": 1788607348.8406136,
-    "farmciapopulartemnovasregrasem2026vejamedicamentosgratuitose": 1788693762.8752854
+    "farmciapopulartemnovasregrasem2026vejamedicamentosgratuitose": 1788693762.8752854,
+    "casolitosousaanvisaautorizaimportaodemedicamentondmais": 1788780358.0937874
   },
   "entries": [
     {
@@ -758,6 +759,28 @@
             "retirar",
             "tem",
             "veja"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1788780358.0937874,
+      "date": "2026-09-07 08:25",
+      "kind": "carousel",
+      "title": "Importar rem\u00e9dio caro pela Anvisa",
+      "stories": [
+        {
+          "key": "casolitosousaanvisaautorizaimportaodemedicamentondmais",
+          "title": "Caso Lito Sousa: Anvisa autoriza importa\u00e7\u00e3o de medicamento - ND Mais",
+          "tokens": [
+            "anvisa",
+            "autoriza",
+            "caso",
+            "importa",
+            "lito",
+            "mais",
+            "medicamento",
+            "sousa"
           ]
         }
       ]
