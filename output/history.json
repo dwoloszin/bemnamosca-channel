@@ -30,7 +30,8 @@
     "casolitosousaanvisaautorizaimportaodemedicamentondmais": 1788780358.0937874,
     "thiagodosreiscandidatoadeputadofederalpropereajusteintegrald": 1788866746.2167444,
     "anvisaaprovagenricosparadiabeteseobesidadeenovomedicamentopa": 1788953078.8449287,
-    "mxicobuscaexperinciadosusparaestruturarserviouniversaldesade": 1789039497.7368882
+    "mxicobuscaexperinciadosusparaestruturarserviouniversaldesade": 1789039497.7368882,
+    "anvisaaprovanovasindicaesparamedicamentousadocontracncerdema": 1789125910.221783
   },
   "entries": [
     {
@@ -861,6 +862,32 @@
             "sus",
             "universal",
             "xico"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1789125910.221783,
+      "date": "2026-09-11 08:25",
+      "kind": "carousel",
+      "title": "Novas regras para rem\u00e9dios de c\u00e2ncer",
+      "stories": [
+        {
+          "key": "anvisaaprovanovasindicaesparamedicamentousadocontracncerdema",
+          "title": "Anvisa aprova novas indica\u00e7\u00f5es para medicamento usado contra c\u00e2ncer de mama - Jornal Noroeste",
+          "tokens": [
+            "anvisa",
+            "aprova",
+            "contra",
+            "indica",
+            "jornal",
+            "mama",
+            "medicamento",
+            "ncer",
+            "noroeste",
+            "novas",
+            "para",
+            "usado"
           ]
         }
       ]
