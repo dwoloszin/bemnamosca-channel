@@ -156,8 +156,10 @@ _SCREEN_TOPIC_WORDS: dict[str, tuple[str, ...]] = {
     "protetor":  ("protetor solar", "filtro solar", "fps", "sol "),
     "solar":     ("protetor solar", "filtro solar", "fps"),
     "creme":     ("creme", "anti-idade", "antiidade", "skincare", "dermocosm", "pele"),
-    "antiidade": ("anti-idade", "antiidade", "skincare", "rugas"),
+    "antirrugas": ("antirrugas", "anti-idade", "antiidade", "rugas"),
+    "hidratante": ("hidratante", "hidratacao"),
     "colageno":  ("colageno", "acido hialuronico", "hialuronico"),
+    "capilar":   ("capilar", "cabelo", "shampoo", "condicionador", "queda de cabelo"),
 }
 
 
