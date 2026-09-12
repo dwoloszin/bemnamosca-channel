@@ -1,12 +1,13 @@
 # Bem na Mosca — canal de conteúdo automático
 
-Rotina diária que transforma **a notícia do dia sobre medicamentos** em um Short
+Rotina diária que transforma **a notícia do dia sobre produtos de farmácia**
+(medicamentos, suplementos como whey/creatina/vitaminas, dermocosméticos) em um Short
 vertical narrado (YouTube + Instagram Reels), um card para o LinkedIn e um
 pacote para postagem manual — e publica sozinha, todo dia, no GitHub Actions.
 O PC fica como backup.
 
 > O app promovido é o [Bem na Mosca](https://bemnamosca.com/), um buscador de
-> preços de medicamentos. Perfis: [@bemnamosc4](https://www.instagram.com/bemnamosc4)
+> preços de medicamentos e produtos de farmácia. Perfis: [@bemnamosc4](https://www.instagram.com/bemnamosc4)
 > no Instagram, [YouTube](https://www.youtube.com/@bemnamosc4) e [Facebook](https://www.facebook.com/bemnamosc4).
 
 ---

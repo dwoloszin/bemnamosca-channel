@@ -44,7 +44,10 @@ channel:
 # THEME — what the channel is about. Change these to pivot to any topic.
 # --------------------------------------------------------------------------
 theme:
-  topic: "medicamentos de alto custo"
+  # 12/09: nicho ampliado alem de remedios — dermocosmeticos (creme facial,
+  # protetor solar) e suplementos de academia (whey, creatina, vitaminas)
+  # tambem sao vendidos em farmacia e o app ja indexa esses produtos.
+  topic: "medicamentos, suplementos e produtos de farmácia"
   # Search terms used to find news + stock media.
   keywords:
     - "medicamento de alto custo"
@@ -52,6 +55,9 @@ theme:
     - "farmacia popular"
     - "remedio caro"
     - "economizar em medicamentos"
+    - "whey protein creatina"
+    - "suplemento alimentar"
+    - "dermocosmetico protetor solar"
   # Google News searches (via SERPER_API_KEYS -> SERPAPI_API_KEYS pools).
   # Angulos que fazem o publico parar de rolar: preco, direito, economia.
   # Os resultados sao noticias REAIS indexadas — nunca inventadas.
@@ -64,6 +70,13 @@ theme:
     - "farmacia popular programa medicamentos"
     - "reajuste preco remedios Brasil"
     - "tratamento de alto custo plano de saude"
+    # Nichos de farmacia alem de remedio (12/09): suplementos e dermocosmeticos.
+    # Angulo continua o mesmo do canal — preco, estudo serio, regulacao.
+    - "creatina estudo beneficio preco"
+    - "whey protein preco comparacao qualidade"
+    - "suplemento alimentar ANVISA regra"
+    - "vitamina suplemento academia estudo"
+    - "protetor solar dermocosmetico preco farmacia"
   # RESERVA: usadas so quando TODAS as noticias do dia ja foram cobertas.
   # O objetivo e nunca pular um dia — se nao ha pauta de preco/regulacao,
   # vale uma descoberta ou um tema de saude que traga gente para a plataforma.
@@ -76,6 +89,8 @@ theme:
     - "avanco no tratamento de cancer"
     - "saude publica Brasil noticia hoje"
     - "novo medicamento pesquisa clinica"
+    - "creatina pesquisa nova descoberta"
+    - "skincare cuidado com a pele dermatologista"
   # Reddit tem pouco volume nesse tema em portugues; as listas TOP 5 vao se
   # apoiar nas noticias. Esvazie a lista se as fontes vierem fora de contexto.
   subreddits:
@@ -86,6 +101,10 @@ theme:
     - "https://news.google.com/rss/search?q=%22medicamento+de+alto+custo%22+OR+%22pre%C3%A7o+de+medicamentos%22&hl=pt-BR&gl=BR&ceid=BR:pt-419"
     - "https://news.google.com/rss/search?q=ANVISA+medicamento+OR+%22farm%C3%A1cia+popular%22&hl=pt-BR&gl=BR&ceid=BR:pt-419"
     - "https://news.google.com/rss/search?q=CMED+reajuste+pre%C3%A7o+rem%C3%A9dio&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+    # Suplementos (whey/creatina/vitaminas) e dermocosmeticos — nichos de
+    # farmacia adicionados em 12/09.
+    - "https://news.google.com/rss/search?q=creatina+OR+%22whey+protein%22+OR+%22suplemento+alimentar%22&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+    - "https://news.google.com/rss/search?q=%22protetor+solar%22+OR+dermocosm%C3%A9tico+OR+skincare&hl=pt-BR&gl=BR&ceid=BR:pt-419"
   # Skip a story if its headline matches none of these (case-insensitive).
   # Empty list = accept everything the feeds return.
   must_match_any:
@@ -100,6 +119,21 @@ theme:
     - "tratamento"
     - "saude"
     - "saúde"
+    # nichos ampliados 12/09 (sem "creme" nem "academia" sozinhos: passam
+    # manchete de culinaria e de Academia de Letras)
+    - "creatina"
+    - "whey"
+    - "suplemento"
+    - "vitamina"
+    - "proteina"
+    - "proteína"
+    - "colageno"
+    - "colágeno"
+    - "dermocosm"
+    - "protetor solar"
+    - "skincare"
+    - "cosmetic"
+    - "cosmétic"
   # Never publish a story whose headline contains any of these.
   # Saude e tema sensivel: bloqueia promessa de cura, automedicacao e golpes.
   block_words:
@@ -110,6 +144,9 @@ theme:
     - "golpe"
     - "falsificado"
     - "emagrecer rapido"
+    # suplemento atrai pauta de doping/anabolizante — adjacencia ruim para a marca
+    - "anabolizante"
+    - "doping"
 
 # --------------------------------------------------------------------------
 # SCRIPT — how the narration is written.
@@ -409,10 +446,11 @@ carousel:
 # --------------------------------------------------------------------------
 linkedin:
   enabled: true
-  # Telas do app que aparecem no card, em rodizio por dia. Lista curada A MAO
-  # e so com REMEDIOS: o seletor do carrossel escolhe por palavra-chave e ja
-  # colocou perfume e creme facial num post sobre medicamento prescrito.
-  # Quando tirar screenshots novas de remedios, acrescente aqui.
+  # Telas do app que aparecem no card, em rodizio por dia. Lista curada A MAO:
+  # o seletor automatico escolhia por palavra-chave e ja colocou perfume num
+  # post sobre medicamento prescrito. Com o nicho ampliado (12/09), telas de
+  # busca de CREATINA / WHEY / PROTETOR SOLAR sao bem-vindas aqui — tire o
+  # screenshot no app e acrescente o nome do arquivo nesta lista.
   screens:
     - "Screenshot_20260814_210030_Chrome.jpg"   # busca Mounjaro, 3 farmacias, 3 precos
     - "Screenshot_20260815_142615_Chrome.jpg"   # Ajovy, queda de preco -61%
@@ -422,8 +460,9 @@ linkedin:
   # link no corpo (vai no 1o comentario), uma ideia por linha, pergunta no fim
   # para puxar comentario na primeira hora, e 3 hashtags — nao 8.
   pitch: >-
-    No Bem na Mosca você busca o remédio, define quanto quer pagar e é avisado
-    quando o preço chegar lá. A compra é feita na farmácia.
+    No Bem na Mosca você busca o produto — remédio, suplemento ou
+    dermocosmético —, define quanto quer pagar e é avisado quando o preço
+    chegar lá. A compra é feita na farmácia.
   # Uma pergunta por dia, em rodizio. Comentario vale mais que curtida.
   questions:
     - "Você compara preço de remédio antes de comprar?"
@@ -431,6 +470,8 @@ linkedin:
     - "Na sua cidade, a diferença de preço entre farmácias é grande?"
     - "Remédio é a única compra cara que a gente faz sem pesquisar. Concorda?"
     - "Você já deixou de comprar um remédio por causa do preço?"
+    - "Whey, creatina, protetor solar: você compara o preço ou pega o primeiro?"
+    - "Quanto do seu orçamento vai para farmácia — remédio, suplemento, skincare?"
   # Historia sensivel (pessoa em sofrimento): sem app, pergunta neutra.
   questions_neutral:
     - "O que você acha que deveria mudar nesse caso?"
@@ -762,7 +803,7 @@ youtube:
   upload_captions: true            # attach the word-timed .srt as closed captions
   # Auto-posted first comment (engagement velocity). {topic} is substituted.
   # Pin it manually in the YouTube app for extra effect. Empty = disabled.
-  first_comment: "Voce ja pagou caro em algum remedio? Conta aqui 👇 Dicas de economia todo dia — se inscreve 🔔"
+  first_comment: "Voce ja pagou caro em algum remedio ou suplemento? Conta aqui 👇 Dicas de economia todo dia — se inscreve 🔔"
   default_tags:
     - "medicamentos"
     - "alto custo"
@@ -792,6 +833,13 @@ youtube:
     - "desconto em medicamento"
     - "programa de desconto laboratorio"
     - "receita medica"
+    - "creatina"
+    - "whey protein"
+    - "suplementos"
+    - "vitaminas"
+    - "protetor solar"
+    - "dermocosmeticos"
+    - "skincare"
     - "saude no brasil"
     - "economia domestica"
     - "dicas de economia"
@@ -889,6 +937,10 @@ posts:
     - "reajuste anual do preco dos medicamentos"
     - "plano de saude cobre medicamento de alto custo"
     - "programa de desconto de laboratorio como funciona"
+    - "creatina vale a pena como escolher pelo preco"
+    - "whey protein qual a diferenca entre os precos"
+    - "protetor solar de farmacia qual escolher"
+    - "vitaminas para quem treina precisa mesmo"
 
 # --------------------------------------------------------------------------
 # INSTAGRAM REELS — same Shorts, posted as Reels.
@@ -902,7 +954,7 @@ instagram:
   # Publica tambem o pacote de post (imagem + texto) como foto no feed,
   # logo apos `python main.py post`. VAI AO AR na hora (IG nao agenda).
   post_enabled: true
-  caption_suffix: "Siga @bemnamosc4 e economize nos seus medicamentos!"
+  caption_suffix: "Siga @bemnamosc4 e economize na farmácia — remédios, suplementos e dermocosméticos!"
 
 # --------------------------------------------------------------------------
 # TIKTOK — same Shorts via Content Posting API.
