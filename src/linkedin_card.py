@@ -144,14 +144,61 @@ def _phone(screenshot: Path, box_w: int, box_h: int, crop_top: float) -> Image.I
     return shadow
 
 
-def pick_screenshot(cfg: Config, when: date | None = None) -> Path | None:
-    """Rotate through the medicine screens listed in config, one per day.
+# Which story words make a TOPICAL screen relevant. The key is a token of the
+# screen's own FILENAME (app_creatina_now_foods.jpg -> "creatina"), so a new
+# supplement/beauty screenshot named app_<produto>_*.jpg is topic-aware with
+# no code change. Screens whose filename has no known token (the old
+# Screenshot_*.jpg medicine captures) are the DEFAULT set.
+_SCREEN_TOPIC_WORDS: dict[str, tuple[str, ...]] = {
+    "creatina":  ("creatina", "creatine"),
+    "whey":      ("whey", "proteina"),
+    "vitaminas": ("vitamina", "polivitamin", "multivitamin", "suplemento"),
+    "protetor":  ("protetor solar", "filtro solar", "fps", "sol "),
+    "solar":     ("protetor solar", "filtro solar", "fps"),
+    "creme":     ("creme", "anti-idade", "antiidade", "skincare", "dermocosm", "pele"),
+    "antiidade": ("anti-idade", "antiidade", "skincare", "rugas"),
+    "colageno":  ("colageno", "acido hialuronico", "hialuronico"),
+}
+
+
+def _fold(s: str) -> str:
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", s.lower())
+                   if not unicodedata.combining(c))
+
+
+def screens_for_story(cfg: Config, story_text: str) -> list[str]:
+    """The curated screens that fit THIS story, in config order.
+
+    A supplement/beauty screen only appears when the story actually talks
+    about that product (matched via _SCREEN_TOPIC_WORDS on the filename);
+    otherwise the untagged medicine screens are used — a prescription-drug
+    story must never ship with a face cream, and vice versa. When the story
+    IS topical, only the matching screens come back, so a creatina story
+    leads with the creatina screen instead of whatever the rotation owed.
+    """
+    names = [str(n) for n in (cfg.get("linkedin.screens", []) or [])]
+    text = _fold(story_text or "")
+    generic, matched = [], []
+    for n in names:
+        tokens = re.split(r"[^a-z0-9]+", _fold(Path(n).stem))
+        words = tuple(w for t in tokens for w in _SCREEN_TOPIC_WORDS.get(t, ()))
+        if not words:
+            generic.append(n)
+        elif text and any(_fold(w) in text for w in words):
+            matched.append(n)
+    return matched or generic or names
+
+
+def pick_screenshot(cfg: Config, when: date | None = None,
+                    story_text: str = "") -> Path | None:
+    """Rotate through the curated screens listed in config, one per day.
 
     The carousel's own picker chooses by keyword and happily puts a perfume on
-    a prescription-drug story. This list is curated by hand to screens that
-    show MEDICINES, so the card never contradicts its own headline.
+    a prescription-drug story. This list is curated by hand (and filtered by
+    screens_for_story), so the card never contradicts its own headline.
     """
-    names = cfg.get("linkedin.screens", []) or []
+    names = screens_for_story(cfg, story_text)
     root = Path(cfg.get("media.screenshots_dir", "img-channel/vertical"))
     paths = [p for p in (root / n for n in names) if p.exists()]
     if not paths:
@@ -164,7 +211,7 @@ def make_linkedin_card(cfg: Config, *, headline: str, deck: str,
                        points: list[tuple[str, str]], source: str,
                        out_path: Path, when: date | None = None,
                        screenshot: Path | None = None,
-                       link: str = "") -> Path | None:
+                       link: str = "", story_text: str = "") -> Path | None:
     """Render the card. `points` are (title, body) pairs — the story's beats."""
     W, H = 1080, 1350
     when = when or date.today()
@@ -206,7 +253,7 @@ def make_linkedin_card(cfg: Config, *, headline: str, deck: str,
     # ---- phone, straddling the header edge --------------------------------
     body_left_w = int(W * 0.58)
     if screenshot is None:
-        screenshot = pick_screenshot(cfg, when)
+        screenshot = pick_screenshot(cfg, when, story_text or headline)
     if screenshot and Path(screenshot).exists():
         pw = int(W * 0.31)
         ph = int(pw * 2.05)
@@ -316,6 +363,8 @@ def card_from_package(cfg: Config, pkg: Path, when: date | None = None) -> Path 
         link=meta.get("link", ""),
         out_path=pkg / "linkedin.jpg",
         when=when,
+        story_text=" ".join(
+            f"{s.get('headline', '')} {s.get('body', '')}" for s in slides),
     )
 
 

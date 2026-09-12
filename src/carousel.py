@@ -357,7 +357,13 @@ def pick_sources(cfg: Config, slides: list[Slide],
     # from the hand-curated medicine list (shared with the LinkedIn card),
     # still least-used-first. Empty list = old behaviour.
     if cfg.get("carousel.curated_screens_only", True):
-        names = {str(n).lower() for n in (cfg.get("linkedin.screens", []) or [])}
+        # screens_for_story narrows further by TOPIC: since 12/09 the curated
+        # list also holds supplement/dermocosmetic screens, and blind rotation
+        # would put a face cream under a prescription-drug story (the exact
+        # mismatch this list was created to prevent, in reverse).
+        from .linkedin_card import screens_for_story
+        story = " ".join(f"{s.headline} {s.body} {s.narration}" for s in slides)
+        names = {n.lower() for n in screens_for_story(cfg, story)}
         curated = [p for p in local if p.name.lower() in names]
         if curated:
             local = curated

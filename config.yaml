@@ -456,6 +456,18 @@ linkedin:
     - "Screenshot_20260815_142615_Chrome.jpg"   # Ajovy, queda de preco -61%
     - "Screenshot_20260814_205936_Chrome.jpg"   # Prolia 60mg, venda sob prescricao
     - "Screenshot_20260814_203938_Chrome.jpg"   # comparacao Koselugo -86%
+    # Suplementos e dermocosmeticos (12/09), tiradas pelo usuario com a faixa
+    # interna de tickets removida por script (os arquivos app_*.jpg sao copias
+    # limpas; os Screenshot_20260912_* originais ficam fora do repo publico).
+    # Obs: capturadas com o app em INGLES ("Best Price", preco com "$") —
+    # se recapturar em portugues, e so substituir o arquivo pelo mesmo nome.
+    - "app_creatina_now_foods.jpg"              # creatina Now Foods 1kg
+    - "app_creatina_muscletech.jpg"             # Creactor creatina HCl 120 doses
+    - "app_whey_hydro_optimum.jpg"              # whey Platinum Hydro, Best Price
+    - "app_kit_vitaminas_whey_creatina.jpg"     # kit multi + whey + creatina
+    - "app_vichy_protetor_solar.jpg"            # Vichy serum + protetor solar FPS60
+    - "app_creme_antiidade_estee.jpg"           # creme anti-idade Estee Lauder
+    - "app_colageno_dermup.jpg"                 # colageno Verisol + hialuronico
   # TEXTO do post (linkedin.txt). Regras do LinkedIn, nao do Instagram: nenhum
   # link no corpo (vai no 1o comentario), uma ideia por linha, pergunta no fim
   # para puxar comentario na primeira hora, e 3 hashtags — nao 8.
