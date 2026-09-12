@@ -31,7 +31,8 @@
     "thiagodosreiscandidatoadeputadofederalpropereajusteintegrald": 1788866746.2167444,
     "anvisaaprovagenricosparadiabeteseobesidadeenovomedicamentopa": 1788953078.8449287,
     "mxicobuscaexperinciadosusparaestruturarserviouniversaldesade": 1789039497.7368882,
-    "anvisaaprovanovasindicaesparamedicamentousadocontracncerdema": 1789125910.221783
+    "anvisaaprovanovasindicaesparamedicamentousadocontracncerdema": 1789125910.221783,
+    "anvisaprobeprodutodamedicinachinesavendidodeformairregularim": 1789212166.458231
   },
   "entries": [
     {
@@ -888,6 +889,29 @@
             "novas",
             "para",
             "usado"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1789212166.458231,
+      "date": "2026-09-12 08:22",
+      "kind": "carousel",
+      "title": "Produto proibido pela Anvisa no mercado",
+      "stories": [
+        {
+          "key": "anvisaprobeprodutodamedicinachinesavendidodeformairregularim",
+          "title": "Anvisa pro\u00edbe produto da medicina chinesa vendido de forma irregular - Impactto News",
+          "tokens": [
+            "anvisa",
+            "chinesa",
+            "forma",
+            "impactto",
+            "irregular",
+            "medicina",
+            "pro",
+            "produto",
+            "vendido"
           ]
         }
       ]
