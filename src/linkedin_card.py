@@ -416,7 +416,15 @@ def build_linkedin_text(cfg: Config, *, headline: str, deck: str,
     questions = [q for q in (cfg.get(pool_key, []) or []) if str(q).strip()]
     if questions:
         parts += [str(questions[when.toordinal() % len(questions)]), ""]
-    tags = [t for t in (cfg.get("linkedin.hashtags", []) or []) if str(t).strip()][:3]
+    # Story tags first (mined from the text), the static brand tags topping
+    # up to three — before 14/09 the same three shipped every single day.
+    from .social_captions import story_hashtags
+    tags = story_hashtags(headline, " ".join(bodies), 2) + \
+        [t for t in (cfg.get("linkedin.hashtags", []) or []) if str(t).strip()]
+    seen: set[str] = set()
+    tags = [t for t in tags
+            if not (re.sub(r"[^a-z0-9]", "", str(t).lower()) in seen
+                    or seen.add(re.sub(r"[^a-z0-9]", "", str(t).lower())))][:3]
     if tags:
         parts.append(" ".join(t if t.startswith("#") else f"#{t}" for t in tags))
     text = "\n".join(parts).strip()

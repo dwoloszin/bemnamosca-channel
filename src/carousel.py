@@ -554,8 +554,15 @@ def _slide_image(cfg: Config, slide: Slide, index: int, total: int,
 # --------------------------------------------------------------------------
 # text deliverables
 # --------------------------------------------------------------------------
-def _hashtags(cfg: Config, n: int = 8) -> str:
-    tags = list(cfg.get("youtube.default_tags", []) or []) + \
+def _hashtags(cfg: Config, slides: list[Slide] | None = None, n: int = 8) -> str:
+    """Story-specific tags first (mined from the slides), static pool topping
+    up — before 14/09 every day shipped the same eight tags."""
+    from .social_captions import story_hashtags
+    tags: list[str] = []
+    if slides:
+        tags += story_hashtags(slides[0].headline,
+                               " ".join(f"{s.headline} {s.body}" for s in slides))
+    tags += list(cfg.get("youtube.default_tags", []) or []) + \
         list(cfg.get("youtube.tag_pool", []) or [])
     out, seen = [], set()
     for t in tags:
@@ -598,7 +605,7 @@ def build_caption(cfg: Config, slides: list[Slide], item: NewsItem) -> str:
     suffix = cfg.get("instagram.caption_suffix", "")
     if suffix:
         parts += [suffix, ""]
-    parts += [f"Fonte: {_source_label(item)}", "", _links(cfg), "", _hashtags(cfg)]
+    parts += [f"Fonte: {_source_label(item)}", "", _links(cfg), "", _hashtags(cfg, slides)]
     return "\n".join(p for p in parts if p is not None).strip()
 
 
@@ -614,7 +621,7 @@ def build_single_post(cfg: Config, slides: list[Slide], item: NewsItem) -> str:
     if suffix:
         lines += [suffix, ""]
     lines += [f"Fonte: {_source_label(item)} — {item.link}", "", _links(cfg), "",
-              _hashtags(cfg)]
+              _hashtags(cfg, slides)]
     return "\n".join(lines).strip()
 
 
@@ -886,15 +893,21 @@ def make_carousel(cfg: Config, topic: str | None = None,
     (pkg / "post.txt").write_text(build_single_post(cfg, slides, item), encoding="utf-8")
     # TikTok gets its own caption (no links, no drug-brand hashtags) — using
     # post.txt there got posts locked for "community guidelines violation".
-    from .social_captions import build_tiktok_caption
+    from .social_captions import (build_tiktok_caption,
+                                  build_linkedin_page_caption, story_hashtags)
+    # Tags the story earns go first in both captions; each builder then adds
+    # its own safe/static pool. TikTok's blocklist still filters brands.
+    stags = story_hashtags(slides[0].headline,
+                           " ".join(f"{s.headline} {s.body}" for s in slides))
     (pkg / "tiktok.txt").write_text(build_tiktok_caption(
-        cfg, slides[0].headline, slides[1].body if len(slides) > 1 else ""),
+        cfg, slides[0].headline, slides[1].body if len(slides) > 1 else "",
+        tags=stags),
         encoding="utf-8")
     # Company page gets its own short text for the video — never the same
     # words as linkedin.txt (profile), or LinkedIn suppresses one of the two.
-    from .social_captions import build_linkedin_page_caption
     (pkg / "linkedin_page.txt").write_text(build_linkedin_page_caption(
-        cfg, slides[0].headline, slides[1].body if len(slides) > 1 else ""),
+        cfg, slides[0].headline, slides[1].body if len(slides) > 1 else "",
+        tags=stags),
         encoding="utf-8")
     (pkg / "meta.json").write_text(json.dumps({
         "created": time.strftime("%Y-%m-%d %H:%M"),

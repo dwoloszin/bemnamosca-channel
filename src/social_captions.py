@@ -32,6 +32,73 @@ _TIKTOK_TAG_BLOCKLIST = {
 
 _SAFE_BASE_TAGS = ["noticia", "saude", "farmacia", "economia", "brasil", "dicas"]
 
+# Story-tag vocabulary: (tag, trigger regexes matched on the FOLDED story
+# text). Deterministic on purpose, like everything else in this module — the
+# LLM writes the story, not the hashtags. Order = priority within one text.
+# TikTok's blocklist still filters whatever comes out of here (a story about
+# Ozempic yields "ozempic", which build_tiktok_caption drops and the LinkedIn
+# texts keep — exactly the per-platform behaviour we want).
+_STORY_TAG_PATTERNS: list[tuple[str, tuple[str, ...]]] = [
+    # reguladores e programas
+    ("anvisa", (r"\banvisa\b",)),
+    ("sus", (r"\bsus\b",)),
+    ("farmaciapopular", (r"farmacia popular",)),
+    ("planodesaude", (r"plano de saude", r"\bans\b")),
+    # produtos e categorias
+    ("genericos", (r"\bgeneric",)),
+    ("creatina", (r"\bcreatina",)),
+    ("wheyprotein", (r"\bwhey\b",)),
+    ("suplementos", (r"\bsuplement",)),
+    ("vitaminas", (r"\bvitamina", r"polivitamin")),
+    ("colageno", (r"\bcolageno",)),
+    ("protetorsolar", (r"protetor solar", r"filtro solar")),
+    ("skincare", (r"\bskincare\b", r"dermocosm", r"anti-?idade", r"antirrugas")),
+    ("cabelo", (r"\bcapilar\b", r"queda de cabelo", r"\bshampoo\b")),
+    ("insulina", (r"\binsulina",)),
+    ("antibioticos", (r"\bantibiotic",)),
+    ("vacina", (r"\bvacina",)),
+    # marcas/principios em alta (o TikTok filtra; LinkedIn e IG aproveitam)
+    ("ozempic", (r"\bozempic\b",)),
+    ("mounjaro", (r"\bmounjaro\b",)),
+    ("wegovy", (r"\bwegovy\b",)),
+    ("semaglutida", (r"\bsemaglutida\b",)),
+    ("tirzepatida", (r"\btirzepatida\b",)),
+    # condicoes de saude
+    ("diabetes", (r"\bdiabet",)),
+    ("cancer", (r"\bcancer\b", r"\boncolog", r"quimioterapia")),
+    ("obesidade", (r"\bobesidade\b",)),
+    ("emagrecimento", (r"\bemagre",)),
+    ("hipertensao", (r"\bhipertens", r"pressao alta")),
+    ("colesterol", (r"\bcolesterol\b",)),
+    ("saudemental", (r"\bdepress", r"\bansiedade\b", r"\bantidepressiv")),
+    ("alzheimer", (r"\balzheimer\b",)),
+    ("dengue", (r"\bdengue\b",)),
+    ("gripe", (r"\bgripe\b", r"\binfluenza\b")),
+    # treino (pauta de suplemento costuma citar)
+    ("treino", (r"\btreino\b", r"\bmusculacao\b", r"\bacademia\b")),
+]
+
+
+def _fold(s: str) -> str:
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", str(s).lower())
+                   if not unicodedata.combining(c))
+
+
+def story_hashtags(headline: str, body: str = "", max_n: int = 6) -> list[str]:
+    """Tags the STORY itself earns, headline matches first. Lowercase slugs,
+    no '#'. Empty when nothing in the vocabulary appears — callers top up
+    with their own static pools, so a day without matches degrades to the
+    old behaviour instead of inventing noise."""
+    picked: list[str] = []
+    for text in (_fold(headline), _fold(body)):
+        for tag, pats in _STORY_TAG_PATTERNS:
+            if tag not in picked and any(re.search(p, text) for p in pats):
+                picked.append(tag)
+                if len(picked) >= max_n:
+                    return picked
+    return picked
+
 
 def _clean_tag(tag: str) -> str:
     return re.sub(r"[^a-z0-9à-ÿ]", "", str(tag).lower())
