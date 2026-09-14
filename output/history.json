@@ -33,7 +33,8 @@
     "mxicobuscaexperinciadosusparaestruturarserviouniversaldesade": 1789039497.7368882,
     "anvisaaprovanovasindicaesparamedicamentousadocontracncerdema": 1789125910.221783,
     "anvisaprobeprodutodamedicinachinesavendidodeformairregularim": 1789212166.458231,
-    "creatinagrowthxmaxtitaniumxintegralmdicacomocompararpelortul": 1789298533.4376166
+    "creatinagrowthxmaxtitaniumxintegralmdicacomocompararpelortul": 1789298533.4376166,
+    "prtreinooqueaanvisaobrigaortuloainformar": 1789385200.4307756
   },
   "entries": [
     {
@@ -938,6 +939,26 @@
             "pelo",
             "por",
             "titanium",
+            "tulo"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1789385200.4307756,
+      "date": "2026-09-14 08:26",
+      "kind": "carousel",
+      "title": "O que o r\u00f3tulo do pr\u00e9-treino esconde",
+      "stories": [
+        {
+          "key": "prtreinooqueaanvisaobrigaortuloainformar",
+          "title": "Pr\u00e9-treino: o que a Anvisa obriga o r\u00f3tulo a informar",
+          "tokens": [
+            "anvisa",
+            "informar",
+            "obriga",
+            "que",
+            "treino",
             "tulo"
           ]
         }
