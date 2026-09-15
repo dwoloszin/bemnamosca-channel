@@ -34,7 +34,8 @@
     "anvisaaprovanovasindicaesparamedicamentousadocontracncerdema": 1789125910.221783,
     "anvisaprobeprodutodamedicinachinesavendidodeformairregularim": 1789212166.458231,
     "creatinagrowthxmaxtitaniumxintegralmdicacomocompararpelortul": 1789298533.4376166,
-    "prtreinooqueaanvisaobrigaortuloainformar": 1789385200.4307756
+    "prtreinooqueaanvisaobrigaortuloainformar": 1789385200.4307756,
+    "anvisadeterminarecolhimentodesuplementosqueprometemprevenird": 1789471589.1184387
   },
   "entries": [
     {
@@ -960,6 +961,29 @@
             "que",
             "treino",
             "tulo"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1789471589.1184387,
+      "date": "2026-09-15 08:26",
+      "kind": "carousel",
+      "title": "Promessa falsa na prateleira da farm\u00e1cia",
+      "stories": [
+        {
+          "key": "anvisadeterminarecolhimentodesuplementosqueprometemprevenird",
+          "title": "Anvisa determina recolhimento de suplementos que prometem prevenir dores e artrite",
+          "tokens": [
+            "anvisa",
+            "artrite",
+            "determina",
+            "dores",
+            "prevenir",
+            "prometem",
+            "que",
+            "recolhimento",
+            "suplementos"
           ]
         }
       ]
