@@ -35,7 +35,8 @@
     "anvisaprobeprodutodamedicinachinesavendidodeformairregularim": 1789212166.458231,
     "creatinagrowthxmaxtitaniumxintegralmdicacomocompararpelortul": 1789298533.4376166,
     "prtreinooqueaanvisaobrigaortuloainformar": 1789385200.4307756,
-    "anvisadeterminarecolhimentodesuplementosqueprometemprevenird": 1789471589.1184387
+    "anvisadeterminarecolhimentodesuplementosqueprometemprevenird": 1789471589.1184387,
+    "anvisaprobecomercializaoeusodemedicamentot36tirzepatidasemre": 1789557955.1090624
   },
   "entries": [
     {
@@ -984,6 +985,33 @@
             "que",
             "recolhimento",
             "suplementos"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1789557955.1090624,
+      "date": "2026-09-16 08:25",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio sem registro foi proibido",
+      "stories": [
+        {
+          "key": "anvisaprobecomercializaoeusodemedicamentot36tirzepatidasemre",
+          "title": "Anvisa pro\u00edbe comercializa\u00e7\u00e3o e uso de medicamento T36 (Tirzepatida) sem registro sanit\u00e1rio - atlaspublico.com.br",
+          "tokens": [
+            "anvisa",
+            "atlaspublico",
+            "com",
+            "comercializa",
+            "medicamento",
+            "pro",
+            "registro",
+            "rio",
+            "sanit",
+            "sem",
+            "t36",
+            "tirzepatida",
+            "uso"
           ]
         }
       ]
