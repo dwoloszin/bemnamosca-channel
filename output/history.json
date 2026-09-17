@@ -36,7 +36,8 @@
     "creatinagrowthxmaxtitaniumxintegralmdicacomocompararpelortul": 1789298533.4376166,
     "prtreinooqueaanvisaobrigaortuloainformar": 1789385200.4307756,
     "anvisadeterminarecolhimentodesuplementosqueprometemprevenird": 1789471589.1184387,
-    "anvisaprobecomercializaoeusodemedicamentot36tirzepatidasemre": 1789557955.1090624
+    "anvisaprobecomercializaoeusodemedicamentot36tirzepatidasemre": 1789557955.1090624,
+    "anvisaprobecanetaemagrecedoravindadoparaguaifolhadoes": 1789644336.4175663
   },
   "entries": [
     {
@@ -1012,6 +1013,27 @@
             "t36",
             "tirzepatida",
             "uso"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1789644336.4175663,
+      "date": "2026-09-17 08:25",
+      "kind": "carousel",
+      "title": "Caneta emagrecedora proibida",
+      "stories": [
+        {
+          "key": "anvisaprobecanetaemagrecedoravindadoparaguaifolhadoes",
+          "title": "Anvisa pro\u00edbe caneta emagrecedora vinda do Paraguai - Folha do ES",
+          "tokens": [
+            "anvisa",
+            "caneta",
+            "emagrecedora",
+            "folha",
+            "paraguai",
+            "pro",
+            "vinda"
           ]
         }
       ]
