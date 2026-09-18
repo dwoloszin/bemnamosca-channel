@@ -37,7 +37,8 @@
     "prtreinooqueaanvisaobrigaortuloainformar": 1789385200.4307756,
     "anvisadeterminarecolhimentodesuplementosqueprometemprevenird": 1789471589.1184387,
     "anvisaprobecomercializaoeusodemedicamentot36tirzepatidasemre": 1789557955.1090624,
-    "anvisaprobecanetaemagrecedoravindadoparaguaifolhadoes": 1789644336.4175663
+    "anvisaprobecanetaemagrecedoravindadoparaguaifolhadoes": 1789644336.4175663,
+    "aanvisaproibiunobrasilumamarcadetirzepatidafabricadanoparagu": 1789730661.0386796
   },
   "entries": [
     {
@@ -1034,6 +1035,30 @@
             "paraguai",
             "pro",
             "vinda"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1789730661.0386796,
+      "date": "2026-09-18 08:24",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio proibido por origem",
+      "stories": [
+        {
+          "key": "aanvisaproibiunobrasilumamarcadetirzepatidafabricadanoparagu",
+          "title": "A anvisa proibiu no brasil uma marca de Tirzepatida fabricada no Paraguai - REDE BRASIL DE TELEVIS\u00c3O",
+          "tokens": [
+            "anvisa",
+            "brasil",
+            "fabricada",
+            "marca",
+            "paraguai",
+            "proibiu",
+            "rede",
+            "televis",
+            "tirzepatida",
+            "uma"
           ]
         }
       ]
