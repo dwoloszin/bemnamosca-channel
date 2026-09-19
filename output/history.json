@@ -38,7 +38,8 @@
     "anvisadeterminarecolhimentodesuplementosqueprometemprevenird": 1789471589.1184387,
     "anvisaprobecomercializaoeusodemedicamentot36tirzepatidasemre": 1789557955.1090624,
     "anvisaprobecanetaemagrecedoravindadoparaguaifolhadoes": 1789644336.4175663,
-    "aanvisaproibiunobrasilumamarcadetirzepatidafabricadanoparagu": 1789730661.0386796
+    "aanvisaproibiunobrasilumamarcadetirzepatidafabricadanoparagu": 1789730661.0386796,
+    "anvisaprobevendaemandarecolhertodososlotesdonotshakeprotein": 1789816975.8560925
   },
   "entries": [
     {
@@ -1059,6 +1060,29 @@
             "televis",
             "tirzepatida",
             "uma"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1789816975.8560925,
+      "date": "2026-09-19 08:22",
+      "kind": "carousel",
+      "title": "NotShake fora de venda",
+      "stories": [
+        {
+          "key": "anvisaprobevendaemandarecolhertodososlotesdonotshakeprotein",
+          "title": "Anvisa pro\u00edbe venda e manda recolher todos os lotes do NotShake Protein",
+          "tokens": [
+            "anvisa",
+            "lotes",
+            "manda",
+            "notshake",
+            "pro",
+            "protein",
+            "recolher",
+            "todos",
+            "venda"
           ]
         }
       ]
