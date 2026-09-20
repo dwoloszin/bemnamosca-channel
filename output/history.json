@@ -39,7 +39,8 @@
     "anvisaprobecomercializaoeusodemedicamentot36tirzepatidasemre": 1789557955.1090624,
     "anvisaprobecanetaemagrecedoravindadoparaguaifolhadoes": 1789644336.4175663,
     "aanvisaproibiunobrasilumamarcadetirzepatidafabricadanoparagu": 1789730661.0386796,
-    "anvisaprobevendaemandarecolhertodososlotesdonotshakeprotein": 1789816975.8560925
+    "anvisaprobevendaemandarecolhertodososlotesdonotshakeprotein": 1789816975.8560925,
+    "anvisaprobebebidaproteicaedeterminarecolhimentovejaamarcaeom": 1789903450.634616
   },
   "entries": [
     {
@@ -1083,6 +1084,30 @@
             "recolher",
             "todos",
             "venda"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1789903450.634616,
+      "date": "2026-09-20 08:24",
+      "kind": "carousel",
+      "title": "Prote\u00edna proibida recolhida pela Anvisa",
+      "stories": [
+        {
+          "key": "anvisaprobebebidaproteicaedeterminarecolhimentovejaamarcaeom",
+          "title": "Anvisa pro\u00edbe bebida proteica e determina recolhimento; veja a marca e o motivo | Sa\u00fade | O Liberal",
+          "tokens": [
+            "anvisa",
+            "bebida",
+            "determina",
+            "liberal",
+            "marca",
+            "motivo",
+            "pro",
+            "proteica",
+            "recolhimento",
+            "veja"
           ]
         }
       ]
