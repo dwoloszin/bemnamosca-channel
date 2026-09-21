@@ -40,7 +40,8 @@
     "anvisaprobecanetaemagrecedoravindadoparaguaifolhadoes": 1789644336.4175663,
     "aanvisaproibiunobrasilumamarcadetirzepatidafabricadanoparagu": 1789730661.0386796,
     "anvisaprobevendaemandarecolhertodososlotesdonotshakeprotein": 1789816975.8560925,
-    "anvisaprobebebidaproteicaedeterminarecolhimentovejaamarcaeom": 1789903450.634616
+    "anvisaprobebebidaproteicaedeterminarecolhimentovejaamarcaeom": 1789903450.634616,
+    "anvisasuspendefabricaoecomercializaodeprodutosdamarcadeprote": 1789990023.838343
   },
   "entries": [
     {
@@ -1108,6 +1109,28 @@
             "proteica",
             "recolhimento",
             "veja"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1789990023.838343,
+      "date": "2026-09-21 08:27",
+      "kind": "carousel",
+      "title": "O mesmo suplemento, tr\u00eas pre\u00e7os",
+      "stories": [
+        {
+          "key": "anvisasuspendefabricaoecomercializaodeprodutosdamarcadeprote",
+          "title": "Anvisa suspende fabrica\u00e7\u00e3o e comercializa\u00e7\u00e3o de produtos da marca de proteicos NotCo",
+          "tokens": [
+            "anvisa",
+            "comercializa",
+            "fabrica",
+            "marca",
+            "notco",
+            "produtos",
+            "proteicos",
+            "suspende"
           ]
         }
       ]

@@ -177,8 +177,8 @@
       "last": "2026-09-20 08:22:26"
     },
     "assets/music/bed_modern_pop.mp3": {
-      "uses": 8,
-      "last": "2026-09-17 08:24:34"
+      "uses": 9,
+      "last": "2026-09-21 08:26:20"
     },
     "output/_work_carousel_feed/ai/ai_20260822_b6a78e4b37.png": {
       "uses": 1,
@@ -617,8 +617,8 @@
       "last": "2026-09-13 08:19:42"
     },
     "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg": {
-      "uses": 5,
-      "last": "2026-09-20 08:21:00"
+      "uses": 6,
+      "last": "2026-09-21 08:24:46"
     },
     "output/_work_carousel_feed/pexels/a0665dc582a933cc.jpg": {
       "uses": 3,
@@ -773,12 +773,12 @@
       "last": "2026-09-20 08:21:00"
     },
     "img-channel/vertical/app_whey_truesource.jpg": {
-      "uses": 1,
-      "last": "2026-09-20 08:21:00"
+      "uses": 2,
+      "last": "2026-09-21 08:24:46"
     },
     "img-channel/vertical/app_whey_hydro_optimum.jpg": {
-      "uses": 1,
-      "last": "2026-09-20 08:21:00"
+      "uses": 2,
+      "last": "2026-09-21 08:24:46"
     },
     "output/_work_carousel_feed/pexels/bf77058b318fab00.jpg": {
       "uses": 1,
@@ -789,8 +789,32 @@
       "last": "2026-09-20 08:21:00"
     },
     "img-channel/vertical/app_whey_gold_standard.jpg": {
+      "uses": 2,
+      "last": "2026-09-21 08:24:46"
+    },
+    "output/_work_carousel_feed/ai/ai_20260921_b83efe5af3.png": {
       "uses": 1,
-      "last": "2026-09-20 08:21:00"
+      "last": "2026-09-21 08:24:46"
+    },
+    "output/_work_carousel_feed/ai/ai_20260921_bab72f8537.png": {
+      "uses": 1,
+      "last": "2026-09-21 08:24:46"
+    },
+    "output/_work_carousel_feed/pexels/dca32fb2ba0a9104.jpg": {
+      "uses": 1,
+      "last": "2026-09-21 08:24:46"
+    },
+    "output/_work_carousel_feed/pexels/473b4d574f60e54e.jpg": {
+      "uses": 1,
+      "last": "2026-09-21 08:24:46"
+    },
+    "output/_work_carousel_feed/pexels/091f03eb195e2769.jpg": {
+      "uses": 1,
+      "last": "2026-09-21 08:24:46"
+    },
+    "output/_work_carousel_feed/pexels/1beb9a809be0b212.jpg": {
+      "uses": 1,
+      "last": "2026-09-21 08:24:46"
     }
   },
   "log": [
@@ -1744,6 +1768,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_energetic_clap.mp3"
+    },
+    {
+      "time": "2026-09-21 08:24:46",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20260921_b83efe5af3.png",
+        "output/_work_carousel_feed/ai/ai_20260921_bab72f8537.png",
+        "output/_work_carousel_feed/pexels/dca32fb2ba0a9104.jpg",
+        "img-channel/vertical/app_whey_gold_standard.jpg",
+        "img-channel/vertical/app_whey_truesource.jpg",
+        "output/_work_carousel_feed/pexels/473b4d574f60e54e.jpg",
+        "output/_work_carousel_feed/pexels/091f03eb195e2769.jpg",
+        "output/_work_carousel_feed/pexels/1beb9a809be0b212.jpg",
+        "img-channel/vertical/app_whey_hydro_optimum.jpg",
+        "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg"
+      ]
+    },
+    {
+      "time": "2026-09-21 08:26:20",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_modern_pop.mp3"
     }
   ]
 }
