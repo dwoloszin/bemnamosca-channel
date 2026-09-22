@@ -41,7 +41,8 @@
     "aanvisaproibiunobrasilumamarcadetirzepatidafabricadanoparagu": 1789730661.0386796,
     "anvisaprobevendaemandarecolhertodososlotesdonotshakeprotein": 1789816975.8560925,
     "anvisaprobebebidaproteicaedeterminarecolhimentovejaamarcaeom": 1789903450.634616,
-    "anvisasuspendefabricaoecomercializaodeprodutosdamarcadeprote": 1789990023.838343
+    "anvisasuspendefabricaoecomercializaodeprodutosdamarcadeprote": 1789990023.838343,
+    "anvisaapreendelotesfalsosdemedicamentoscontracnceretoxinabot": 1790076319.5393481
   },
   "entries": [
     {
@@ -1131,6 +1132,33 @@
             "produtos",
             "proteicos",
             "suspende"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1790076319.5393481,
+      "date": "2026-09-22 08:25",
+      "kind": "carousel",
+      "title": "Alertas da Anvisa sobre rem\u00e9dios falsificados",
+      "stories": [
+        {
+          "key": "anvisaapreendelotesfalsosdemedicamentoscontracnceretoxinabot",
+          "title": "Anvisa apreende lotes falsos de medicamentos contra c\u00e2ncer e toxina botul\u00ednica; veja quais - ACidade ON",
+          "tokens": [
+            "acidade",
+            "anvisa",
+            "apreende",
+            "botul",
+            "contra",
+            "falsos",
+            "lotes",
+            "medicamentos",
+            "ncer",
+            "nica",
+            "quais",
+            "toxina",
+            "veja"
           ]
         }
       ]
