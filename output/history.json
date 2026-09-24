@@ -43,7 +43,8 @@
     "anvisaprobebebidaproteicaedeterminarecolhimentovejaamarcaeom": 1789903450.634616,
     "anvisasuspendefabricaoecomercializaodeprodutosdamarcadeprote": 1789990023.838343,
     "anvisaapreendelotesfalsosdemedicamentoscontracnceretoxinabot": 1790076319.5393481,
-    "anvisaautorizanovaalegaoparacreatinaemsuplementosbhbfood": 1790162824.5399897
+    "anvisaautorizanovaalegaoparacreatinaemsuplementosbhbfood": 1790162824.5399897,
+    "propeseacoberturadeplanosdesadepormais129medicamentosfitoter": 1790249092.1156182
   },
   "entries": [
     {
@@ -1183,6 +1184,37 @@
             "nova",
             "para",
             "suplementos"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1790249092.1156182,
+      "date": "2026-09-24 08:24",
+      "kind": "carousel",
+      "title": "129 fitoter\u00e1picos na cobertura",
+      "stories": [
+        {
+          "key": "propeseacoberturadeplanosdesadepormais129medicamentosfitoter",
+          "title": "Prop\u00f5e-se a cobertura de planos de sa\u00fade por mais 129 medicamentos fitoter\u00e1picos, sendo que alguns ter\u00e3o apenas 50% do s",
+          "tokens": [
+            "129",
+            "alguns",
+            "apenas",
+            "cobertura",
+            "custo",
+            "fitoter",
+            "mais",
+            "medicamentos",
+            "picos",
+            "planos",
+            "por",
+            "prop",
+            "que",
+            "reembolsado",
+            "sendo",
+            "seu",
+            "ter"
           ]
         }
       ]
