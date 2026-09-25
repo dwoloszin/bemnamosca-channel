@@ -44,7 +44,8 @@
     "anvisasuspendefabricaoecomercializaodeprodutosdamarcadeprote": 1789990023.838343,
     "anvisaapreendelotesfalsosdemedicamentoscontracnceretoxinabot": 1790076319.5393481,
     "anvisaautorizanovaalegaoparacreatinaemsuplementosbhbfood": 1790162824.5399897,
-    "propeseacoberturadeplanosdesadepormais129medicamentosfitoter": 1790249092.1156182
+    "propeseacoberturadeplanosdesadepormais129medicamentosfitoter": 1790249092.1156182,
+    "anvisaprobelotesirregularesdemedicamentousadocontraesclerose": 1790335598.8965597
   },
   "entries": [
     {
@@ -1215,6 +1216,30 @@
             "sendo",
             "seu",
             "ter"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1790335598.8965597,
+      "date": "2026-09-25 08:26",
+      "kind": "carousel",
+      "title": "Lotes de rem\u00e9dio s\u00e3o proibidos",
+      "stories": [
+        {
+          "key": "anvisaprobelotesirregularesdemedicamentousadocontraesclerose",
+          "title": "Anvisa pro\u00edbe lotes irregulares de medicamento usado contra esclerose m\u00faltipla - Franc\u00eas News",
+          "tokens": [
+            "anvisa",
+            "contra",
+            "esclerose",
+            "franc",
+            "irregulares",
+            "lotes",
+            "ltipla",
+            "medicamento",
+            "pro",
+            "usado"
           ]
         }
       ]
