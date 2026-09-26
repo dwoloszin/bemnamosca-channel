@@ -45,7 +45,8 @@
     "anvisaapreendelotesfalsosdemedicamentoscontracnceretoxinabot": 1790076319.5393481,
     "anvisaautorizanovaalegaoparacreatinaemsuplementosbhbfood": 1790162824.5399897,
     "propeseacoberturadeplanosdesadepormais129medicamentosfitoter": 1790249092.1156182,
-    "anvisaprobelotesirregularesdemedicamentousadocontraesclerose": 1790335598.8965597
+    "anvisaprobelotesirregularesdemedicamentousadocontraesclerose": 1790335598.8965597,
+    "justiadecidequempagatratamentoder27milhescontraocncer": 1790421799.0317245
   },
   "entries": [
     {
@@ -1240,6 +1241,28 @@
             "medicamento",
             "pro",
             "usado"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1790421799.0317245,
+      "date": "2026-09-26 08:23",
+      "kind": "carousel",
+      "title": "R$ 2,7 milh\u00f5es num tratamento",
+      "stories": [
+        {
+          "key": "justiadecidequempagatratamentoder27milhescontraocncer",
+          "title": "Justi\u00e7a decide quem paga tratamento de R$ 2,7 milh\u00f5es contra o c\u00e2ncer",
+          "tokens": [
+            "contra",
+            "decide",
+            "justi",
+            "milh",
+            "ncer",
+            "paga",
+            "quem",
+            "tratamento"
           ]
         }
       ]
