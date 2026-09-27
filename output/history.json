@@ -46,7 +46,8 @@
     "anvisaautorizanovaalegaoparacreatinaemsuplementosbhbfood": 1790162824.5399897,
     "propeseacoberturadeplanosdesadepormais129medicamentosfitoter": 1790249092.1156182,
     "anvisaprobelotesirregularesdemedicamentousadocontraesclerose": 1790335598.8965597,
-    "justiadecidequempagatratamentoder27milhescontraocncer": 1790421799.0317245
+    "justiadecidequempagatratamentoder27milhescontraocncer": 1790421799.0317245,
+    "anvisaprobepropagandadomedicamentosemavynobrasiloestemais": 1790508271.2154202
   },
   "entries": [
     {
@@ -1263,6 +1264,28 @@
             "paga",
             "quem",
             "tratamento"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1790508271.2154202,
+      "date": "2026-09-27 08:24",
+      "kind": "carousel",
+      "title": "Voc\u00ea viu propaganda do Semavy?",
+      "stories": [
+        {
+          "key": "anvisaprobepropagandadomedicamentosemavynobrasiloestemais",
+          "title": "Anvisa pro\u00edbe propaganda do medicamento Semavy no Brasil - Oeste Mais",
+          "tokens": [
+            "anvisa",
+            "brasil",
+            "mais",
+            "medicamento",
+            "oeste",
+            "pro",
+            "propaganda",
+            "semavy"
           ]
         }
       ]
