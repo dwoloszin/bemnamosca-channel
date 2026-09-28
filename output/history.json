@@ -47,7 +47,8 @@
     "propeseacoberturadeplanosdesadepormais129medicamentosfitoter": 1790249092.1156182,
     "anvisaprobelotesirregularesdemedicamentousadocontraesclerose": 1790335598.8965597,
     "justiadecidequempagatratamentoder27milhescontraocncer": 1790421799.0317245,
-    "anvisaprobepropagandadomedicamentosemavynobrasiloestemais": 1790508271.2154202
+    "anvisaprobepropagandadomedicamentosemavynobrasiloestemais": 1790508271.2154202,
+    "anvisamandarecolherbebidaproteicavegetalesuspendetodosossabo": 1790594864.4428716
   },
   "entries": [
     {
@@ -1286,6 +1287,31 @@
             "pro",
             "propaganda",
             "semavy"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1790594864.4428716,
+      "date": "2026-09-28 08:27",
+      "kind": "carousel",
+      "title": "Pagou caro no seu shake?",
+      "stories": [
+        {
+          "key": "anvisamandarecolherbebidaproteicavegetalesuspendetodosossabo",
+          "title": "Anvisa manda recolher bebida proteica vegetal e suspende todos os sabores por irregularidades",
+          "tokens": [
+            "anvisa",
+            "bebida",
+            "irregularidades",
+            "manda",
+            "por",
+            "proteica",
+            "recolher",
+            "sabores",
+            "suspende",
+            "todos",
+            "vegetal"
           ]
         }
       ]
