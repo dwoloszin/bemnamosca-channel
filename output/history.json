@@ -48,7 +48,8 @@
     "anvisaprobelotesirregularesdemedicamentousadocontraesclerose": 1790335598.8965597,
     "justiadecidequempagatratamentoder27milhescontraocncer": 1790421799.0317245,
     "anvisaprobepropagandadomedicamentosemavynobrasiloestemais": 1790508271.2154202,
-    "anvisamandarecolherbebidaproteicavegetalesuspendetodosossabo": 1790594864.4428716
+    "anvisamandarecolherbebidaproteicavegetalesuspendetodosossabo": 1790594864.4428716,
+    "anvisaaprovacanetaparadiabetesquecombinainsulinaesemaglutida": 1790681341.5674493
   },
   "entries": [
     {
@@ -1312,6 +1313,31 @@
             "suspende",
             "todos",
             "vegetal"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1790681341.5674493,
+      "date": "2026-09-29 08:29",
+      "kind": "carousel",
+      "title": "Caneta de diabetes cara?",
+      "stories": [
+        {
+          "key": "anvisaaprovacanetaparadiabetesquecombinainsulinaesemaglutida",
+          "title": "Anvisa aprova caneta para diabetes que combina insulina e semaglutida - Tribuna do Sert\u00e3o",
+          "tokens": [
+            "anvisa",
+            "aprova",
+            "caneta",
+            "combina",
+            "diabetes",
+            "insulina",
+            "para",
+            "que",
+            "semaglutida",
+            "sert",
+            "tribuna"
           ]
         }
       ]
