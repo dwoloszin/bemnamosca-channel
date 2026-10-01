@@ -233,7 +233,9 @@ For EACH slide return:
                 sentences that connect to each other. In the NARRATION write
                 every number OUT IN WORDS as a Brazilian says it ("três vírgula
                 oitenta e um por cento", "mil e duzentos reais") — digits stay
-                in headline and body only.
+                in headline and body only. NEVER use the "R$" symbol or any
+                digit in narration: money is words ending in "reais" ("oito
+                mil e oitocentos reais", not "R$ oito vírgula oito mil").
 - "keyword"   : 2-4 words describing a visual for this slide, IN ENGLISH.
 
 Rules: strictly factual to the story, invent no numbers, no medical advice,

@@ -56,4 +56,9 @@ def normalize_numbers_pt(text: str) -> str:
     # milhar com ponto: 1.200 / 12.345.678
     out = re.sub(r"(?<![\d,.])(\d{1,3}(?:\.\d{3})+)(?![\d,%])",
                  lambda m: _n2w(int(m.group(1).replace(".", ""))), out)
+    # "R$" orfao, com o numero ja por extenso ("R$ oito virgula oito mil"):
+    # a regra de moeda acima exige digitos e nao pega. Em 01/10 esse simbolo
+    # solto no COMECO do bloco fez o ElevenLabs alucinar uma frase inteira
+    # antes do gancho. So o simbolo sai; "mil por ano" continua claro.
+    out = re.sub(r"R\$\s*(?=[A-Za-zÀ-ÿ])", "", out)
     return out

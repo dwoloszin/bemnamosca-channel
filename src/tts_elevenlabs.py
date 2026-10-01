@@ -133,6 +133,31 @@ def _words_from_alignment(text: str, alignment: dict) -> list[Word]:
     return words
 
 
+def _trim_hallucinated_lead(out_path: Path, words: list[Word],
+                            max_lead: float = 0.6, keep: float = 0.15) -> None:
+    """Cut audio that plays BEFORE the first aligned word.
+
+    01/10: the model spoke a whole invented sentence ("Chegou o time,
+    assistente...") before a hook that began with a bare "R$" symbol — 3.4s
+    of babble before the script started. The /with-timestamps alignment maps
+    only the INPUT text, so any audio ahead of words[0].start is not ours by
+    definition; a normal breath is ~0.2s, so anything past `max_lead` is cut
+    (keeping `keep` seconds of natural lead) and the word times shifted.
+    """
+    if not words or words[0].start <= max_lead:
+        return
+    cut = words[0].start - keep
+    from .ffmpeg import run
+    tmp = out_path.with_name(out_path.stem + "_lead" + out_path.suffix)
+    run(["-ss", f"{cut:.3f}", "-i", str(out_path),
+         "-codec:a", "libmp3lame", "-b:a", "128k", str(tmp)])
+    tmp.replace(out_path)
+    for w in words:
+        w.start = max(0.0, w.start - cut)
+        w.end = max(w.start, w.end - cut)
+    print(f"  [11labs] trimmed {cut:.2f}s of unscripted audio before the first word")
+
+
 def synthesize_elevenlabs(text: str, out_path: str | Path, cfg: Config, *,
                           previous_text: str = "", next_text: str = "") -> SpeechClip:
     """Synthesize with the first key that has enough credits. Raises
@@ -233,6 +258,7 @@ def synthesize_elevenlabs(text: str, out_path: str | Path, cfg: Config, *,
             data = r.json()
             out_path.write_bytes(base64.b64decode(data["audio_base64"]))
             words = _words_from_alignment(text, data.get("alignment") or {})
+            _trim_hallucinated_lead(out_path, words)
             from .ffmpeg import probe_duration
             duration = probe_duration(out_path)
             if words:
