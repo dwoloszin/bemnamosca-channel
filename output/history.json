@@ -50,7 +50,8 @@
     "anvisaprobepropagandadomedicamentosemavynobrasiloestemais": 1790508271.2154202,
     "anvisamandarecolherbebidaproteicavegetalesuspendetodosossabo": 1790594864.4428716,
     "anvisaaprovacanetaparadiabetesquecombinainsulinaesemaglutida": 1790681341.5674493,
-    "eltonfernandesmapeiaacoberturadetratamentodealtocustodianted": 1790767643.8936636
+    "eltonfernandesmapeiaacoberturadetratamentodealtocustodianted": 1790767643.8936636,
+    "farmciapopularpodegerareconomiadeatr88milporanovejaimpactopa": 1790854055.5143616
   },
   "entries": [
     {
@@ -1364,6 +1365,33 @@
             "mapeia",
             "terapias",
             "tratamento"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1790854055.5143616,
+      "date": "2026-10-01 08:27",
+      "kind": "carousel",
+      "title": "R$ 8,8 mil por ano em rem\u00e9dios?",
+      "stories": [
+        {
+          "key": "farmciapopularpodegerareconomiadeatr88milporanovejaimpactopa",
+          "title": "Farm\u00e1cia Popular pode gerar economia de at\u00e9 R$ 8,8 mil por ano; veja impacto para Alagoas",
+          "tokens": [
+            "alagoas",
+            "ano",
+            "cia",
+            "economia",
+            "farm",
+            "gerar",
+            "impacto",
+            "mil",
+            "para",
+            "pode",
+            "popular",
+            "por",
+            "veja"
           ]
         }
       ]
