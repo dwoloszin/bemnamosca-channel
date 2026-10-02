@@ -51,7 +51,8 @@
     "anvisamandarecolherbebidaproteicavegetalesuspendetodosossabo": 1790594864.4428716,
     "anvisaaprovacanetaparadiabetesquecombinainsulinaesemaglutida": 1790681341.5674493,
     "eltonfernandesmapeiaacoberturadetratamentodealtocustodianted": 1790767643.8936636,
-    "farmciapopularpodegerareconomiadeatr88milporanovejaimpactopa": 1790854055.5143616
+    "farmciapopularpodegerareconomiadeatr88milporanovejaimpactopa": 1790854055.5143616,
+    "anvisaprobeprodutoscommoringaoleifera": 1790940419.1626704
   },
   "entries": [
     {
@@ -1392,6 +1393,26 @@
             "popular",
             "por",
             "veja"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1790940419.1626704,
+      "date": "2026-10-02 08:26",
+      "kind": "carousel",
+      "title": "Moringa proibida pela Anvisa",
+      "stories": [
+        {
+          "key": "anvisaprobeprodutoscommoringaoleifera",
+          "title": "Anvisa pro\u00edbe produtos com moringa oleifera",
+          "tokens": [
+            "anvisa",
+            "com",
+            "moringa",
+            "oleifera",
+            "pro",
+            "produtos"
           ]
         }
       ]
