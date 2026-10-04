@@ -169,8 +169,8 @@
       "last": "2026-10-03 09:06:22"
     },
     "assets/music/bed_upbeat_acoustic.mp3": {
-      "uses": 12,
-      "last": "2026-10-01 08:26:55"
+      "uses": 13,
+      "last": "2026-10-04 10:11:33"
     },
     "assets/music/bed_energetic_clap.mp3": {
       "uses": 12,
@@ -1047,6 +1047,46 @@
     "output/_work_carousel_feed/pexels/14af694593e37930.jpg": {
       "uses": 1,
       "last": "2026-10-03 09:05:08"
+    },
+    "output/_work_carousel_feed/ai/ai_20261004_1a8b98b21b.png": {
+      "uses": 1,
+      "last": "2026-10-04 10:10:32"
+    },
+    "output/_work_carousel_feed/ai/ai_20261004_95ce2cc3e1.png": {
+      "uses": 1,
+      "last": "2026-10-04 10:10:32"
+    },
+    "output/_work_carousel_feed/pexels/13113c132597a705.jpg": {
+      "uses": 1,
+      "last": "2026-10-04 10:10:32"
+    },
+    "img-channel/vertical/app_creme_hidratante_clinique.jpg": {
+      "uses": 1,
+      "last": "2026-10-04 10:10:32"
+    },
+    "img-channel/vertical/app_creme_antirrugas_skinceuticals.jpg": {
+      "uses": 1,
+      "last": "2026-10-04 10:10:32"
+    },
+    "output/_work_carousel_feed/pexels/0ba498c8c2fcbe63.jpg": {
+      "uses": 1,
+      "last": "2026-10-04 10:10:32"
+    },
+    "output/_work_carousel_feed/pexels/f09a136dd915052e.jpg": {
+      "uses": 1,
+      "last": "2026-10-04 10:10:32"
+    },
+    "output/_work_carousel_feed/pexels/ec33834008a8ba0b.jpg": {
+      "uses": 1,
+      "last": "2026-10-04 10:10:32"
+    },
+    "img-channel/vertical/app_vichy_protetor_solar.jpg": {
+      "uses": 1,
+      "last": "2026-10-04 10:10:32"
+    },
+    "output/_work_carousel_feed/pexels/e1a88c3e35a400a8.jpg": {
+      "uses": 1,
+      "last": "2026-10-04 10:10:32"
     }
   },
   "log": [
@@ -2290,6 +2330,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_calm_piano.mp3"
+    },
+    {
+      "time": "2026-10-04 10:10:32",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20261004_1a8b98b21b.png",
+        "output/_work_carousel_feed/ai/ai_20261004_95ce2cc3e1.png",
+        "output/_work_carousel_feed/pexels/13113c132597a705.jpg",
+        "img-channel/vertical/app_creme_hidratante_clinique.jpg",
+        "img-channel/vertical/app_creme_antirrugas_skinceuticals.jpg",
+        "output/_work_carousel_feed/pexels/0ba498c8c2fcbe63.jpg",
+        "output/_work_carousel_feed/pexels/f09a136dd915052e.jpg",
+        "output/_work_carousel_feed/pexels/ec33834008a8ba0b.jpg",
+        "img-channel/vertical/app_vichy_protetor_solar.jpg",
+        "output/_work_carousel_feed/pexels/e1a88c3e35a400a8.jpg"
+      ]
+    },
+    {
+      "time": "2026-10-04 10:11:33",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_upbeat_acoustic.mp3"
     }
   ]
 }
