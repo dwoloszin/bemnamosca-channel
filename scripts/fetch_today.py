@@ -44,6 +44,16 @@ def main() -> int:
     for run in runs:
         rid = run["databaseId"]
         print(f"execucao {rid} ({run['createdAt'][:16].replace('T', ' ')} UTC, {run['event']})", end=" ")
+        # Cheap pre-check: in a late-cron day the retries come FIRST in this
+        # newest-first walk, and each used to be a full download just to learn
+        # it only carried the log. The artifact listing already tells the
+        # size — a log-only artifact is a few KB, a package with video >10MB.
+        q = subprocess.run(["gh", "api", f"repos/{REPO}/actions/runs/{rid}/artifacts",
+                            "--jq", "[.artifacts[].size_in_bytes] | add // 0"],
+                           capture_output=True, text=True)
+        if q.returncode == 0 and q.stdout.strip().isdigit() and int(q.stdout.strip()) < 1_000_000:
+            print(f"— sem pacote (artefato de {int(q.stdout.strip()) // 1024} KB, so log)")
+            continue
         shutil.rmtree(tmp, ignore_errors=True)
         tmp.mkdir(parents=True, exist_ok=True)
         r = subprocess.run(["gh", "run", "download", str(rid), "--repo", REPO, "--dir", str(tmp)],
