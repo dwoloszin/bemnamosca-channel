@@ -137,8 +137,8 @@
       "last": "2026-10-05 08:28:44"
     },
     "output/_work_carousel_feed/pexels/cf83bda8486aa8eb.jpg": {
-      "uses": 11,
-      "last": "2026-09-25 08:24:14"
+      "uses": 12,
+      "last": "2026-10-06 08:24:55"
     },
     "output/_work_carousel_feed/pexels/4b46c036cb577bf9.jpg": {
       "uses": 7,
@@ -177,8 +177,8 @@
       "last": "2026-10-05 08:30:17"
     },
     "assets/music/bed_modern_pop.mp3": {
-      "uses": 12,
-      "last": "2026-10-02 08:25:59"
+      "uses": 13,
+      "last": "2026-10-06 08:26:26"
     },
     "output/_work_carousel_feed/ai/ai_20260822_b6a78e4b37.png": {
       "uses": 1,
@@ -665,8 +665,8 @@
       "last": "2026-09-25 08:24:14"
     },
     "output/_work_carousel_feed/pexels/e9862040b7a2fc32.jpg": {
-      "uses": 2,
-      "last": "2026-09-20 08:21:00"
+      "uses": 3,
+      "last": "2026-10-06 08:24:55"
     },
     "output/_work_carousel_feed/pexels/9282262bbd9854c7.jpg": {
       "uses": 1,
@@ -785,8 +785,8 @@
       "last": "2026-09-20 08:21:00"
     },
     "output/_work_carousel_feed/pexels/2533201089ea9c31.jpg": {
-      "uses": 1,
-      "last": "2026-09-20 08:21:00"
+      "uses": 2,
+      "last": "2026-10-06 08:24:55"
     },
     "img-channel/vertical/app_whey_gold_standard.jpg": {
       "uses": 2,
@@ -1061,12 +1061,12 @@
       "last": "2026-10-04 10:10:32"
     },
     "img-channel/vertical/app_creme_hidratante_clinique.jpg": {
-      "uses": 1,
-      "last": "2026-10-04 10:10:32"
+      "uses": 2,
+      "last": "2026-10-06 08:24:55"
     },
     "img-channel/vertical/app_creme_antirrugas_skinceuticals.jpg": {
-      "uses": 1,
-      "last": "2026-10-04 10:10:32"
+      "uses": 2,
+      "last": "2026-10-06 08:24:55"
     },
     "output/_work_carousel_feed/pexels/0ba498c8c2fcbe63.jpg": {
       "uses": 1,
@@ -1111,6 +1111,26 @@
     "output/_work_carousel_feed/pexels/2101eca037e1973a.jpg": {
       "uses": 1,
       "last": "2026-10-05 08:28:44"
+    },
+    "output/_work_carousel_feed/ai/ai_20261006_df80ed7b39.png": {
+      "uses": 1,
+      "last": "2026-10-06 08:24:55"
+    },
+    "output/_work_carousel_feed/ai/ai_20261006_b11a4926f9.png": {
+      "uses": 1,
+      "last": "2026-10-06 08:24:55"
+    },
+    "output/_work_carousel_feed/pexels/b8782c80ba0d07e8.jpg": {
+      "uses": 1,
+      "last": "2026-10-06 08:24:55"
+    },
+    "output/_work_carousel_feed/pexels/4f6e4e5ca7219e36.jpg": {
+      "uses": 1,
+      "last": "2026-10-06 08:24:55"
+    },
+    "output/_work_carousel_feed/pexels/abd91a44a8bed877.jpg": {
+      "uses": 1,
+      "last": "2026-10-06 08:24:55"
     }
   },
   "log": [
@@ -2398,6 +2418,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_energetic_clap.mp3"
+    },
+    {
+      "time": "2026-10-06 08:24:55",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20261006_df80ed7b39.png",
+        "output/_work_carousel_feed/ai/ai_20261006_b11a4926f9.png",
+        "output/_work_carousel_feed/pexels/e9862040b7a2fc32.jpg",
+        "img-channel/vertical/app_creme_hidratante_clinique.jpg",
+        "img-channel/vertical/app_creme_antirrugas_skinceuticals.jpg",
+        "output/_work_carousel_feed/pexels/cf83bda8486aa8eb.jpg",
+        "output/_work_carousel_feed/pexels/2533201089ea9c31.jpg",
+        "output/_work_carousel_feed/pexels/b8782c80ba0d07e8.jpg",
+        "output/_work_carousel_feed/pexels/4f6e4e5ca7219e36.jpg",
+        "output/_work_carousel_feed/pexels/abd91a44a8bed877.jpg"
+      ]
+    },
+    {
+      "time": "2026-10-06 08:26:26",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_modern_pop.mp3"
     }
   ]
 }
