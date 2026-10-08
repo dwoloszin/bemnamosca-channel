@@ -57,7 +57,8 @@
     "neutrogenaestreiaprotetorsolarembastocomcoraospsdocristorede": 1791119555.929269,
     "canetinhaeremdioentramnacestadomercadolivremasavanoesbarraem": 1791199858.486043,
     "liberadopelaanvisacidoazelaicodeveatrairindstriadeskincareno": 1791286076.8961217,
-    "quaisaspropostasdeflviobolsonaroelulaparaasadevejaprojetos": 1791372533.3859928
+    "quaisaspropostasdeflviobolsonaroelulaparaasadevejaprojetos": 1791372533.3859928,
+    "planodeflvioextinguirprogramafarmciapopulardenunciapadilha": 1791458898.5483088
   },
   "entries": [
     {
@@ -1542,6 +1543,29 @@
             "propostas",
             "quais",
             "veja",
+            "vio"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1791458898.5483088,
+      "date": "2026-10-08 08:28",
+      "kind": "carousel",
+      "title": "Voc\u00ea pagou caro no \u00faltimo rem\u00e9dio?",
+      "stories": [
+        {
+          "key": "planodeflvioextinguirprogramafarmciapopulardenunciapadilha",
+          "title": "\"Plano de Fl\u00e1vio \u00e9 extinguir programa Farm\u00e1cia Popular\", denuncia Padilha",
+          "tokens": [
+            "cia",
+            "denuncia",
+            "extinguir",
+            "farm",
+            "padilha",
+            "plano",
+            "popular",
+            "programa",
             "vio"
           ]
         }
