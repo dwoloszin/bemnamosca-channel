@@ -59,7 +59,8 @@
     "liberadopelaanvisacidoazelaicodeveatrairindstriadeskincareno": 1791286076.8961217,
     "quaisaspropostasdeflviobolsonaroelulaparaasadevejaprojetos": 1791372533.3859928,
     "planodeflvioextinguirprogramafarmciapopulardenunciapadilha": 1791458898.5483088,
-    "creatinadepoisdos55anosumanovaregradaanvisasobreosuplementop": 1791545233.792146
+    "creatinadepoisdos55anosumanovaregradaanvisasobreosuplementop": 1791545233.792146,
+    "suplementosalimentaresnotratamresistnciainsulinaalertaanvisa": 1791631524.3088398
   },
   "entries": [
     {
@@ -1605,6 +1606,28 @@
             "suplemento",
             "uma",
             "vinha"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1791631524.3088398,
+      "date": "2026-10-10 08:25",
+      "kind": "carousel",
+      "title": "Suplemento n\u00e3o trata resist\u00eancia \u00e0 insulina",
+      "stories": [
+        {
+          "key": "suplementosalimentaresnotratamresistnciainsulinaalertaanvisa",
+          "title": "Suplementos alimentares n\u00e3o tratam resist\u00eancia \u00e0 insulina, alerta Anvisa",
+          "tokens": [
+            "alerta",
+            "alimentares",
+            "anvisa",
+            "insulina",
+            "ncia",
+            "resist",
+            "suplementos",
+            "tratam"
           ]
         }
       ]
