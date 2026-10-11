@@ -165,8 +165,8 @@
       "last": "2026-08-20 10:03:11"
     },
     "assets/music/bed_calm_piano.mp3": {
-      "uses": 14,
-      "last": "2026-10-07 08:27:54"
+      "uses": 15,
+      "last": "2026-10-11 08:25:27"
     },
     "assets/music/bed_upbeat_acoustic.mp3": {
       "uses": 14,
@@ -597,12 +597,12 @@
       "last": "2026-09-23 08:23:51"
     },
     "img-channel/vertical/app_creatina_now_foods.jpg": {
-      "uses": 3,
-      "last": "2026-10-09 08:25:03"
+      "uses": 4,
+      "last": "2026-10-11 08:24:03"
     },
     "img-channel/vertical/app_creatina_dymatize.jpg": {
-      "uses": 3,
-      "last": "2026-10-09 08:25:03"
+      "uses": 4,
+      "last": "2026-10-11 08:24:03"
     },
     "output/_work_carousel_feed/pexels/66ae94f3c8a5293c.jpg": {
       "uses": 2,
@@ -617,8 +617,8 @@
       "last": "2026-09-13 08:19:42"
     },
     "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg": {
-      "uses": 11,
-      "last": "2026-10-10 08:22:55"
+      "uses": 12,
+      "last": "2026-10-11 08:24:03"
     },
     "output/_work_carousel_feed/pexels/a0665dc582a933cc.jpg": {
       "uses": 4,
@@ -1173,8 +1173,8 @@
       "last": "2026-10-09 08:25:03"
     },
     "output/_work_carousel_feed/pexels/bb2123bfd92297d7.jpg": {
-      "uses": 1,
-      "last": "2026-10-09 08:25:03"
+      "uses": 2,
+      "last": "2026-10-11 08:24:03"
     },
     "output/_work_carousel_feed/pexels/6a4ec4f315ea35d4.jpg": {
       "uses": 1,
@@ -1185,8 +1185,8 @@
       "last": "2026-10-09 08:25:03"
     },
     "output/_work_carousel_feed/pexels/454b9b4f8de26c57.jpg": {
-      "uses": 1,
-      "last": "2026-10-09 08:25:03"
+      "uses": 2,
+      "last": "2026-10-11 08:24:03"
     },
     "output/_work_carousel_feed/pexels/91f3d9c956595580.jpg": {
       "uses": 1,
@@ -1211,6 +1211,26 @@
     "output/_work_carousel_feed/pexels/364f888656e4771d.jpg": {
       "uses": 1,
       "last": "2026-10-10 08:22:55"
+    },
+    "output/_work_carousel_feed/ai/ai_20261011_479fbb4d2e.png": {
+      "uses": 1,
+      "last": "2026-10-11 08:24:03"
+    },
+    "output/_work_carousel_feed/ai/ai_20261011_e093bfe31d.png": {
+      "uses": 1,
+      "last": "2026-10-11 08:24:03"
+    },
+    "output/_work_carousel_feed/pexels/92e12124c3ac2ba1.jpg": {
+      "uses": 1,
+      "last": "2026-10-11 08:24:03"
+    },
+    "output/_work_carousel_feed/pexels/9877021bc317333c.jpg": {
+      "uses": 1,
+      "last": "2026-10-11 08:24:03"
+    },
+    "output/_work_carousel_feed/pexels/48ea894cd6abe465.jpg": {
+      "uses": 1,
+      "last": "2026-10-11 08:24:03"
     }
   },
   "log": [
@@ -2608,6 +2628,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_modern_pop.mp3"
+    },
+    {
+      "time": "2026-10-11 08:24:03",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20261011_479fbb4d2e.png",
+        "output/_work_carousel_feed/ai/ai_20261011_e093bfe31d.png",
+        "output/_work_carousel_feed/pexels/454b9b4f8de26c57.jpg",
+        "img-channel/vertical/app_creatina_now_foods.jpg",
+        "img-channel/vertical/app_creatina_dymatize.jpg",
+        "output/_work_carousel_feed/pexels/92e12124c3ac2ba1.jpg",
+        "output/_work_carousel_feed/pexels/bb2123bfd92297d7.jpg",
+        "output/_work_carousel_feed/pexels/9877021bc317333c.jpg",
+        "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg",
+        "output/_work_carousel_feed/pexels/48ea894cd6abe465.jpg"
+      ]
+    },
+    {
+      "time": "2026-10-11 08:25:27",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_calm_piano.mp3"
     }
   ]
 }

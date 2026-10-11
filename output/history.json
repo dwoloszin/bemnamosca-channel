@@ -60,7 +60,8 @@
     "quaisaspropostasdeflviobolsonaroelulaparaasadevejaprojetos": 1791372533.3859928,
     "planodeflvioextinguirprogramafarmciapopulardenunciapadilha": 1791458898.5483088,
     "creatinadepoisdos55anosumanovaregradaanvisasobreosuplementop": 1791545233.792146,
-    "suplementosalimentaresnotratamresistnciainsulinaalertaanvisa": 1791631524.3088398
+    "suplementosalimentaresnotratamresistnciainsulinaalertaanvisa": 1791631524.3088398,
+    "anvisaautorizanovaalegaoparacreatinavoltadaapessoasacimade55": 1791717988.657968
   },
   "entries": [
     {
@@ -1628,6 +1629,30 @@
             "resist",
             "suplementos",
             "tratam"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1791717988.657968,
+      "date": "2026-10-11 08:26",
+      "kind": "carousel",
+      "title": "A creatina mudou de regra",
+      "stories": [
+        {
+          "key": "anvisaautorizanovaalegaoparacreatinavoltadaapessoasacimade55",
+          "title": "Anvisa autoriza nova alega\u00e7\u00e3o para creatina voltada a pessoas acima de 55 anos",
+          "tokens": [
+            "acima",
+            "alega",
+            "anos",
+            "anvisa",
+            "autoriza",
+            "creatina",
+            "nova",
+            "para",
+            "pessoas",
+            "voltada"
           ]
         }
       ]
