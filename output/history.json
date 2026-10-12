@@ -61,7 +61,8 @@
     "planodeflvioextinguirprogramafarmciapopulardenunciapadilha": 1791458898.5483088,
     "creatinadepoisdos55anosumanovaregradaanvisasobreosuplementop": 1791545233.792146,
     "suplementosalimentaresnotratamresistnciainsulinaalertaanvisa": 1791631524.3088398,
-    "anvisaautorizanovaalegaoparacreatinavoltadaapessoasacimade55": 1791717988.657968
+    "anvisaautorizanovaalegaoparacreatinavoltadaapessoasacimade55": 1791717988.657968,
+    "anvisasuspendesuplementopeptistrongedeterminarecolhimentodet": 1791805583.8261251
   },
   "entries": [
     {
@@ -1653,6 +1654,28 @@
             "para",
             "pessoas",
             "voltada"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1791805583.8261251,
+      "date": "2026-10-12 08:46",
+      "kind": "carousel",
+      "title": "Suplemento confiado, agora proibido",
+      "stories": [
+        {
+          "key": "anvisasuspendesuplementopeptistrongedeterminarecolhimentodet",
+          "title": "Anvisa suspende suplemento Peptistrong e determina recolhimento de todos os lotes",
+          "tokens": [
+            "anvisa",
+            "determina",
+            "lotes",
+            "peptistrong",
+            "recolhimento",
+            "suplemento",
+            "suspende",
+            "todos"
           ]
         }
       ]
