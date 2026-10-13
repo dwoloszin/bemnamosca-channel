@@ -62,7 +62,8 @@
     "creatinadepoisdos55anosumanovaregradaanvisasobreosuplementop": 1791545233.792146,
     "suplementosalimentaresnotratamresistnciainsulinaalertaanvisa": 1791631524.3088398,
     "anvisaautorizanovaalegaoparacreatinavoltadaapessoasacimade55": 1791717988.657968,
-    "anvisasuspendesuplementopeptistrongedeterminarecolhimentodet": 1791805583.8261251
+    "anvisasuspendesuplementopeptistrongedeterminarecolhimentodet": 1791805583.8261251,
+    "moradoresdenunciamusodecpfsemretiradasdemedicamentospelofarm": 1791890944.8180728
   },
   "entries": [
     {
@@ -1676,6 +1677,30 @@
             "suplemento",
             "suspende",
             "todos"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1791890944.8180728,
+      "date": "2026-10-13 08:29",
+      "kind": "carousel",
+      "title": "Usaram seu CPF na farm\u00e1cia?",
+      "stories": [
+        {
+          "key": "moradoresdenunciamusodecpfsemretiradasdemedicamentospelofarm",
+          "title": "Moradores denunciam uso de CPFs em retiradas de medicamentos pelo Farm\u00e1cia Popular em MG",
+          "tokens": [
+            "cia",
+            "cpfs",
+            "denunciam",
+            "farm",
+            "medicamentos",
+            "moradores",
+            "pelo",
+            "popular",
+            "retiradas",
+            "uso"
           ]
         }
       ]
