@@ -63,7 +63,8 @@
     "suplementosalimentaresnotratamresistnciainsulinaalertaanvisa": 1791631524.3088398,
     "anvisaautorizanovaalegaoparacreatinavoltadaapessoasacimade55": 1791717988.657968,
     "anvisasuspendesuplementopeptistrongedeterminarecolhimentodet": 1791805583.8261251,
-    "moradoresdenunciamusodecpfsemretiradasdemedicamentospelofarm": 1791890944.8180728
+    "moradoresdenunciamusodecpfsemretiradasdemedicamentospelofarm": 1791890944.8180728,
+    "associaopedeatualizaodepelomenos5nospreosdosgenricosem2027": 1791977250.1153355
   },
   "entries": [
     {
@@ -1701,6 +1702,31 @@
             "popular",
             "retiradas",
             "uso"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1791977250.1153355,
+      "date": "2026-10-14 08:27",
+      "kind": "carousel",
+      "title": "5% a mais nos gen\u00e9ricos",
+      "stories": [
+        {
+          "key": "associaopedeatualizaodepelomenos5nospreosdosgenricosem2027",
+          "title": "Associa\u00e7\u00e3o pede atualiza\u00e7\u00e3o de pelo menos 5% nos pre\u00e7os dos gen\u00e9ricos em 2027",
+          "tokens": [
+            "2027",
+            "associa",
+            "atualiza",
+            "dos",
+            "gen",
+            "menos",
+            "nos",
+            "pede",
+            "pelo",
+            "pre",
+            "ricos"
           ]
         }
       ]
