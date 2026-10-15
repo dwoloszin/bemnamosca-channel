@@ -64,7 +64,8 @@
     "anvisaautorizanovaalegaoparacreatinavoltadaapessoasacimade55": 1791717988.657968,
     "anvisasuspendesuplementopeptistrongedeterminarecolhimentodet": 1791805583.8261251,
     "moradoresdenunciamusodecpfsemretiradasdemedicamentospelofarm": 1791890944.8180728,
-    "associaopedeatualizaodepelomenos5nospreosdosgenricosem2027": 1791977250.1153355
+    "associaopedeatualizaodepelomenos5nospreosdosgenricosem2027": 1791977250.1153355,
+    "suplementodecrcumapassaatrazernortuloumavisodequemnodevecons": 1792064955.030266
   },
   "entries": [
     {
@@ -1727,6 +1728,48 @@
             "pelo",
             "pre",
             "ricos"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1792064955.030266,
+      "date": "2026-10-15 08:49",
+      "kind": "carousel",
+      "title": "C\u00farcuma tem novo limite no Brasil",
+      "stories": [
+        {
+          "key": "suplementodecrcumapassaatrazernortuloumavisodequemnodevecons",
+          "title": "Suplemento de c\u00farcuma passa a trazer no r\u00f3tulo um aviso de quem n\u00e3o deve consumir e fica limitado a 130 mg de curcuminoi",
+          "tokens": [
+            "130",
+            "2026",
+            "438",
+            "adultos",
+            "anvisa",
+            "aviso",
+            "com",
+            "consumir",
+            "curcuminoides",
+            "deve",
+            "dia",
+            "fica",
+            "ind",
+            "instru",
+            "limitado",
+            "normativa",
+            "outubro",
+            "para",
+            "passa",
+            "pela",
+            "por",
+            "prazo",
+            "quem",
+            "rcuma",
+            "stria",
+            "suplemento",
+            "trazer",
+            "tulo"
           ]
         }
       ]
