@@ -65,7 +65,8 @@
     "anvisasuspendesuplementopeptistrongedeterminarecolhimentodet": 1791805583.8261251,
     "moradoresdenunciamusodecpfsemretiradasdemedicamentospelofarm": 1791890944.8180728,
     "associaopedeatualizaodepelomenos5nospreosdosgenricosem2027": 1791977250.1153355,
-    "suplementodecrcumapassaatrazernortuloumavisodequemnodevecons": 1792064955.030266
+    "suplementodecrcumapassaatrazernortuloumavisodequemnodevecons": 1792064955.030266,
+    "prefeitodeangicalbrunonetopedeautorizaodetratamentopeloplano": 1792150001.2791708
   },
   "entries": [
     {
@@ -1770,6 +1771,29 @@
             "suplemento",
             "trazer",
             "tulo"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1792150001.2791708,
+      "date": "2026-10-16 08:26",
+      "kind": "carousel",
+      "title": "Autoriza seu tratamento?",
+      "stories": [
+        {
+          "key": "prefeitodeangicalbrunonetopedeautorizaodetratamentopeloplano",
+          "title": "Prefeito de Angical, Bruno Neto pede autoriza\u00e7\u00e3o de tratamento pelo plano de sa\u00fade",
+          "tokens": [
+            "angical",
+            "autoriza",
+            "bruno",
+            "neto",
+            "pede",
+            "pelo",
+            "plano",
+            "prefeito",
+            "tratamento"
           ]
         }
       ]
