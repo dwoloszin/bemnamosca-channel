@@ -67,7 +67,8 @@
     "associaopedeatualizaodepelomenos5nospreosdosgenricosem2027": 1791977250.1153355,
     "suplementodecrcumapassaatrazernortuloumavisodequemnodevecons": 1792064955.030266,
     "prefeitodeangicalbrunonetopedeautorizaodetratamentopeloplano": 1792150001.2791708,
-    "vejacomoconsumirsuplementosalimentarescomseguranasegundoaanv": 1792236196.7168286
+    "vejacomoconsumirsuplementosalimentarescomseguranasegundoaanv": 1792236196.7168286,
+    "emparceriacomoministriodasadeerastogaertnertestanovomodelode": 1792323854.7335505
   },
   "entries": [
     {
@@ -1818,6 +1819,36 @@
             "seguran",
             "suplementos",
             "veja"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1792323854.7335505,
+      "date": "2026-10-18 08:44",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio de alto custo no SUS",
+      "stories": [
+        {
+          "key": "emparceriacomoministriodasadeerastogaertnertestanovomodelode",
+          "title": "Em parceria com o Minist\u00e9rio da Sa\u00fade, Erasto Gaertner testa novo modelo de acesso a rem\u00e9dios contra o c\u00e2ncer pelo SUS",
+          "tokens": [
+            "acesso",
+            "com",
+            "contra",
+            "dios",
+            "erasto",
+            "gaertner",
+            "minist",
+            "modelo",
+            "ncer",
+            "novo",
+            "parceria",
+            "pelo",
+            "rem",
+            "rio",
+            "sus",
+            "testa"
           ]
         }
       ]
