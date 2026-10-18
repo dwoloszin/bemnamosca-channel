@@ -127,6 +127,32 @@ def build_tiktok_caption(cfg: Config, headline: str, fact: str = "",
     return (body + "\n\n" + " ".join(f"#{t}" for t in picked)).strip()[:2200]
 
 
+def build_facebook_caption(cfg: Config, headline: str, fact: str = "",
+                           question: str = "", tags: list[str] | None = None) -> str:
+    """Caption for the MANUAL Reels post on the Facebook page (the native
+    page<->Instagram link is blocked on this account, so the user uploads the
+    video by hand). Facebook sits between TikTok and YouTube: short like the
+    TikTok text, but a link in the caption is fine there (no LinkedIn-style
+    down-ranking) and drug-brand hashtags are not TikTok's minefield."""
+    from .links import app_url
+    head = headline.strip().rstrip(".")
+    parts = [head + ("" if head.endswith(("?", "!", "…")) else ".")]
+    if fact.strip():
+        parts.append(fact.strip())
+    parts.append(question.strip() or "Você compara o preço antes de comprar?")
+    parts.append("Buscador de preços — a compra é feita na farmácia.\n"
+                 + app_url(cfg, "facebook", content="reel"))
+    picked: list[str] = []
+    for t in (tags or []) + _SAFE_BASE_TAGS:
+        c = _clean_tag(t)
+        if c and c not in picked:
+            picked.append(c)
+        if len(picked) >= 5:
+            break
+    body = "\n\n".join(parts) + "\n\n" + " ".join(f"#{t}" for t in picked)
+    return body.strip()[:2000]
+
+
 def build_linkedin_page_caption(cfg: Config, headline: str, fact: str = "",
                                 question: str = "", tags: list[str] | None = None) -> str:
     """Company-page post for the day's VIDEO. Deliberately different from

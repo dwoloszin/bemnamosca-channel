@@ -209,6 +209,9 @@ def prepare(cfg: Config, video: Path, extra_tags: list[str] | None = None, *,
     from .social_captions import build_linkedin_page_caption
     meta["linkedin_page"] = build_linkedin_page_caption(cfg, meta["title"], first, tags=meta.get("tags", [])[:4])
     (cfg.output_dir / "promos" / (video.stem + ".linkedin_page.txt")).write_text(meta["linkedin_page"], encoding="utf-8")
+    from .social_captions import build_facebook_caption
+    meta["facebook"] = build_facebook_caption(cfg, meta["title"], first, tags=meta.get("tags", [])[:5])
+    (cfg.output_dir / "promos" / (video.stem + ".facebook.txt")).write_text(meta["facebook"], encoding="utf-8")
     sidecar.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     final_dir = cfg.output_dir / "promos"; final_dir.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(sidecar, final_dir / sidecar.name)      # texts travel with the video

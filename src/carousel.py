@@ -895,7 +895,7 @@ def make_carousel(cfg: Config, topic: str | None = None,
     (pkg / "post.txt").write_text(build_single_post(cfg, slides, item), encoding="utf-8")
     # TikTok gets its own caption (no links, no drug-brand hashtags) — using
     # post.txt there got posts locked for "community guidelines violation".
-    from .social_captions import (build_tiktok_caption,
+    from .social_captions import (build_tiktok_caption, build_facebook_caption,
                                   build_linkedin_page_caption, story_hashtags)
     # Tags the story earns go first in both captions; each builder then adds
     # its own safe/static pool. TikTok's blocklist still filters brands.
@@ -908,6 +908,12 @@ def make_carousel(cfg: Config, topic: str | None = None,
     # Company page gets its own short text for the video — never the same
     # words as linkedin.txt (profile), or LinkedIn suppresses one of the two.
     (pkg / "linkedin_page.txt").write_text(build_linkedin_page_caption(
+        cfg, slides[0].headline, slides[1].body if len(slides) > 1 else "",
+        tags=stags),
+        encoding="utf-8")
+    # Facebook page Reels are posted BY HAND (the native page<->Instagram
+    # link is blocked on this account) — the caption ships ready to paste.
+    (pkg / "facebook.txt").write_text(build_facebook_caption(
         cfg, slides[0].headline, slides[1].body if len(slides) > 1 else "",
         tags=stags),
         encoding="utf-8")

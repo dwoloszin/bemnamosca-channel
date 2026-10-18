@@ -19,7 +19,7 @@ O PC fica como backup.
 | **1/3 oneuse** | promos prontos em `videos/oneuse/` (inbox) | YouTube agendado + Reel; arquivados depois |
 | **2/3 loop** | o próximo pitch do rodízio em `videos/loop/` (16 vídeos) | YouTube 12:00 + Reel |
 | **3/3 carrossel** | vídeo gerado da notícia do dia (5 partes, ~55 s) | YouTube 18:00 + Reel |
-| pacote manual | `linkedin.jpg` + `linkedin.txt`, 5 slides 4:5, `carousel.txt`, `post.txt` | você posta no LinkedIn / TikTok |
+| pacote manual | `linkedin.jpg` + `linkedin.txt`, `tiktok.txt`, `facebook.txt`, `linkedin_page.txt`, 5 slides 4:5, `carousel.txt`, `post.txt` | você posta no LinkedIn / TikTok / Facebook (Reels da página) |
 
 ### Anatomia do vídeo do carrossel
 
@@ -195,3 +195,7 @@ em sofrimento saem sem o app.
 
 # run this cmd to fetch processed file from todAY
 python scripts\fetch_today.py
+
+
+python scripts\fetch_today.py 2026-10-04   # um dia específico
+
