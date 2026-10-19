@@ -68,7 +68,8 @@
     "suplementodecrcumapassaatrazernortuloumavisodequemnodevecons": 1792064955.030266,
     "prefeitodeangicalbrunonetopedeautorizaodetratamentopeloplano": 1792150001.2791708,
     "vejacomoconsumirsuplementosalimentarescomseguranasegundoaanv": 1792236196.7168286,
-    "emparceriacomoministriodasadeerastogaertnertestanovomodelode": 1792323854.7335505
+    "emparceriacomoministriodasadeerastogaertnertestanovomodelode": 1792323854.7335505,
+    "coparticipaoemplanosdesadeavanasemlimitedefinidoeanstentarev": 1792409241.543707
   },
   "entries": [
     {
@@ -1849,6 +1850,31 @@
             "rio",
             "sus",
             "testa"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1792409241.543707,
+      "date": "2026-10-19 08:27",
+      "kind": "carousel",
+      "title": "Plano de sa\u00fade sem limite de cobran\u00e7a",
+      "stories": [
+        {
+          "key": "coparticipaoemplanosdesadeavanasemlimitedefinidoeanstentarev",
+          "title": "Coparticipa\u00e7\u00e3o em planos de sa\u00fade avan\u00e7a sem limite definido, e ANS tenta rever regra de 1998",
+          "tokens": [
+            "1998",
+            "ans",
+            "avan",
+            "coparticipa",
+            "definido",
+            "limite",
+            "planos",
+            "regra",
+            "rever",
+            "sem",
+            "tenta"
           ]
         }
       ]
