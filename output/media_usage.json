@@ -169,8 +169,8 @@
       "last": "2026-10-19 08:25:49"
     },
     "assets/music/bed_upbeat_acoustic.mp3": {
-      "uses": 16,
-      "last": "2026-10-16 08:25:50"
+      "uses": 17,
+      "last": "2026-10-20 08:25:56"
     },
     "assets/music/bed_energetic_clap.mp3": {
       "uses": 16,
@@ -1057,16 +1057,16 @@
       "last": "2026-10-04 10:10:32"
     },
     "output/_work_carousel_feed/pexels/13113c132597a705.jpg": {
-      "uses": 1,
-      "last": "2026-10-04 10:10:32"
+      "uses": 2,
+      "last": "2026-10-20 08:24:29"
     },
     "img-channel/vertical/app_creme_hidratante_clinique.jpg": {
-      "uses": 2,
-      "last": "2026-10-06 08:24:55"
+      "uses": 3,
+      "last": "2026-10-20 08:24:29"
     },
     "img-channel/vertical/app_creme_antirrugas_skinceuticals.jpg": {
-      "uses": 2,
-      "last": "2026-10-06 08:24:55"
+      "uses": 3,
+      "last": "2026-10-20 08:24:29"
     },
     "output/_work_carousel_feed/pexels/0ba498c8c2fcbe63.jpg": {
       "uses": 1,
@@ -1407,6 +1407,34 @@
     "output/_work_carousel_feed/pexels/f0ac7e1c81e8693f.jpg": {
       "uses": 1,
       "last": "2026-10-19 08:24:23"
+    },
+    "output/_work_carousel_feed/ai/ai_20261020_a188de6911.png": {
+      "uses": 1,
+      "last": "2026-10-20 08:24:29"
+    },
+    "output/_work_carousel_feed/ai/ai_20261020_fc20357222.png": {
+      "uses": 1,
+      "last": "2026-10-20 08:24:29"
+    },
+    "output/_work_carousel_feed/pexels/4cb6fc26ea4a5864.jpg": {
+      "uses": 1,
+      "last": "2026-10-20 08:24:29"
+    },
+    "output/_work_carousel_feed/pexels/0571c54064224fe6.jpg": {
+      "uses": 1,
+      "last": "2026-10-20 08:24:29"
+    },
+    "output/_work_carousel_feed/pexels/25ae852f5e89b38d.jpg": {
+      "uses": 1,
+      "last": "2026-10-20 08:24:29"
+    },
+    "output/_work_carousel_feed/pexels/5aecb4cb8a6fb383.jpg": {
+      "uses": 1,
+      "last": "2026-10-20 08:24:29"
+    },
+    "output/_work_carousel_feed/pexels/f97fd2f45aee3191.jpg": {
+      "uses": 1,
+      "last": "2026-10-20 08:24:29"
     }
   },
   "log": [
@@ -3002,6 +3030,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_calm_piano.mp3"
+    },
+    {
+      "time": "2026-10-20 08:24:29",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20261020_a188de6911.png",
+        "output/_work_carousel_feed/ai/ai_20261020_fc20357222.png",
+        "output/_work_carousel_feed/pexels/4cb6fc26ea4a5864.jpg",
+        "img-channel/vertical/app_creme_hidratante_clinique.jpg",
+        "img-channel/vertical/app_creme_antirrugas_skinceuticals.jpg",
+        "output/_work_carousel_feed/pexels/0571c54064224fe6.jpg",
+        "output/_work_carousel_feed/pexels/13113c132597a705.jpg",
+        "output/_work_carousel_feed/pexels/25ae852f5e89b38d.jpg",
+        "output/_work_carousel_feed/pexels/5aecb4cb8a6fb383.jpg",
+        "output/_work_carousel_feed/pexels/f97fd2f45aee3191.jpg"
+      ]
+    },
+    {
+      "time": "2026-10-20 08:25:56",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_upbeat_acoustic.mp3"
     }
   ]
 }
