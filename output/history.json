@@ -70,7 +70,8 @@
     "vejacomoconsumirsuplementosalimentarescomseguranasegundoaanv": 1792236196.7168286,
     "emparceriacomoministriodasadeerastogaertnertestanovomodelode": 1792323854.7335505,
     "coparticipaoemplanosdesadeavanasemlimitedefinidoeanstentarev": 1792409241.543707,
-    "mantecorpskincarecompranamingrightsdosopaulofashionweekapart": 1792495602.4976802
+    "mantecorpskincarecompranamingrightsdosopaulofashionweekapart": 1792495602.4976802,
+    "examesnofarmciapopularsadedafamliaerededecncerosplanosdelula": 1792583249.240983
   },
   "entries": [
     {
@@ -1903,6 +1904,31 @@
             "rights",
             "skincare",
             "week"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1792583249.240983,
+      "date": "2026-10-21 08:47",
+      "kind": "carousel",
+      "title": "Exames no Farm\u00e1cia Popular: tr\u00eas pre\u00e7os",
+      "stories": [
+        {
+          "key": "examesnofarmciapopularsadedafamliaerededecncerosplanosdelula",
+          "title": "Exames no Farm\u00e1cia Popular, Sa\u00fade da Fam\u00edlia e rede de c\u00e2ncer: os planos de Lula para a Sa\u00fade",
+          "tokens": [
+            "cia",
+            "exames",
+            "fam",
+            "farm",
+            "lia",
+            "lula",
+            "ncer",
+            "para",
+            "planos",
+            "popular",
+            "rede"
           ]
         }
       ]
