@@ -73,7 +73,8 @@
     "mantecorpskincarecompranamingrightsdosopaulofashionweekapart": 1792495602.4976802,
     "examesnofarmciapopularsadedafamliaerededecncerosplanosdelula": 1792583249.240983,
     "anvisaaprovanovomedicamentoparatratamentodecncerdepulmoavana": 1792668955.9260166,
-    "comogarantirasustentabilidadedosplanosdesadediantedosdesafio": 1792756347.8610575
+    "comogarantirasustentabilidadedosplanosdesadediantedosdesafio": 1792756347.8610575,
+    "anssugeretraardiretrizesparatratamentodepessoascomautismopor": 1792841035.2093585
   },
   "entries": [
     {
@@ -1981,6 +1982,31 @@
             "segs",
             "setor",
             "sustentabilidade"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1792841035.2093585,
+      "date": "2026-10-24 08:23",
+      "kind": "carousel",
+      "title": "Novas regras para autismo nos planos",
+      "stories": [
+        {
+          "key": "anssugeretraardiretrizesparatratamentodepessoascomautismopor",
+          "title": "ANS sugere tra\u00e7ar diretrizes para tratamento de pessoas com autismo por planos de sa\u00fade",
+          "tokens": [
+            "ans",
+            "autismo",
+            "com",
+            "diretrizes",
+            "para",
+            "pessoas",
+            "planos",
+            "por",
+            "sugere",
+            "tra",
+            "tratamento"
           ]
         }
       ]
