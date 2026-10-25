@@ -74,7 +74,8 @@
     "examesnofarmciapopularsadedafamliaerededecncerosplanosdelula": 1792583249.240983,
     "anvisaaprovanovomedicamentoparatratamentodecncerdepulmoavana": 1792668955.9260166,
     "comogarantirasustentabilidadedosplanosdesadediantedosdesafio": 1792756347.8610575,
-    "anssugeretraardiretrizesparatratamentodepessoascomautismopor": 1792841035.2093585
+    "anssugeretraardiretrizesparatratamentodepessoascomautismopor": 1792841035.2093585,
+    "farmciapopularatendemaisde208milpessoasemsergipeatsetembrode": 1792927419.6499991
   },
   "entries": [
     {
@@ -2007,6 +2008,31 @@
             "sugere",
             "tra",
             "tratamento"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1792927419.6499991,
+      "date": "2026-10-25 08:23",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio de gra\u00e7a para 208 mil",
+      "stories": [
+        {
+          "key": "farmciapopularatendemaisde208milpessoasemsergipeatsetembrode",
+          "title": "Farm\u00e1cia Popular atende mais de 208 mil pessoas em Sergipe at\u00e9 setembro de 2026",
+          "tokens": [
+            "2026",
+            "208",
+            "atende",
+            "cia",
+            "farm",
+            "mais",
+            "mil",
+            "pessoas",
+            "popular",
+            "sergipe",
+            "setembro"
           ]
         }
       ]
