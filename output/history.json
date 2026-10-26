@@ -75,7 +75,8 @@
     "anvisaaprovanovomedicamentoparatratamentodecncerdepulmoavana": 1792668955.9260166,
     "comogarantirasustentabilidadedosplanosdesadediantedosdesafio": 1792756347.8610575,
     "anssugeretraardiretrizesparatratamentodepessoascomautismopor": 1792841035.2093585,
-    "farmciapopularatendemaisde208milpessoasemsergipeatsetembrode": 1792927419.6499991
+    "farmciapopularatendemaisde208milpessoasemsergipeatsetembrode": 1792927419.6499991,
+    "ashwagandhaproibidanobrasilalertaanvisasobresuplementovirald": 1793014367.6224303
   },
   "entries": [
     {
@@ -2033,6 +2034,29 @@
             "popular",
             "sergipe",
             "setembro"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1793014367.6224303,
+      "date": "2026-10-26 08:32",
+      "kind": "carousel",
+      "title": "Suplemento viral, agora proibido",
+      "stories": [
+        {
+          "key": "ashwagandhaproibidanobrasilalertaanvisasobresuplementovirald",
+          "title": "Ashwagandha \u00e9 proibida no Brasil, alerta Anvisa sobre suplemento viral do TikTok",
+          "tokens": [
+            "alerta",
+            "anvisa",
+            "ashwagandha",
+            "brasil",
+            "proibida",
+            "sobre",
+            "suplemento",
+            "tiktok",
+            "viral"
           ]
         }
       ]
