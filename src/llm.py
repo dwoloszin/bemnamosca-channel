@@ -224,6 +224,15 @@ def get_llm(cfg: Config):
             tiers.append(("gemini", GeminiLLM(keys,
                                               cfg.get("script.gemini_model", "gemini-2.5-flash"),
                                               cfg.output_dir / "gemini_state.json")))
+            # A 503 is usually one model overloaded, not Gemini down: on 26 and
+            # 27/10 gemini-3.6-flash gave 503 on every key while 3.5-flash and
+            # 3.1-flash-lite answered — but the chain fell straight to Groq,
+            # which wrote a 78-word, 34s video. Try sibling models first.
+            # Own state file per model: a 429 cooldown on one model's quota
+            # must not bench the same key for the others.
+            for model in cfg.get("script.gemini_fallback_models", []) or []:
+                tiers.append((f"gemini:{model}", GeminiLLM(
+                    keys, model, cfg.output_dir / f"gemini_state_{model}.json")))
 
     if provider in ("auto", "groq"):
         keys = _groq_keys()

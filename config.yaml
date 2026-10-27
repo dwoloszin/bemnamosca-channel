@@ -166,6 +166,11 @@ script:
   # Se voltar a dar 503, liste os modelos disponiveis e fixe o mais novo que
   # responder — nao volte para o alias.
   gemini_model: "gemini-3.6-flash"
+  # Tentados em ordem quando o gemini_model falha, ANTES do Groq. Em 26 e 27/10
+  # o 3.6-flash deu 503 nas tres chaves e o Groq escreveu um roteiro de 78
+  # palavras (video de 34s). Testado em 27/10: estes dois respondem em ~2s;
+  # 2.5-flash e 2.5-flash-lite dao 404, flash-latest da 503.
+  gemini_fallback_models: ["gemini-3.5-flash", "gemini-3.1-flash-lite"]
   # 17/08: a Groq aposentou llama-3.3-70b-versatile e as cinco chaves passaram a
   # dar 404 model_not_found — o tier de fallback inteiro estava morto em silencio
   # (o log so mostrava "404 Not Found", que parece problema de chave, nao de
@@ -393,8 +398,11 @@ carousel:
   # modelo e perguntado de novo na hora (mesmo prompt, temperatura 0.7, resposta
   # diferente). So depois de esgotar as tentativas o dia cai na escada de 30 min
   # do daily — que existe para o provedor fora do ar, outro problema.
-  min_narrated_words: 60           # menos que isso, refaz o roteiro
-  min_slides: 3                    # slides aproveitaveis minimos
+  # 27/10: 60 palavras/3 slides deixou passar um roteiro do Groq com 78
+  # palavras -> video de 34s com a historia pela metade. O prompt pede 5 slides
+  # de 18-26 palavras (90-130); a recusa agora diz ao modelo quanto faltou.
+  min_narrated_words: 90           # menos que isso, refaz o roteiro
+  min_slides: 4                    # slides aproveitaveis minimos
   script_attempts: 3               # re-perguntas imediatas antes de desistir
   # GANCHO. A primeira frase da narracao decide o scroll: curta, com numero,
   # pergunta ou contradicao, e nunca comecando com "licao de moral". Abaixo

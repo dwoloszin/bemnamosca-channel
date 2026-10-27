@@ -263,8 +263,13 @@ Return ONLY JSON: {{"slides": [{{"role": "hook", "headline": "...",
     min_slides = int(cfg.get("carousel.min_slides", 3))
     attempts = max(1, int(cfg.get("carousel.script_attempts", 3)))
 
+    # Re-asking with the SAME prompt only works for a random hiccup. Weaker
+    # fallback models write short on purpose, every time — on 27/10 the Groq
+    # tier ignored "18-26 words per slide" twice. Telling the model exactly
+    # what was wrong with its last answer is what makes the retry different.
+    feedback = ""
     for attempt in range(1, attempts + 1):
-        data = _ask_json(client, prompt)
+        data = _ask_json(client, prompt + feedback)
         raw = (data or {}).get("slides") or []
         slides: list[Slide] = []
         missing_narration = 0
@@ -315,6 +320,13 @@ Return ONLY JSON: {{"slides": [{{"role": "hook", "headline": "...",
         if attempt < attempts:
             print(f"  [carousel] rejected ({reason}) — asking the model again "
                   f"[{attempt}/{attempts}]")
+            feedback = (f"\n\nYOUR PREVIOUS ANSWER WAS REJECTED: {reason}.")
+            if len(slides) < min_slides or words < min_words:
+                feedback += (f" You returned {len(slides)} slides and {words} narrated "
+                             f"words. Return ALL 5 slides, each with a \"narration\" of "
+                             f"18-26 spoken words — {max(min_words, 100)}-130 words in "
+                             f"total. Tell the whole story: what happened, why it "
+                             f"matters, what the reader can do.")
         else:
             print(f"  [carousel] rejected ({reason}) — giving up after "
                   f"{attempts} attempts")
