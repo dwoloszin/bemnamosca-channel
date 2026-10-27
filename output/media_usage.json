@@ -165,8 +165,8 @@
       "last": "2026-08-20 10:03:11"
     },
     "assets/music/bed_calm_piano.mp3": {
-      "uses": 18,
-      "last": "2026-10-23 08:51:14"
+      "uses": 19,
+      "last": "2026-10-27 08:28:32"
     },
     "assets/music/bed_upbeat_acoustic.mp3": {
       "uses": 18,
@@ -433,20 +433,20 @@
       "last": "2026-09-04 08:24:46"
     },
     "output/_work_carousel_feed/pexels/6114426d057ed69d.jpg": {
-      "uses": 2,
-      "last": "2026-10-01 08:25:21"
+      "uses": 3,
+      "last": "2026-10-27 08:27:42"
     },
     "output/_work_carousel_feed/pexels/cac9faaa6ecd75e8.jpg": {
-      "uses": 2,
-      "last": "2026-10-01 08:25:21"
+      "uses": 3,
+      "last": "2026-10-27 08:27:42"
     },
     "output/_work_carousel_feed/pexels/35e8b4cfedfddacc.jpg": {
-      "uses": 1,
-      "last": "2026-09-04 08:24:46"
+      "uses": 2,
+      "last": "2026-10-27 08:27:42"
     },
     "output/_work_carousel_feed/pexels/bfee4eab6fceec11.jpg": {
-      "uses": 1,
-      "last": "2026-09-04 08:24:46"
+      "uses": 2,
+      "last": "2026-10-27 08:27:42"
     },
     "output/_work_carousel_feed/ai/ai_20260905_f59162827e.png": {
       "uses": 1,
@@ -1555,6 +1555,14 @@
     "output/_work_carousel_feed/pexels/38f990c7ee5e0c30.jpg": {
       "uses": 1,
       "last": "2026-10-26 08:29:57"
+    },
+    "output/_work_carousel_feed/ai/ai_20261027_133a7b314f.png": {
+      "uses": 1,
+      "last": "2026-10-27 08:27:42"
+    },
+    "output/_work_carousel_feed/ai/ai_20261027_a243b7c692.png": {
+      "uses": 1,
+      "last": "2026-10-27 08:27:42"
     }
   },
   "log": [
@@ -3304,6 +3312,24 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_modern_pop.mp3"
+    },
+    {
+      "time": "2026-10-27 08:27:42",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20261027_133a7b314f.png",
+        "output/_work_carousel_feed/ai/ai_20261027_a243b7c692.png",
+        "output/_work_carousel_feed/pexels/6114426d057ed69d.jpg",
+        "output/_work_carousel_feed/pexels/cac9faaa6ecd75e8.jpg",
+        "output/_work_carousel_feed/pexels/bfee4eab6fceec11.jpg",
+        "output/_work_carousel_feed/pexels/35e8b4cfedfddacc.jpg"
+      ]
+    },
+    {
+      "time": "2026-10-27 08:28:32",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_calm_piano.mp3"
     }
   ]
 }
