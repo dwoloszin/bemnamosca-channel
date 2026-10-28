@@ -77,7 +77,8 @@
     "anssugeretraardiretrizesparatratamentodepessoascomautismopor": 1792841035.2093585,
     "farmciapopularatendemaisde208milpessoasemsergipeatsetembrode": 1792927419.6499991,
     "ashwagandhaproibidanobrasilalertaanvisasobresuplementovirald": 1793014367.6224303,
-    "justiadomaranhonegacusteiodetratamentocommounjaroausuriadepl": 1793100561.8264506
+    "justiadomaranhonegacusteiodetratamentocommounjaroausuriadepl": 1793100561.8264506,
+    "anvisadeterminarecolhimentodepicolcommelatoninaedesuplemento": 1793186509.1568952
   },
   "entries": [
     {
@@ -2082,6 +2083,29 @@
             "ria",
             "tratamento",
             "usu"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1793186509.1568952,
+      "date": "2026-10-28 08:21",
+      "kind": "carousel",
+      "title": "Picol\u00e9 com melatonina foi proibido",
+      "stories": [
+        {
+          "key": "anvisadeterminarecolhimentodepicolcommelatoninaedesuplemento",
+          "title": "Anvisa determina recolhimento de picol\u00e9 com melatonina e de suplemento alimentar - O Liberal",
+          "tokens": [
+            "alimentar",
+            "anvisa",
+            "com",
+            "determina",
+            "liberal",
+            "melatonina",
+            "picol",
+            "recolhimento",
+            "suplemento"
           ]
         }
       ]
