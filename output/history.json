@@ -78,7 +78,8 @@
     "farmciapopularatendemaisde208milpessoasemsergipeatsetembrode": 1792927419.6499991,
     "ashwagandhaproibidanobrasilalertaanvisasobresuplementovirald": 1793014367.6224303,
     "justiadomaranhonegacusteiodetratamentocommounjaroausuriadepl": 1793100561.8264506,
-    "anvisadeterminarecolhimentodepicolcommelatoninaedesuplemento": 1793186509.1568952
+    "anvisadeterminarecolhimentodepicolcommelatoninaedesuplemento": 1793186509.1568952,
+    "remdiosdegraanafarmciapopularevitamendividamentodefamliasdeb": 1793272898.0677452
   },
   "entries": [
     {
@@ -2106,6 +2107,32 @@
             "picol",
             "recolhimento",
             "suplemento"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1793272898.0677452,
+      "date": "2026-10-29 08:21",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio de gra\u00e7a evita d\u00edvidas",
+      "stories": [
+        {
+          "key": "remdiosdegraanafarmciapopularevitamendividamentodefamliasdeb",
+          "title": "Rem\u00e9dios de gra\u00e7a na Farm\u00e1cia Popular evitam endividamento de fam\u00edlias de baixa renda",
+          "tokens": [
+            "baixa",
+            "cia",
+            "dios",
+            "endividamento",
+            "evitam",
+            "fam",
+            "farm",
+            "gra",
+            "lias",
+            "popular",
+            "rem",
+            "renda"
           ]
         }
       ]
