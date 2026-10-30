@@ -79,7 +79,8 @@
     "ashwagandhaproibidanobrasilalertaanvisasobresuplementovirald": 1793014367.6224303,
     "justiadomaranhonegacusteiodetratamentocommounjaroausuriadepl": 1793100561.8264506,
     "anvisadeterminarecolhimentodepicolcommelatoninaedesuplemento": 1793186509.1568952,
-    "remdiosdegraanafarmciapopularevitamendividamentodefamliasdeb": 1793272898.0677452
+    "remdiosdegraanafarmciapopularevitamendividamentodefamliasdeb": 1793272898.0677452,
+    "anvisasuspendepropagandadeglicofiteglifitporpromessasenganos": 1793359188.2738724
   },
   "entries": [
     {
@@ -2133,6 +2134,30 @@
             "popular",
             "rem",
             "renda"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1793359188.2738724,
+      "date": "2026-10-30 08:19",
+      "kind": "carousel",
+      "title": "Promessa cara sobre glicose virou proibi\u00e7\u00e3o",
+      "stories": [
+        {
+          "key": "anvisasuspendepropagandadeglicofiteglifitporpromessasenganos",
+          "title": "Anvisa suspende propaganda de Glicofit e Glifit por promessas enganosas de controle da glicose",
+          "tokens": [
+            "anvisa",
+            "controle",
+            "enganosas",
+            "glicofit",
+            "glicose",
+            "glifit",
+            "por",
+            "promessas",
+            "propaganda",
+            "suspende"
           ]
         }
       ]
