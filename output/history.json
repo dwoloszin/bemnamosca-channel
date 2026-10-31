@@ -80,7 +80,8 @@
     "justiadomaranhonegacusteiodetratamentocommounjaroausuriadepl": 1793100561.8264506,
     "anvisadeterminarecolhimentodepicolcommelatoninaedesuplemento": 1793186509.1568952,
     "remdiosdegraanafarmciapopularevitamendividamentodefamliasdeb": 1793272898.0677452,
-    "anvisasuspendepropagandadeglicofiteglifitporpromessasenganos": 1793359188.2738724
+    "anvisasuspendepropagandadeglicofiteglifitporpromessasenganos": 1793359188.2738724,
+    "anvisasuspendepropagandadesuplementosqueprometemcontrolardia": 1793445423.3082283
   },
   "entries": [
     {
@@ -2157,6 +2158,28 @@
             "por",
             "promessas",
             "propaganda",
+            "suspende"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1793445423.3082283,
+      "date": "2026-10-31 08:17",
+      "kind": "carousel",
+      "title": "Suplemento de internet n\u00e3o \u00e9 rem\u00e9dio",
+      "stories": [
+        {
+          "key": "anvisasuspendepropagandadesuplementosqueprometemcontrolardia",
+          "title": "Anvisa suspende propaganda de suplementos que prometem controlar diabetes",
+          "tokens": [
+            "anvisa",
+            "controlar",
+            "diabetes",
+            "prometem",
+            "propaganda",
+            "que",
+            "suplementos",
             "suspende"
           ]
         }
