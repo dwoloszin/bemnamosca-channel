@@ -81,7 +81,8 @@
     "anvisadeterminarecolhimentodepicolcommelatoninaedesuplemento": 1793186509.1568952,
     "remdiosdegraanafarmciapopularevitamendividamentodefamliasdeb": 1793272898.0677452,
     "anvisasuspendepropagandadeglicofiteglifitporpromessasenganos": 1793359188.2738724,
-    "anvisasuspendepropagandadesuplementosqueprometemcontrolardia": 1793445423.3082283
+    "anvisasuspendepropagandadesuplementosqueprometemcontrolardia": 1793445423.3082283,
+    "exclusoindevidadeidosodeplanodesadebastaparacausardanosmorai": 1793531873.8765519
   },
   "entries": [
     {
@@ -2181,6 +2182,29 @@
             "que",
             "suplementos",
             "suspende"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1793531873.8765519,
+      "date": "2026-11-01 08:17",
+      "kind": "carousel",
+      "title": "Plano cancelado sem aviso gera indeniza\u00e7\u00e3o",
+      "stories": [
+        {
+          "key": "exclusoindevidadeidosodeplanodesadebastaparacausardanosmorai",
+          "title": "Exclus\u00e3o indevida de idoso de plano de sa\u00fade basta para causar danos morais",
+          "tokens": [
+            "basta",
+            "causar",
+            "danos",
+            "exclus",
+            "idoso",
+            "indevida",
+            "morais",
+            "para",
+            "plano"
           ]
         }
       ]
