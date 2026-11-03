@@ -83,7 +83,8 @@
     "anvisasuspendepropagandadeglicofiteglifitporpromessasenganos": 1793359188.2738724,
     "anvisasuspendepropagandadesuplementosqueprometemcontrolardia": 1793445423.3082283,
     "exclusoindevidadeidosodeplanodesadebastaparacausardanosmorai": 1793531873.8765519,
-    "quandoainsulinanobastaoqueodiabetesrevelasobreosistemadesade": 1793618447.6496422
+    "quandoainsulinanobastaoqueodiabetesrevelasobreosistemadesade": 1793618447.6496422,
+    "remdiosdegraaparapressoaltadiabetesecolesterolestodisponveis": 1793704769.4826953
   },
   "entries": [
     {
@@ -2229,6 +2230,34 @@
             "revela",
             "sistema",
             "sobre"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1793704769.4826953,
+      "date": "2026-11-03 08:19",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio de gra\u00e7a mesmo com plano",
+      "stories": [
+        {
+          "key": "remdiosdegraaparapressoaltadiabetesecolesterolestodisponveis",
+          "title": "Rem\u00e9dios de gra\u00e7a para press\u00e3o alta, diabetes e colesterol est\u00e3o dispon\u00edveis at\u00e9 para quem tem plano de sa\u00fade",
+          "tokens": [
+            "alta",
+            "colesterol",
+            "diabetes",
+            "dios",
+            "dispon",
+            "est",
+            "gra",
+            "para",
+            "plano",
+            "press",
+            "quem",
+            "rem",
+            "tem",
+            "veis"
           ]
         }
       ]
