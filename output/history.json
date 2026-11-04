@@ -84,7 +84,8 @@
     "anvisasuspendepropagandadesuplementosqueprometemcontrolardia": 1793445423.3082283,
     "exclusoindevidadeidosodeplanodesadebastaparacausardanosmorai": 1793531873.8765519,
     "quandoainsulinanobastaoqueodiabetesrevelasobreosistemadesade": 1793618447.6496422,
-    "remdiosdegraaparapressoaltadiabetesecolesterolestodisponveis": 1793704769.4826953
+    "remdiosdegraaparapressoaltadiabetesecolesterolestodisponveis": 1793704769.4826953,
+    "fimdasinjeesanvisaaprovaprimeirocomprimidodeglp1paraemagrece": 1793791297.8750646
   },
   "entries": [
     {
@@ -2258,6 +2259,33 @@
             "rem",
             "tem",
             "veis"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1793791297.8750646,
+      "date": "2026-11-04 08:21",
+      "kind": "carousel",
+      "title": "O mesmo comprimido. Tr\u00eas pre\u00e7os diferentes.",
+      "stories": [
+        {
+          "key": "fimdasinjeesanvisaaprovaprimeirocomprimidodeglp1paraemagrece",
+          "title": "Fim das inje\u00e7\u00f5es? Anvisa aprova primeiro comprimido de GLP-1 para emagrecer no Brasil - ncnews.com.br",
+          "tokens": [
+            "anvisa",
+            "aprova",
+            "brasil",
+            "com",
+            "comprimido",
+            "das",
+            "emagrecer",
+            "fim",
+            "glp",
+            "inje",
+            "ncnews",
+            "para",
+            "primeiro"
           ]
         }
       ]
