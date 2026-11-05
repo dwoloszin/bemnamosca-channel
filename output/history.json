@@ -85,7 +85,8 @@
     "exclusoindevidadeidosodeplanodesadebastaparacausardanosmorai": 1793531873.8765519,
     "quandoainsulinanobastaoqueodiabetesrevelasobreosistemadesade": 1793618447.6496422,
     "remdiosdegraaparapressoaltadiabetesecolesterolestodisponveis": 1793704769.4826953,
-    "fimdasinjeesanvisaaprovaprimeirocomprimidodeglp1paraemagrece": 1793791297.8750646
+    "fimdasinjeesanvisaaprovaprimeirocomprimidodeglp1paraemagrece": 1793791297.8750646,
+    "anvisaprobeashwagandhacomosuplementoentendaaregraparamanipul": 1793877518.2137601
   },
   "entries": [
     {
@@ -2286,6 +2287,29 @@
             "ncnews",
             "para",
             "primeiro"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1793877518.2137601,
+      "date": "2026-11-05 08:18",
+      "kind": "carousel",
+      "title": "Ashwagandha de prateleira foi proibida",
+      "stories": [
+        {
+          "key": "anvisaprobeashwagandhacomosuplementoentendaaregraparamanipul",
+          "title": "Anvisa pro\u00edbe ashwagandha como suplemento; entenda a regra para manipulados",
+          "tokens": [
+            "anvisa",
+            "ashwagandha",
+            "como",
+            "entenda",
+            "manipulados",
+            "para",
+            "pro",
+            "regra",
+            "suplemento"
           ]
         }
       ]
