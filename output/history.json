@@ -86,7 +86,8 @@
     "quandoainsulinanobastaoqueodiabetesrevelasobreosistemadesade": 1793618447.6496422,
     "remdiosdegraaparapressoaltadiabetesecolesterolestodisponveis": 1793704769.4826953,
     "fimdasinjeesanvisaaprovaprimeirocomprimidodeglp1paraemagrece": 1793791297.8750646,
-    "anvisaprobeashwagandhacomosuplementoentendaaregraparamanipul": 1793877518.2137601
+    "anvisaprobeashwagandhacomosuplementoentendaaregraparamanipul": 1793877518.2137601,
+    "soluesinterinstitucionaissugeridapelojudicirioparalidarcomju": 1793964091.190793
   },
   "entries": [
     {
@@ -2310,6 +2311,30 @@
             "pro",
             "regra",
             "suplemento"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1793964091.190793,
+      "date": "2026-11-06 08:21",
+      "kind": "carousel",
+      "title": "Direito ao rem\u00e9dio exige luta na Justi\u00e7a",
+      "stories": [
+        {
+          "key": "soluesinterinstitucionaissugeridapelojudicirioparalidarcomju",
+          "title": "Solu\u00e7\u00f5es interinstitucionais \u00e9 sugerida pelo Judici\u00e1rio para lidar com judicializa\u00e7\u00e3o da sa\u00fade",
+          "tokens": [
+            "com",
+            "interinstitucionais",
+            "judici",
+            "judicializa",
+            "lidar",
+            "para",
+            "pelo",
+            "rio",
+            "solu",
+            "sugerida"
           ]
         }
       ]
