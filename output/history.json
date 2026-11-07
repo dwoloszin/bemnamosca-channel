@@ -87,7 +87,8 @@
     "remdiosdegraaparapressoaltadiabetesecolesterolestodisponveis": 1793704769.4826953,
     "fimdasinjeesanvisaaprovaprimeirocomprimidodeglp1paraemagrece": 1793791297.8750646,
     "anvisaprobeashwagandhacomosuplementoentendaaregraparamanipul": 1793877518.2137601,
-    "soluesinterinstitucionaissugeridapelojudicirioparalidarcomju": 1793964091.190793
+    "soluesinterinstitucionaissugeridapelojudicirioparalidarcomju": 1793964091.190793,
+    "coparticipaonosplanosdesadeacontanopodesetornarumobstculoaot": 1794050358.7583795
   },
   "entries": [
     {
@@ -2335,6 +2336,29 @@
             "rio",
             "solu",
             "sugerida"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1794050358.7583795,
+      "date": "2026-11-07 08:19",
+      "kind": "carousel",
+      "title": "Conta do plano quase dobra",
+      "stories": [
+        {
+          "key": "coparticipaonosplanosdesadeacontanopodesetornarumobstculoaot",
+          "title": "Coparticipa\u00e7\u00e3o nos planos de sa\u00fade: a conta n\u00e3o pode se tornar um obst\u00e1culo ao tratamento",
+          "tokens": [
+            "conta",
+            "coparticipa",
+            "culo",
+            "nos",
+            "obst",
+            "planos",
+            "pode",
+            "tornar",
+            "tratamento"
           ]
         }
       ]
