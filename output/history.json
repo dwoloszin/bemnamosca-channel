@@ -88,7 +88,8 @@
     "fimdasinjeesanvisaaprovaprimeirocomprimidodeglp1paraemagrece": 1793791297.8750646,
     "anvisaprobeashwagandhacomosuplementoentendaaregraparamanipul": 1793877518.2137601,
     "soluesinterinstitucionaissugeridapelojudicirioparalidarcomju": 1793964091.190793,
-    "coparticipaonosplanosdesadeacontanopodesetornarumobstculoaot": 1794050358.7583795
+    "coparticipaonosplanosdesadeacontanopodesetornarumobstculoaot": 1794050358.7583795,
+    "anvisaalertaparausodamelatoninaequestionapromessasdeprodutos": 1794136564.2197785
   },
   "entries": [
     {
@@ -2359,6 +2360,28 @@
             "pode",
             "tornar",
             "tratamento"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1794136564.2197785,
+      "date": "2026-11-08 08:16",
+      "kind": "carousel",
+      "title": "Melatonina n\u00e3o \u00e9 para ins\u00f4nia?",
+      "stories": [
+        {
+          "key": "anvisaalertaparausodamelatoninaequestionapromessasdeprodutos",
+          "title": "Anvisa alerta para uso da melatonina e questiona promessas de produtos",
+          "tokens": [
+            "alerta",
+            "anvisa",
+            "melatonina",
+            "para",
+            "produtos",
+            "promessas",
+            "questiona",
+            "uso"
           ]
         }
       ]
