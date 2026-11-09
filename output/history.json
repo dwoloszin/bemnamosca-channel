@@ -89,7 +89,8 @@
     "anvisaprobeashwagandhacomosuplementoentendaaregraparamanipul": 1793877518.2137601,
     "soluesinterinstitucionaissugeridapelojudicirioparalidarcomju": 1793964091.190793,
     "coparticipaonosplanosdesadeacontanopodesetornarumobstculoaot": 1794050358.7583795,
-    "anvisaalertaparausodamelatoninaequestionapromessasdeprodutos": 1794136564.2197785
+    "anvisaalertaparausodamelatoninaequestionapromessasdeprodutos": 1794136564.2197785,
+    "osmedicamentosdenovageraoparaotratamentodocncertmumaprobabil": 1794223253.3742144
   },
   "entries": [
     {
@@ -2382,6 +2383,33 @@
             "promessas",
             "questiona",
             "uso"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1794223253.3742144,
+      "date": "2026-11-09 08:20",
+      "kind": "carousel",
+      "title": "Cobertura de rem\u00e9dios varia entre 30% e 70%",
+      "stories": [
+        {
+          "key": "osmedicamentosdenovageraoparaotratamentodocncertmumaprobabil",
+          "title": "Os medicamentos de nova gera\u00e7\u00e3o para o tratamento do c\u00e2ncer t\u00eam uma probabilidade de serem cobertos pelo plano de sa\u00fade ",
+          "tokens": [
+            "cobertos",
+            "entre",
+            "gera",
+            "medicamentos",
+            "ncer",
+            "nova",
+            "para",
+            "pelo",
+            "plano",
+            "probabilidade",
+            "serem",
+            "tratamento",
+            "uma"
           ]
         }
       ]
