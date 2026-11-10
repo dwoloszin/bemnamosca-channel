@@ -90,7 +90,8 @@
     "soluesinterinstitucionaissugeridapelojudicirioparalidarcomju": 1793964091.190793,
     "coparticipaonosplanosdesadeacontanopodesetornarumobstculoaot": 1794050358.7583795,
     "anvisaalertaparausodamelatoninaequestionapromessasdeprodutos": 1794136564.2197785,
-    "osmedicamentosdenovageraoparaotratamentodocncertmumaprobabil": 1794223253.3742144
+    "osmedicamentosdenovageraoparaotratamentodocncertmumaprobabil": 1794223253.3742144,
+    "medicamentodealtocustoparacncerpassaaseroferecidopelosusatar": 1794309799.9177454
   },
   "entries": [
     {
@@ -2410,6 +2411,31 @@
             "serem",
             "tratamento",
             "uma"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1794309799.9177454,
+      "date": "2026-11-10 08:23",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio caro de c\u00e2ncer agora no SUS",
+      "stories": [
+        {
+          "key": "medicamentodealtocustoparacncerpassaaseroferecidopelosusatar",
+          "title": "Medicamento de alto custo para c\u00e2ncer passa a ser oferecido pelo SUS - A TARDE",
+          "tokens": [
+            "alto",
+            "custo",
+            "medicamento",
+            "ncer",
+            "oferecido",
+            "para",
+            "passa",
+            "pelo",
+            "ser",
+            "sus",
+            "tarde"
           ]
         }
       ]

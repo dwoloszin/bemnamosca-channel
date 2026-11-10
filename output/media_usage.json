@@ -1,8 +1,8 @@
 {
   "usage": {
     "img-channel/vertical/Screenshot_20260815_142615_Chrome.jpg": {
-      "uses": 54,
-      "last": "2026-11-09 08:17:33"
+      "uses": 55,
+      "last": "2026-11-10 08:21:12"
     },
     "img-channel/vertical/Screenshot_20260814_204045_Chrome.jpg": {
       "uses": 2,
@@ -21,8 +21,8 @@
       "last": "2026-08-16 11:19:23"
     },
     "img-channel/vertical/Screenshot_20260814_203938_Chrome.jpg": {
-      "uses": 54,
-      "last": "2026-11-09 08:17:33"
+      "uses": 55,
+      "last": "2026-11-10 08:21:12"
     },
     "img-channel/vertical/Screenshot_20260814_203512_Chrome.jpg": {
       "uses": 1,
@@ -33,8 +33,8 @@
       "last": "2026-08-19 10:02:38"
     },
     "img-channel/vertical/Screenshot_20260814_210030_Chrome.jpg": {
-      "uses": 54,
-      "last": "2026-11-09 08:17:33"
+      "uses": 55,
+      "last": "2026-11-10 08:21:12"
     },
     "img-channel/vertical/Screenshot_20260814_203917_Chrome.jpg": {
       "uses": 2,
@@ -133,16 +133,16 @@
       "last": "2026-08-18 10:04:54"
     },
     "img-channel/vertical/Screenshot_20260814_205936_Chrome.jpg": {
-      "uses": 55,
-      "last": "2026-11-09 08:17:33"
+      "uses": 56,
+      "last": "2026-11-10 08:21:12"
     },
     "output/_work_carousel_feed/pexels/cf83bda8486aa8eb.jpg": {
-      "uses": 14,
-      "last": "2026-10-29 08:18:49"
+      "uses": 15,
+      "last": "2026-11-10 08:21:12"
     },
     "output/_work_carousel_feed/pexels/4b46c036cb577bf9.jpg": {
-      "uses": 10,
-      "last": "2026-11-05 08:16:24"
+      "uses": 11,
+      "last": "2026-11-10 08:21:12"
     },
     "img-channel/vertical/Screenshot_20260814_205852_Chrome.jpg": {
       "uses": 1,
@@ -173,8 +173,8 @@
       "last": "2026-11-09 08:19:09"
     },
     "assets/music/bed_energetic_clap.mp3": {
-      "uses": 21,
-      "last": "2026-11-06 08:20:47"
+      "uses": 22,
+      "last": "2026-11-10 08:22:32"
     },
     "assets/music/bed_modern_pop.mp3": {
       "uses": 21,
@@ -473,8 +473,8 @@
       "last": "2026-09-06 08:19:51"
     },
     "output/_work_carousel_feed/pexels/aa56886bf23b966c.jpg": {
-      "uses": 4,
-      "last": "2026-10-29 08:18:49"
+      "uses": 5,
+      "last": "2026-11-10 08:21:12"
     },
     "output/_work_carousel_feed/ai/ai_20260907_dd1a92762b.png": {
       "uses": 1,
@@ -661,8 +661,8 @@
       "last": "2026-09-15 08:24:14"
     },
     "output/_work_carousel_feed/pexels/cc6b4e71fbf31f1d.jpg": {
-      "uses": 4,
-      "last": "2026-09-25 08:24:14"
+      "uses": 5,
+      "last": "2026-11-10 08:21:12"
     },
     "output/_work_carousel_feed/pexels/e9862040b7a2fc32.jpg": {
       "uses": 3,
@@ -1819,6 +1819,14 @@
     "output/_work_carousel_feed/pexels/692a8608357ed577.jpg": {
       "uses": 1,
       "last": "2026-11-09 08:17:33"
+    },
+    "output/_work_carousel_feed/ai/ai_20261110_0060fead7d.png": {
+      "uses": 1,
+      "last": "2026-11-10 08:21:12"
+    },
+    "output/_work_carousel_feed/ai/ai_20261110_976fea37ad.png": {
+      "uses": 1,
+      "last": "2026-11-10 08:21:12"
     }
   },
   "log": [
@@ -3870,6 +3878,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_upbeat_acoustic.mp3"
+    },
+    {
+      "time": "2026-11-10 08:21:12",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20261110_0060fead7d.png",
+        "output/_work_carousel_feed/ai/ai_20261110_976fea37ad.png",
+        "output/_work_carousel_feed/pexels/cf83bda8486aa8eb.jpg",
+        "img-channel/vertical/Screenshot_20260814_210030_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_203938_Chrome.jpg",
+        "output/_work_carousel_feed/pexels/4b46c036cb577bf9.jpg",
+        "output/_work_carousel_feed/pexels/cc6b4e71fbf31f1d.jpg",
+        "output/_work_carousel_feed/pexels/aa56886bf23b966c.jpg",
+        "img-channel/vertical/Screenshot_20260815_142615_Chrome.jpg",
+        "img-channel/vertical/Screenshot_20260814_205936_Chrome.jpg"
+      ]
+    },
+    {
+      "time": "2026-11-10 08:22:32",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_energetic_clap.mp3"
     }
   ]
 }
