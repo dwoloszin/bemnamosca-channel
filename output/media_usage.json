@@ -177,8 +177,8 @@
       "last": "2026-11-10 08:22:32"
     },
     "assets/music/bed_modern_pop.mp3": {
-      "uses": 21,
-      "last": "2026-11-07 08:17:30"
+      "uses": 22,
+      "last": "2026-11-11 08:17:36"
     },
     "output/_work_carousel_feed/ai/ai_20260822_b6a78e4b37.png": {
       "uses": 1,
@@ -593,20 +593,20 @@
       "last": "2026-09-13 08:19:42"
     },
     "output/_work_carousel_feed/pexels/8ccb2e18cec40ba2.jpg": {
-      "uses": 3,
-      "last": "2026-09-23 08:23:51"
+      "uses": 4,
+      "last": "2026-11-11 08:16:12"
     },
     "img-channel/vertical/app_creatina_now_foods.jpg": {
-      "uses": 4,
-      "last": "2026-10-11 08:24:03"
+      "uses": 5,
+      "last": "2026-11-11 08:16:12"
     },
     "img-channel/vertical/app_creatina_dymatize.jpg": {
-      "uses": 4,
-      "last": "2026-10-11 08:24:03"
+      "uses": 5,
+      "last": "2026-11-11 08:16:12"
     },
     "output/_work_carousel_feed/pexels/66ae94f3c8a5293c.jpg": {
-      "uses": 3,
-      "last": "2026-11-05 08:16:24"
+      "uses": 4,
+      "last": "2026-11-11 08:16:12"
     },
     "output/_work_carousel_feed/pexels/f229437d716ce40d.jpg": {
       "uses": 2,
@@ -617,8 +617,8 @@
       "last": "2026-09-13 08:19:42"
     },
     "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg": {
-      "uses": 22,
-      "last": "2026-11-08 08:13:51"
+      "uses": 23,
+      "last": "2026-11-11 08:16:12"
     },
     "output/_work_carousel_feed/pexels/a0665dc582a933cc.jpg": {
       "uses": 4,
@@ -1827,6 +1827,26 @@
     "output/_work_carousel_feed/ai/ai_20261110_976fea37ad.png": {
       "uses": 1,
       "last": "2026-11-10 08:21:12"
+    },
+    "output/_work_carousel_feed/ai/ai_20261111_1a240660f2.png": {
+      "uses": 1,
+      "last": "2026-11-11 08:16:12"
+    },
+    "output/_work_carousel_feed/ai/ai_20261111_8a6a208926.png": {
+      "uses": 1,
+      "last": "2026-11-11 08:16:12"
+    },
+    "img-channel/vertical/app_colageno_dermup.jpg": {
+      "uses": 1,
+      "last": "2026-11-11 08:16:12"
+    },
+    "output/_work_carousel_feed/pexels/8fbdaa46dc11e475.jpg": {
+      "uses": 1,
+      "last": "2026-11-11 08:16:12"
+    },
+    "output/_work_carousel_feed/pexels/8dbbf81fcf5d6a34.jpg": {
+      "uses": 1,
+      "last": "2026-11-11 08:16:12"
     }
   },
   "log": [
@@ -3900,6 +3920,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_energetic_clap.mp3"
+    },
+    {
+      "time": "2026-11-11 08:16:12",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20261111_1a240660f2.png",
+        "output/_work_carousel_feed/ai/ai_20261111_8a6a208926.png",
+        "output/_work_carousel_feed/pexels/8ccb2e18cec40ba2.jpg",
+        "img-channel/vertical/app_colageno_dermup.jpg",
+        "img-channel/vertical/app_creatina_now_foods.jpg",
+        "output/_work_carousel_feed/pexels/8fbdaa46dc11e475.jpg",
+        "output/_work_carousel_feed/pexels/66ae94f3c8a5293c.jpg",
+        "output/_work_carousel_feed/pexels/8dbbf81fcf5d6a34.jpg",
+        "img-channel/vertical/app_creatina_dymatize.jpg",
+        "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg"
+      ]
+    },
+    {
+      "time": "2026-11-11 08:17:36",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_modern_pop.mp3"
     }
   ]
 }

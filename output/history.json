@@ -91,7 +91,8 @@
     "coparticipaonosplanosdesadeacontanopodesetornarumobstculoaot": 1794050358.7583795,
     "anvisaalertaparausodamelatoninaequestionapromessasdeprodutos": 1794136564.2197785,
     "osmedicamentosdenovageraoparaotratamentodocncertmumaprobabil": 1794223253.3742144,
-    "medicamentodealtocustoparacncerpassaaseroferecidopelosusatar": 1794309799.9177454
+    "medicamentodealtocustoparacncerpassaaseroferecidopelosusatar": 1794309799.9177454,
+    "anvisaprobelotedecreatinaeoutrossuplementosalimentaresirregu": 1794395919.1253467
   },
   "entries": [
     {
@@ -2436,6 +2437,30 @@
             "ser",
             "sus",
             "tarde"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1794395919.1253467,
+      "date": "2026-11-11 08:18",
+      "kind": "carousel",
+      "title": "Voc\u00ea conferiu sua creatina hoje?",
+      "stories": [
+        {
+          "key": "anvisaprobelotedecreatinaeoutrossuplementosalimentaresirregu",
+          "title": "Anvisa pro\u00edbe lote de creatina e outros suplementos alimentares irregulares; veja lista",
+          "tokens": [
+            "alimentares",
+            "anvisa",
+            "creatina",
+            "irregulares",
+            "lista",
+            "lote",
+            "outros",
+            "pro",
+            "suplementos",
+            "veja"
           ]
         }
       ]
