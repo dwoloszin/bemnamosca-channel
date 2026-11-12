@@ -92,7 +92,8 @@
     "anvisaalertaparausodamelatoninaequestionapromessasdeprodutos": 1794136564.2197785,
     "osmedicamentosdenovageraoparaotratamentodocncertmumaprobabil": 1794223253.3742144,
     "medicamentodealtocustoparacncerpassaaseroferecidopelosusatar": 1794309799.9177454,
-    "anvisaprobelotedecreatinaeoutrossuplementosalimentaresirregu": 1794395919.1253467
+    "anvisaprobelotedecreatinaeoutrossuplementosalimentaresirregu": 1794395919.1253467,
+    "anvisaaprovamaisduascanetasdesemaglutidamassparadiabetestvsi": 1794482547.9831245
   },
   "entries": [
     {
@@ -2461,6 +2462,31 @@
             "pro",
             "suplementos",
             "veja"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1794482547.9831245,
+      "date": "2026-11-12 08:22",
+      "kind": "carousel",
+      "title": "Novas canetas aprovadas s\u00f3 para diabetes",
+      "stories": [
+        {
+          "key": "anvisaaprovamaisduascanetasdesemaglutidamassparadiabetestvsi",
+          "title": "Anvisa aprova mais duas canetas de semaglutida, mas s\u00f3 para diabetes - TV Sim Brasil",
+          "tokens": [
+            "anvisa",
+            "aprova",
+            "brasil",
+            "canetas",
+            "diabetes",
+            "duas",
+            "mais",
+            "mas",
+            "para",
+            "semaglutida",
+            "sim"
           ]
         }
       ]
