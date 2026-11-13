@@ -93,7 +93,8 @@
     "osmedicamentosdenovageraoparaotratamentodocncertmumaprobabil": 1794223253.3742144,
     "medicamentodealtocustoparacncerpassaaseroferecidopelosusatar": 1794309799.9177454,
     "anvisaprobelotedecreatinaeoutrossuplementosalimentaresirregu": 1794395919.1253467,
-    "anvisaaprovamaisduascanetasdesemaglutidamassparadiabetestvsi": 1794482547.9831245
+    "anvisaaprovamaisduascanetasdesemaglutidamassparadiabetestvsi": 1794482547.9831245,
+    "anvisasuspendealimentosesuplementosdaenkapsincluindoamarcamu": 1794568784.8879726
   },
   "entries": [
     {
@@ -2487,6 +2488,31 @@
             "para",
             "semaglutida",
             "sim"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1794568784.8879726,
+      "date": "2026-11-13 08:19",
+      "kind": "carousel",
+      "title": "Anvisa suspende marcas de suplementos",
+      "stories": [
+        {
+          "key": "anvisasuspendealimentosesuplementosdaenkapsincluindoamarcamu",
+          "title": "Anvisa suspende alimentos e suplementos da ENKAPS, incluindo a marca Muscleboss, fabricados at\u00e9 3 de novembro de 2026",
+          "tokens": [
+            "2026",
+            "alimentos",
+            "anvisa",
+            "enkaps",
+            "fabricados",
+            "incluindo",
+            "marca",
+            "muscleboss",
+            "novembro",
+            "suplementos",
+            "suspende"
           ]
         }
       ]
