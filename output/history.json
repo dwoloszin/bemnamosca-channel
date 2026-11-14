@@ -94,7 +94,8 @@
     "medicamentodealtocustoparacncerpassaaseroferecidopelosusatar": 1794309799.9177454,
     "anvisaprobelotedecreatinaeoutrossuplementosalimentaresirregu": 1794395919.1253467,
     "anvisaaprovamaisduascanetasdesemaglutidamassparadiabetestvsi": 1794482547.9831245,
-    "anvisasuspendealimentosesuplementosdaenkapsincluindoamarcamu": 1794568784.8879726
+    "anvisasuspendealimentosesuplementosdaenkapsincluindoamarcamu": 1794568784.8879726,
+    "anvisamandarecolherlotedeanestsicoapslaudoapontarpartculaest": 1794655016.0867858
   },
   "entries": [
     {
@@ -2513,6 +2514,33 @@
             "novembro",
             "suplementos",
             "suspende"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1794655016.0867858,
+      "date": "2026-11-14 08:16",
+      "kind": "carousel",
+      "title": "Anvisa manda recolher lote de anest\u00e9sico",
+      "stories": [
+        {
+          "key": "anvisamandarecolherlotedeanestsicoapslaudoapontarpartculaest",
+          "title": "Anvisa manda recolher lote de anest\u00e9sico ap\u00f3s laudo apontar part\u00edcula estranha no medicamento - MEON",
+          "tokens": [
+            "anest",
+            "anvisa",
+            "apontar",
+            "cula",
+            "estranha",
+            "laudo",
+            "lote",
+            "manda",
+            "medicamento",
+            "meon",
+            "part",
+            "recolher",
+            "sico"
           ]
         }
       ]
