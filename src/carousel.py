@@ -387,16 +387,33 @@ def pick_sources(cfg: Config, slides: list[Slide],
     # per story per day — see ai_image.news_image — so the retry ladder and
     # the feed/video double call never bill twice.
     from . import ai_image
+    news = [s for s in slides if s.role not in ("solucao", "aplicacao", "conclusao")]
     if ai_image.enabled(cfg):
-        n_ai = max(0, min(2, int(cfg.get("media.ai_image.per_story", 1))))
+        n_ai = max(0, min(5, int(cfg.get("media.ai_image.per_story", 1))))
         headline = slides[0].headline if slides else ""
-        for s in slides[:n_ai]:
-            img = ai_image.news_image(cfg, s.keyword, headline + " " + s.headline)
+        on_screen: set[str] = set()
+        for s in news[:n_ai]:
+            img = ai_image.news_image(cfg, s.keyword, headline + " " + s.headline,
+                                      exclude=on_screen)
             if img:
                 stock.append(img)
-    for s in slides[:2]:                       # only the news beats need stock
-        if s.keyword:
-            stock.extend(pexels_images(cfg, s.keyword, 4, workdir / "pexels"))
+        # 15/11: Pexels answered "warning label" with a man offering a pack of
+        # cigarettes and a pesticide sign, and both went out on a health
+        # channel. Stock photos are matched by words, not meaning. With
+        # stock_photos off, the video's second shot per news beat comes from
+        # the channel's own library of past AI images instead.
+        # App beats get one too: when the curated screens run out they fall
+        # back to this pool, and without a spare they repeated a news photo.
+        if not cfg.get("carousel.stock_photos", True) and extras is not None:
+            for s in news + [s for s in slides if s not in news]:
+                img = ai_image.from_library(cfg, s.keyword, on_screen)
+                if img:
+                    on_screen.add(img.name)
+                    stock.append(img)
+    if cfg.get("carousel.stock_photos", True):
+        for s in slides[:2]:                   # only the news beats need stock
+            if s.keyword:
+                stock.extend(pexels_images(cfg, s.keyword, 4, workdir / "pexels"))
 
     used: set[Path] = set()
     picks: list[tuple[Path | None, bool]] = []

@@ -433,6 +433,10 @@ carousel:
   # Blocos do app (solucao/aplicacao/conclusao) usam SO as telas de remedio da
   # lista linkedin.screens — a biblioteca inteira tem perfume e creme.
   curated_screens_only: true
+  # 15/11: false = carrossel SEM Pexels. Busca por palavra trouxe um maco de
+  # cigarros e uma placa de agrotoxico para "warning label". So foto IA do dia
+  # + biblioteca assets/images/ai (fotos IA de videos anteriores).
+  stock_photos: false
   section_chips:                   # etiqueta no topo a cada bloco (por role)
     noticia: "O QUE MUDOU"
     impacto: "O QUE ISSO CUSTA"
@@ -735,7 +739,11 @@ media:
     enabled: true
     models: ["gemini-3.1-flash-image", "gemini-2.5-flash-image"]   # ordem de tentativa
     aspect_ratio: "9:16"
-    per_story: 2                   # gancho + noticia com foto IA; o bloco 3 usa banco/biblioteca
+    # 15/11: todo slide de noticia (gancho, noticia, impacto) ganha foto IA.
+    # A segunda imagem de cada um no video vem da biblioteca abaixo — o Pexels
+    # saiu do carrossel (carousel.stock_photos) depois de por um maco de
+    # cigarros num video de saude.
+    per_story: 3
     style: "warm tones, Brazilian pharmacy or home setting"
     # Toda imagem gerada e guardada aqui. Sem credito/quota, o proximo video
     # usa a mais parecida (por palavra-chave) em vez de foto de banco.

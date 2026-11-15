@@ -95,11 +95,17 @@ def _keep(cfg: Config, img: Path, keyword: str, when: date) -> None:
         print(f"  [ai-image] could not store in library ({exc})")
 
 
-def from_library(cfg: Config, keyword: str) -> Path | None:
+def from_library(cfg: Config, keyword: str,
+                 exclude: set[str] | None = None) -> Path | None:
     """Best stand-in from past generations: most keyword words in common,
-    then least-used (the project's existing rotation guarantee)."""
+    then least-used (the project's existing rotation guarantee). `exclude`
+    holds file names already on screen in this video. Today's generations are
+    skipped too: they are copies of images this video already shows."""
     lib = _library_dir(cfg)
-    files = [p for p in lib.iterdir() if p.suffix.lower() in (".png", ".jpg", ".jpeg")]
+    today = f"ai_{date.today():%Y%m%d}_"
+    skip = {n.lower() for n in (exclude or set())}
+    files = [p for p in lib.iterdir() if p.suffix.lower() in (".png", ".jpg", ".jpeg")
+             and not p.name.startswith(today) and p.name.lower() not in skip]
     if not files:
         return None
     words = {w for w in re.split(r"[^a-z0-9]+", (keyword or "").lower()) if len(w) > 3}
@@ -150,7 +156,8 @@ def _generate(cfg: Config, prompt: str, out: Path) -> bool:
 
 
 def news_image(cfg: Config, keyword: str, headline: str,
-               when: date | None = None) -> Path | None:
+               when: date | None = None,
+               exclude: set[str] | None = None) -> Path | None:
     """The day's AI photo for this story — generated once, then reused;
     library stand-in when the API cannot deliver."""
     if not enabled(cfg):
@@ -164,8 +171,10 @@ def news_image(cfg: Config, keyword: str, headline: str,
         _keep(cfg, out, keyword, when)
         return out
     print("  [ai-image] no model produced an image — looking in the library")
-    stand_in = from_library(cfg, keyword)
+    stand_in = from_library(cfg, keyword, exclude)
     if stand_in:
+        if exclude is not None:
+            exclude.add(stand_in.name)
         # Mark the story as AI-illustrated today (cache + synthetic flag) even
         # though the image is a reuse: it is still a generated picture.
         shutil.copyfile(stand_in, out)
