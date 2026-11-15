@@ -95,7 +95,8 @@
     "anvisaprobelotedecreatinaeoutrossuplementosalimentaresirregu": 1794395919.1253467,
     "anvisaaprovamaisduascanetasdesemaglutidamassparadiabetestvsi": 1794482547.9831245,
     "anvisasuspendealimentosesuplementosdaenkapsincluindoamarcamu": 1794568784.8879726,
-    "anvisamandarecolherlotedeanestsicoapslaudoapontarpartculaest": 1794655016.0867858
+    "anvisamandarecolherlotedeanestsicoapslaudoapontarpartculaest": 1794655016.0867858,
+    "anvisaprobefabricaoevendadequatrosuplementosalimentaressaiba": 1794741474.1119616
   },
   "entries": [
     {
@@ -2541,6 +2542,29 @@
             "part",
             "recolher",
             "sico"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1794741474.1119616,
+      "date": "2026-11-15 08:17",
+      "kind": "carousel",
+      "title": "Quatro suplementos proibidos pela Anvisa",
+      "stories": [
+        {
+          "key": "anvisaprobefabricaoevendadequatrosuplementosalimentaressaiba",
+          "title": "Anvisa pro\u00edbe fabrica\u00e7\u00e3o e venda de quatro suplementos alimentares; saiba quais",
+          "tokens": [
+            "alimentares",
+            "anvisa",
+            "fabrica",
+            "pro",
+            "quais",
+            "quatro",
+            "saiba",
+            "suplementos",
+            "venda"
           ]
         }
       ]
