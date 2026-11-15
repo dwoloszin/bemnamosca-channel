@@ -104,6 +104,13 @@ def synthesize_auto(text: str, out_path: str | Path, cfg, *,
             return synthesize_elevenlabs(text, out_path, cfg,
                                          previous_text=previous_text, next_text=next_text)
         except Exception as exc:  # noqa: BLE001
+            # 14/11: the keys are shared with another project and ran dry.
+            # A video half in Alice's voice and half in edge-tts is worse than
+            # no video, so with fallback off the render fails and nothing
+            # is published.
+            if not cfg.get("tts.elevenlabs.fallback", True):
+                raise RuntimeError(f"ElevenLabs unavailable ({exc}) and "
+                                   "tts.elevenlabs.fallback is off") from exc
             print(f"  [tts] ElevenLabs unavailable ({exc}) — trying Groq TTS")
             provider = "groq"
 

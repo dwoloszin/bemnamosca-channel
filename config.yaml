@@ -628,6 +628,12 @@ tts:
     stability: 0.35                # lower = more expressive, higher = more even
     similarity: 0.75
     style: 0.45                    # expressividade (0.25 era monotono)
+    # 14/11: as chaves sao divididas com outro projeto e zeraram. Sem creditos
+    # NAO publica video (nem com a voz do edge): o carrossel consulta o saldo
+    # antes, e se faltar gera so slides/textos. fallback: false tambem impede
+    # trocar de voz no meio se acabar durante a renderizacao.
+    fallback: false
+    min_credits_for_video: 1000    # um video usa ~500 (turbo = meio credito/caractere)
   # Groq TTS — middle fallback slot in the chain (elevenlabs -> groq -> edge).
   # NOTE: Groq decommissioned its playai-tts model (no TTS models are currently
   # served), so this tier is dormant. If Groq ships a new TTS model, put its

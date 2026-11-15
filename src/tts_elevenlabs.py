@@ -273,6 +273,29 @@ def synthesize_elevenlabs(text: str, out_path: str | Path, cfg: Config, *,
     raise AllKeysExhausted(f"no ElevenLabs key succeeded (last error: {last_err})")
 
 
+def usable_credits(cfg: Config, min_per_key: float = 200) -> tuple[float, int]:
+    """Credits the pool can actually spend right now, asked fresh from the API.
+
+    Returns (credits, unknown_keys). Leftovers under `min_per_key` don't count:
+    each narration block must fit in ONE key, so ten keys with 100 credits
+    each cannot voice a single 150-character block. Keys that can't read
+    their subscription (TTS-only scope) are counted in unknown_keys.
+    """
+    pool = load_pool(cfg)
+    if pool is None:
+        return 0.0, 0
+    total, unknown = 0.0, 0
+    for k in pool.keys:
+        if pool.state.get(_key_id(k), {}).get("invalid"):
+            continue
+        rem = pool.remaining_credits(k)
+        if rem is None:
+            unknown += 1
+        elif rem >= min_per_key:
+            total += rem
+    return total, unknown
+
+
 def pool_status(cfg: Config) -> str:
     """Human-readable credit status for every key (for `main.py setup`)."""
     pool = load_pool(cfg)

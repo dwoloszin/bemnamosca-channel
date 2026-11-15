@@ -805,11 +805,38 @@ def _maybe_publish_reel(cfg: Config, video: Path, pkg: Path) -> None:
     print(f"  [carousel] reel {'published' if ok else 'FAILED'}")
 
 
+def _voice_credits_ok(cfg: Config) -> bool:
+    """Check the ElevenLabs pool BEFORE building the video.
+
+    Without credits there is no video and no upload. The slides and texts
+    are still made for posting by hand. Only applies when ElevenLabs is the
+    voice and its fallback is off; otherwise edge-tts covers the gap.
+    """
+    if cfg.get("tts.provider") != "elevenlabs" or cfg.get("tts.elevenlabs.fallback", True):
+        return True
+    from .tts_elevenlabs import usable_credits
+    need = float(cfg.get("tts.elevenlabs.min_credits_for_video", 1000))
+    have, unknown = usable_credits(cfg)
+    if have >= need:
+        print(f"  [11labs] {have:.0f} credits available (need {need:.0f}) — video on")
+        return True
+    if unknown:
+        # A TTS-only key can't report its balance; let the TTS call decide.
+        # With fallback off a dry key fails the render, so nothing is posted.
+        print(f"  [11labs] {have:.0f} known credits, {unknown} key(s) unknown — trying")
+        return True
+    print(f"  [11labs] only {have:.0f} usable credits (need {need:.0f}) — "
+          "NO video today; slides and texts only")
+    return False
+
+
 def make_carousel(cfg: Config, topic: str | None = None,
                   *, with_video: bool | None = None) -> Path | None:
     """Build the whole package. Returns its folder."""
     if with_video is None:
         with_video = bool(cfg.get("carousel.video", True))
+    if with_video and not _voice_credits_ok(cfg):
+        with_video = False
 
     items = fetch_news(cfg, limit=25)
     if topic:
