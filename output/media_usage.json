@@ -169,8 +169,8 @@
       "last": "2026-11-16 08:24:06"
     },
     "assets/music/bed_upbeat_acoustic.mp3": {
-      "uses": 23,
-      "last": "2026-11-13 08:18:33"
+      "uses": 24,
+      "last": "2026-11-17 08:21:52"
     },
     "assets/music/bed_energetic_clap.mp3": {
       "uses": 23,
@@ -617,8 +617,8 @@
       "last": "2026-09-13 08:19:42"
     },
     "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg": {
-      "uses": 26,
-      "last": "2026-11-16 08:22:44"
+      "uses": 27,
+      "last": "2026-11-17 08:20:44"
     },
     "output/_work_carousel_feed/pexels/a0665dc582a933cc.jpg": {
       "uses": 4,
@@ -1959,6 +1959,38 @@
     "assets/images/ai/ai_20260920_banned-product-pharmacy-shelf.png": {
       "uses": 1,
       "last": "2026-11-16 08:22:44"
+    },
+    "output/_work_carousel_feed/ai/ai_20261117_ad585d4a33.png": {
+      "uses": 1,
+      "last": "2026-11-17 08:20:44"
+    },
+    "output/_work_carousel_feed/ai/ai_20261117_3cb55a9b22.png": {
+      "uses": 1,
+      "last": "2026-11-17 08:20:44"
+    },
+    "output/_work_carousel_feed/ai/ai_20261117_583d3b96e5.png": {
+      "uses": 1,
+      "last": "2026-11-17 08:20:44"
+    },
+    "assets/images/ai/ai_20260915_pharmacy-medicine-shelf-bottles.png": {
+      "uses": 1,
+      "last": "2026-11-17 08:20:44"
+    },
+    "assets/images/ai/ai_20260828_government-official-document-pharmacy.png": {
+      "uses": 1,
+      "last": "2026-11-17 08:20:44"
+    },
+    "assets/images/ai/ai_20261103_senior-person-looking-at-pharmacy-receip.png": {
+      "uses": 1,
+      "last": "2026-11-17 08:20:44"
+    },
+    "assets/images/ai/ai_20261026_person-looking-at-smartphone.png": {
+      "uses": 1,
+      "last": "2026-11-17 08:20:44"
+    },
+    "assets/images/ai/ai_20261003_brazilian-woman-holding-pharmacy-medicin.png": {
+      "uses": 1,
+      "last": "2026-11-17 08:20:44"
     }
   },
   "log": [
@@ -4164,6 +4196,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_calm_piano.mp3"
+    },
+    {
+      "time": "2026-11-17 08:20:44",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20261117_ad585d4a33.png",
+        "output/_work_carousel_feed/ai/ai_20261117_3cb55a9b22.png",
+        "output/_work_carousel_feed/ai/ai_20261117_583d3b96e5.png",
+        "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg",
+        "assets/images/ai/ai_20260915_pharmacy-medicine-shelf-bottles.png",
+        "assets/images/ai/ai_20260828_government-official-document-pharmacy.png",
+        "assets/images/ai/ai_20261103_senior-person-looking-at-pharmacy-receip.png",
+        "assets/images/ai/ai_20261026_person-looking-at-smartphone.png",
+        "assets/images/ai/ai_20261003_brazilian-woman-holding-pharmacy-medicin.png",
+        "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg"
+      ]
+    },
+    {
+      "time": "2026-11-17 08:21:52",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_upbeat_acoustic.mp3"
     }
   ]
 }

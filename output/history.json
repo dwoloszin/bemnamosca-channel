@@ -97,7 +97,8 @@
     "anvisasuspendealimentosesuplementosdaenkapsincluindoamarcamu": 1794568784.8879726,
     "anvisamandarecolherlotedeanestsicoapslaudoapontarpartculaest": 1794655016.0867858,
     "anvisaprobefabricaoevendadequatrosuplementosalimentaressaiba": 1794741474.1119616,
-    "anvisabarrasuplementosecosmticosvendidosemplataformasonline": 1794828307.985707
+    "anvisabarrasuplementosecosmticosvendidosemplataformasonline": 1794828307.985707,
+    "anvisadeterminaapreensodesuplementosalimentaresdediferentesm": 1794914587.7552824
   },
   "entries": [
     {
@@ -2588,6 +2589,28 @@
             "suplementos",
             "ticos",
             "vendidos"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1794914587.7552824,
+      "date": "2026-11-17 08:23",
+      "kind": "carousel",
+      "title": "Sua vitamina pode estar irregular",
+      "stories": [
+        {
+          "key": "anvisadeterminaapreensodesuplementosalimentaresdediferentesm",
+          "title": "Anvisa determina apreens\u00e3o de suplementos alimentares de diferentes marcas no Brasil",
+          "tokens": [
+            "alimentares",
+            "anvisa",
+            "apreens",
+            "brasil",
+            "determina",
+            "diferentes",
+            "marcas",
+            "suplementos"
           ]
         }
       ]
