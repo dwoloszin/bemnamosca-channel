@@ -98,7 +98,8 @@
     "anvisamandarecolherlotedeanestsicoapslaudoapontarpartculaest": 1794655016.0867858,
     "anvisaprobefabricaoevendadequatrosuplementosalimentaressaiba": 1794741474.1119616,
     "anvisabarrasuplementosecosmticosvendidosemplataformasonline": 1794828307.985707,
-    "anvisadeterminaapreensodesuplementosalimentaresdediferentesm": 1794914587.7552824
+    "anvisadeterminaapreensodesuplementosalimentaresdediferentesm": 1794914587.7552824,
+    "planodesadecondenadoafornecermedicamentoparapacientecomescle": 1795000863.216625
   },
   "entries": [
     {
@@ -2611,6 +2612,29 @@
             "diferentes",
             "marcas",
             "suplementos"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1795000863.216625,
+      "date": "2026-11-18 08:21",
+      "kind": "carousel",
+      "title": "Plano nega rem\u00e9dio? Entenda seus direitos",
+      "stories": [
+        {
+          "key": "planodesadecondenadoafornecermedicamentoparapacientecomescle",
+          "title": "Plano de sa\u00fade \u00e9 condenado a fornecer medicamento para paciente com esclerose m\u00faltipla no RN",
+          "tokens": [
+            "com",
+            "condenado",
+            "esclerose",
+            "fornecer",
+            "ltipla",
+            "medicamento",
+            "paciente",
+            "para",
+            "plano"
           ]
         }
       ]
