@@ -99,7 +99,8 @@
     "anvisaprobefabricaoevendadequatrosuplementosalimentaressaiba": 1794741474.1119616,
     "anvisabarrasuplementosecosmticosvendidosemplataformasonline": 1794828307.985707,
     "anvisadeterminaapreensodesuplementosalimentaresdediferentesm": 1794914587.7552824,
-    "planodesadecondenadoafornecermedicamentoparapacientecomescle": 1795000863.216625
+    "planodesadecondenadoafornecermedicamentoparapacientecomescle": 1795000863.216625,
+    "r7rioentrevistatratamentonegadopeloplanodesadesaibacomodefen": 1795087360.4019227
   },
   "entries": [
     {
@@ -2635,6 +2636,31 @@
             "paciente",
             "para",
             "plano"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1795087360.4019227,
+      "date": "2026-11-19 08:22",
+      "kind": "carousel",
+      "title": "Seu plano negou seu medicamento?",
+      "stories": [
+        {
+          "key": "r7rioentrevistatratamentonegadopeloplanodesadesaibacomodefen",
+          "title": "R7 RIO ENTREVISTA: Tratamento negado pelo plano de sa\u00fade? Saiba como defender seus direitos",
+          "tokens": [
+            "como",
+            "defender",
+            "direitos",
+            "entrevista",
+            "negado",
+            "pelo",
+            "plano",
+            "rio",
+            "saiba",
+            "seus",
+            "tratamento"
           ]
         }
       ]
