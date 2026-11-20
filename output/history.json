@@ -100,7 +100,8 @@
     "anvisabarrasuplementosecosmticosvendidosemplataformasonline": 1794828307.985707,
     "anvisadeterminaapreensodesuplementosalimentaresdediferentesm": 1794914587.7552824,
     "planodesadecondenadoafornecermedicamentoparapacientecomescle": 1795000863.216625,
-    "r7rioentrevistatratamentonegadopeloplanodesadesaibacomodefen": 1795087360.4019227
+    "r7rioentrevistatratamentonegadopeloplanodesadesaibacomodefen": 1795087360.4019227,
+    "justiadespdeterminacusteiodemedicamentosemregistronaanvisapa": 1795173631.3154514
   },
   "entries": [
     {
@@ -2661,6 +2662,37 @@
             "saiba",
             "seus",
             "tratamento"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1795173631.3154514,
+      "date": "2026-11-20 08:20",
+      "kind": "carousel",
+      "title": "Plano \u00e9 obrigado a pagar rem\u00e9dio",
+      "stories": [
+        {
+          "key": "justiadespdeterminacusteiodemedicamentosemregistronaanvisapa",
+          "title": "Justi\u00e7a de SP determina custeio de medicamento sem registro na Anvisa para c\u00e2ncer de p\u00e2ncreas; defesa obt\u00e9m tutela contr",
+          "tokens": [
+            "anvisa",
+            "contra",
+            "custeio",
+            "defesa",
+            "determina",
+            "direito",
+            "justi",
+            "medicamento",
+            "ncer",
+            "ncreas",
+            "obt",
+            "para",
+            "registro",
+            "rica",
+            "sem",
+            "sulam",
+            "tutela"
           ]
         }
       ]
