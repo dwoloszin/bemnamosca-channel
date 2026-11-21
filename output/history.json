@@ -101,7 +101,8 @@
     "anvisadeterminaapreensodesuplementosalimentaresdediferentesm": 1794914587.7552824,
     "planodesadecondenadoafornecermedicamentoparapacientecomescle": 1795000863.216625,
     "r7rioentrevistatratamentonegadopeloplanodesadesaibacomodefen": 1795087360.4019227,
-    "justiadespdeterminacusteiodemedicamentosemregistronaanvisapa": 1795173631.3154514
+    "justiadespdeterminacusteiodemedicamentosemregistronaanvisapa": 1795173631.3154514,
+    "suplementosalimentarescomoconsultarnaanvisaantesdacompra": 1795260112.6812632
   },
   "entries": [
     {
@@ -2693,6 +2694,27 @@
             "sem",
             "sulam",
             "tutela"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1795260112.6812632,
+      "date": "2026-11-21 08:21",
+      "kind": "carousel",
+      "title": "Sua vitamina est\u00e1 na lista da Anvisa?",
+      "stories": [
+        {
+          "key": "suplementosalimentarescomoconsultarnaanvisaantesdacompra",
+          "title": "Suplementos alimentares: como consultar na Anvisa antes da compra",
+          "tokens": [
+            "alimentares",
+            "antes",
+            "anvisa",
+            "como",
+            "compra",
+            "consultar",
+            "suplementos"
           ]
         }
       ]
