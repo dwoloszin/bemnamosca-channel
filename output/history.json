@@ -102,7 +102,8 @@
     "planodesadecondenadoafornecermedicamentoparapacientecomescle": 1795000863.216625,
     "r7rioentrevistatratamentonegadopeloplanodesadesaibacomodefen": 1795087360.4019227,
     "justiadespdeterminacusteiodemedicamentosemregistronaanvisapa": 1795173631.3154514,
-    "suplementosalimentarescomoconsultarnaanvisaantesdacompra": 1795260112.6812632
+    "suplementosalimentarescomoconsultarnaanvisaantesdacompra": 1795260112.6812632,
+    "anvisaaprovanovomedicamentooralparaprevenircrisesdeenxaqueca": 1795346225.0222666
   },
   "entries": [
     {
@@ -2715,6 +2716,31 @@
             "compra",
             "consultar",
             "suplementos"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1795346225.0222666,
+      "date": "2026-11-22 08:17",
+      "kind": "carousel",
+      "title": "Novo rem\u00e9dio para enxaqueca aprovado",
+      "stories": [
+        {
+          "key": "anvisaaprovanovomedicamentooralparaprevenircrisesdeenxaqueca",
+          "title": "Anvisa aprova novo medicamento oral para prevenir crises de enxaqueca - band.com.br",
+          "tokens": [
+            "anvisa",
+            "aprova",
+            "band",
+            "com",
+            "crises",
+            "enxaqueca",
+            "medicamento",
+            "novo",
+            "oral",
+            "para",
+            "prevenir"
           ]
         }
       ]
