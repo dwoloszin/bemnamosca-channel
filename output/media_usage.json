@@ -177,8 +177,8 @@
       "last": "2026-11-22 08:16:03"
     },
     "assets/music/bed_modern_pop.mp3": {
-      "uses": 24,
-      "last": "2026-11-19 08:21:08"
+      "uses": 25,
+      "last": "2026-11-23 08:18:24"
     },
     "output/_work_carousel_feed/ai/ai_20260822_b6a78e4b37.png": {
       "uses": 1,
@@ -617,8 +617,8 @@
       "last": "2026-09-13 08:19:42"
     },
     "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg": {
-      "uses": 28,
-      "last": "2026-11-21 08:19:28"
+      "uses": 29,
+      "last": "2026-11-23 08:16:51"
     },
     "output/_work_carousel_feed/pexels/a0665dc582a933cc.jpg": {
       "uses": 4,
@@ -2085,8 +2085,8 @@
       "last": "2026-11-21 08:19:28"
     },
     "assets/images/ai/ai_20261116_person-checking-medicine-label.png": {
-      "uses": 1,
-      "last": "2026-11-21 08:19:28"
+      "uses": 2,
+      "last": "2026-11-23 08:16:51"
     },
     "assets/images/ai/ai_20261021_pharmacy-price-tags.png": {
       "uses": 1,
@@ -2111,6 +2111,34 @@
     "assets/images/ai/ai_20260823_pharmacy-medicine-box-price-tag.png": {
       "uses": 1,
       "last": "2026-11-22 08:14:40"
+    },
+    "output/_work_carousel_feed/ai/ai_20261123_bc3c36820a.png": {
+      "uses": 1,
+      "last": "2026-11-23 08:16:51"
+    },
+    "output/_work_carousel_feed/ai/ai_20261123_5e16273746.png": {
+      "uses": 1,
+      "last": "2026-11-23 08:16:51"
+    },
+    "output/_work_carousel_feed/ai/ai_20261123_633666fe0b.png": {
+      "uses": 1,
+      "last": "2026-11-23 08:16:51"
+    },
+    "assets/images/ai/ai_20261017_dietary-supplement-pills-bottle.png": {
+      "uses": 1,
+      "last": "2026-11-23 08:16:51"
+    },
+    "assets/images/ai/ai_20260906_doctor-prescription-document-pharmacy.png": {
+      "uses": 1,
+      "last": "2026-11-23 08:16:51"
+    },
+    "assets/images/ai/ai_20261013_person-looking-at-smartphone-screen-conf.png": {
+      "uses": 1,
+      "last": "2026-11-23 08:16:51"
+    },
+    "assets/images/ai/ai_20260910_pharmacy-counter-medicine-box.png": {
+      "uses": 1,
+      "last": "2026-11-23 08:16:51"
     }
   },
   "log": [
@@ -4448,6 +4476,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_energetic_clap.mp3"
+    },
+    {
+      "time": "2026-11-23 08:16:51",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20261123_bc3c36820a.png",
+        "output/_work_carousel_feed/ai/ai_20261123_5e16273746.png",
+        "output/_work_carousel_feed/ai/ai_20261123_633666fe0b.png",
+        "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg",
+        "assets/images/ai/ai_20261017_dietary-supplement-pills-bottle.png",
+        "assets/images/ai/ai_20260906_doctor-prescription-document-pharmacy.png",
+        "assets/images/ai/ai_20261116_person-checking-medicine-label.png",
+        "assets/images/ai/ai_20261013_person-looking-at-smartphone-screen-conf.png",
+        "assets/images/ai/ai_20260910_pharmacy-counter-medicine-box.png",
+        "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg"
+      ]
+    },
+    {
+      "time": "2026-11-23 08:18:24",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_modern_pop.mp3"
     }
   ]
 }

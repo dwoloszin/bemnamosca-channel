@@ -103,7 +103,8 @@
     "r7rioentrevistatratamentonegadopeloplanodesadesaibacomodefen": 1795087360.4019227,
     "justiadespdeterminacusteiodemedicamentosemregistronaanvisapa": 1795173631.3154514,
     "suplementosalimentarescomoconsultarnaanvisaantesdacompra": 1795260112.6812632,
-    "anvisaaprovanovomedicamentooralparaprevenircrisesdeenxaqueca": 1795346225.0222666
+    "anvisaaprovanovomedicamentooralparaprevenircrisesdeenxaqueca": 1795346225.0222666,
+    "melatoninaporquesuplementosublingualproibidopelaanvisa": 1795432795.7593076
   },
   "entries": [
     {
@@ -2741,6 +2742,28 @@
             "oral",
             "para",
             "prevenir"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1795432795.7593076,
+      "date": "2026-11-23 08:19",
+      "kind": "carousel",
+      "title": "Melatonina sublingual \u00e9 proibida?",
+      "stories": [
+        {
+          "key": "melatoninaporquesuplementosublingualproibidopelaanvisa",
+          "title": "Melatonina: por que suplemento sublingual \u00e9 proibido pela Anvisa",
+          "tokens": [
+            "anvisa",
+            "melatonina",
+            "pela",
+            "por",
+            "proibido",
+            "que",
+            "sublingual",
+            "suplemento"
           ]
         }
       ]
