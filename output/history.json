@@ -104,7 +104,8 @@
     "justiadespdeterminacusteiodemedicamentosemregistronaanvisapa": 1795173631.3154514,
     "suplementosalimentarescomoconsultarnaanvisaantesdacompra": 1795260112.6812632,
     "anvisaaprovanovomedicamentooralparaprevenircrisesdeenxaqueca": 1795346225.0222666,
-    "melatoninaporquesuplementosublingualproibidopelaanvisa": 1795432795.7593076
+    "melatoninaporquesuplementosublingualproibidopelaanvisa": 1795432795.7593076,
+    "anvisaaprovanovomedicamentoparatratamentodocncerdemamavejapa": 1795519230.048239
   },
   "entries": [
     {
@@ -2764,6 +2765,32 @@
             "que",
             "sublingual",
             "suplemento"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1795519230.048239,
+      "date": "2026-11-24 08:20",
+      "kind": "carousel",
+      "title": "Novo rem\u00e9dio aprovado assusta no bolso?",
+      "stories": [
+        {
+          "key": "anvisaaprovanovomedicamentoparatratamentodocncerdemamavejapa",
+          "title": "Anvisa aprova novo medicamento para tratamento do c\u00e2ncer de mama; veja para quem \u00e9 indicado - ACidade ON",
+          "tokens": [
+            "acidade",
+            "anvisa",
+            "aprova",
+            "indicado",
+            "mama",
+            "medicamento",
+            "ncer",
+            "novo",
+            "para",
+            "quem",
+            "tratamento",
+            "veja"
           ]
         }
       ]
