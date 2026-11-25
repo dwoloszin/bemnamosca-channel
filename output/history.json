@@ -105,7 +105,8 @@
     "suplementosalimentarescomoconsultarnaanvisaantesdacompra": 1795260112.6812632,
     "anvisaaprovanovomedicamentooralparaprevenircrisesdeenxaqueca": 1795346225.0222666,
     "melatoninaporquesuplementosublingualproibidopelaanvisa": 1795432795.7593076,
-    "anvisaaprovanovomedicamentoparatratamentodocncerdemamavejapa": 1795519230.048239
+    "anvisaaprovanovomedicamentoparatratamentodocncerdemamavejapa": 1795519230.048239,
+    "anvisamandaretirarsuplementosdomercadoapsencontrarirregulari": 1795605592.6712604
   },
   "entries": [
     {
@@ -2790,6 +2791,29 @@
             "para",
             "quem",
             "tratamento",
+            "veja"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1795605592.6712604,
+      "date": "2026-11-25 08:19",
+      "kind": "carousel",
+      "title": "Voc\u00ea toma suplemento todos os dias?",
+      "stories": [
+        {
+          "key": "anvisamandaretirarsuplementosdomercadoapsencontrarirregulari",
+          "title": "Anvisa Manda Retirar Suplementos Do Mercado Ap\u00f3s Encontrar Irregularidades; Veja Quais",
+          "tokens": [
+            "anvisa",
+            "encontrar",
+            "irregularidades",
+            "manda",
+            "mercado",
+            "quais",
+            "retirar",
+            "suplementos",
             "veja"
           ]
         }
