@@ -106,7 +106,8 @@
     "anvisaaprovanovomedicamentooralparaprevenircrisesdeenxaqueca": 1795346225.0222666,
     "melatoninaporquesuplementosublingualproibidopelaanvisa": 1795432795.7593076,
     "anvisaaprovanovomedicamentoparatratamentodocncerdemamavejapa": 1795519230.048239,
-    "anvisamandaretirarsuplementosdomercadoapsencontrarirregulari": 1795605592.6712604
+    "anvisamandaretirarsuplementosdomercadoapsencontrarirregulari": 1795605592.6712604,
+    "ogovernopermitiusubirospreosdosmedicamentosbaratosquemdecide": 1795692174.9889784
   },
   "entries": [
     {
@@ -2815,6 +2816,30 @@
             "retirar",
             "suplementos",
             "veja"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1795692174.9889784,
+      "date": "2026-11-26 08:22",
+      "kind": "carousel",
+      "title": "Medicamentos baratos tiveram reajuste autorizado",
+      "stories": [
+        {
+          "key": "ogovernopermitiusubirospreosdosmedicamentosbaratosquemdecide",
+          "title": "O Governo permitiu subir os pre\u00e7os dos medicamentos baratos. Quem decide agora?",
+          "tokens": [
+            "agora",
+            "baratos",
+            "decide",
+            "dos",
+            "governo",
+            "medicamentos",
+            "permitiu",
+            "pre",
+            "quem",
+            "subir"
           ]
         }
       ]
