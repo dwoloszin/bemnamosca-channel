@@ -177,8 +177,8 @@
       "last": "2026-11-26 08:22:01"
     },
     "assets/music/bed_modern_pop.mp3": {
-      "uses": 25,
-      "last": "2026-11-23 08:18:24"
+      "uses": 26,
+      "last": "2026-11-27 08:19:06"
     },
     "output/_work_carousel_feed/ai/ai_20260822_b6a78e4b37.png": {
       "uses": 1,
@@ -597,12 +597,12 @@
       "last": "2026-11-11 08:16:12"
     },
     "img-channel/vertical/app_creatina_now_foods.jpg": {
-      "uses": 5,
-      "last": "2026-11-11 08:16:12"
+      "uses": 6,
+      "last": "2026-11-27 08:17:36"
     },
     "img-channel/vertical/app_creatina_dymatize.jpg": {
-      "uses": 5,
-      "last": "2026-11-11 08:16:12"
+      "uses": 6,
+      "last": "2026-11-27 08:17:36"
     },
     "output/_work_carousel_feed/pexels/66ae94f3c8a5293c.jpg": {
       "uses": 4,
@@ -617,8 +617,8 @@
       "last": "2026-09-13 08:19:42"
     },
     "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg": {
-      "uses": 30,
-      "last": "2026-11-25 08:17:21"
+      "uses": 31,
+      "last": "2026-11-27 08:17:36"
     },
     "output/_work_carousel_feed/pexels/a0665dc582a933cc.jpg": {
       "uses": 4,
@@ -2201,8 +2201,8 @@
       "last": "2026-11-26 08:20:29"
     },
     "assets/images/ai/ai_20260921_pharmacy-shelf-supplement-price-tags.png": {
-      "uses": 1,
-      "last": "2026-11-26 08:20:29"
+      "uses": 2,
+      "last": "2026-11-27 08:17:36"
     },
     "assets/images/ai/ai_20261003_pharmacy-counter-receipt-medicine.png": {
       "uses": 1,
@@ -2211,6 +2211,30 @@
     "assets/images/ai/ai_20261027_person-looking-at-pharmacy-receipt.png": {
       "uses": 1,
       "last": "2026-11-26 08:20:29"
+    },
+    "output/_work_carousel_feed/ai/ai_20261127_db05a372a2.png": {
+      "uses": 1,
+      "last": "2026-11-27 08:17:36"
+    },
+    "output/_work_carousel_feed/ai/ai_20261127_b7ac5684db.png": {
+      "uses": 1,
+      "last": "2026-11-27 08:17:36"
+    },
+    "output/_work_carousel_feed/ai/ai_20261127_06400a2220.png": {
+      "uses": 1,
+      "last": "2026-11-27 08:17:36"
+    },
+    "assets/images/ai/ai_20261023_conference-room-health-policy.png": {
+      "uses": 1,
+      "last": "2026-11-27 08:17:36"
+    },
+    "assets/images/ai/ai_20261005_person-looking-at-medicine-price-tag.png": {
+      "uses": 1,
+      "last": "2026-11-27 08:17:36"
+    },
+    "assets/images/ai/ai_20261121_person-checking-smartphone-label.png": {
+      "uses": 1,
+      "last": "2026-11-27 08:17:36"
     }
   },
   "log": [
@@ -4636,6 +4660,28 @@
       "output": "video.mp4",
       "media": [],
       "music": "assets/music/bed_energetic_clap.mp3"
+    },
+    {
+      "time": "2026-11-27 08:17:36",
+      "output": "video.mp4",
+      "media": [
+        "output/_work_carousel_feed/ai/ai_20261127_db05a372a2.png",
+        "output/_work_carousel_feed/ai/ai_20261127_b7ac5684db.png",
+        "output/_work_carousel_feed/ai/ai_20261127_06400a2220.png",
+        "img-channel/vertical/app_creatina_now_foods.jpg",
+        "img-channel/vertical/app_creatina_dymatize.jpg",
+        "assets/images/ai/ai_20260921_pharmacy-shelf-supplement-price-tags.png",
+        "assets/images/ai/ai_20261023_conference-room-health-policy.png",
+        "assets/images/ai/ai_20261005_person-looking-at-medicine-price-tag.png",
+        "img-channel/vertical/app_kit_vitaminas_whey_creatina.jpg",
+        "assets/images/ai/ai_20261121_person-checking-smartphone-label.png"
+      ]
+    },
+    {
+      "time": "2026-11-27 08:19:06",
+      "output": "video.mp4",
+      "media": [],
+      "music": "assets/music/bed_modern_pop.mp3"
     }
   ]
 }
