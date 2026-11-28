@@ -108,7 +108,8 @@
     "anvisaaprovanovomedicamentoparatratamentodocncerdemamavejapa": 1795519230.048239,
     "anvisamandaretirarsuplementosdomercadoapsencontrarirregulari": 1795605592.6712604,
     "ogovernopermitiusubirospreosdosmedicamentosbaratosquemdecide": 1795692174.9889784,
-    "mercadodecreatinamonoidratadaat2035crescimentoimpulsionadope": 1795778419.272034
+    "mercadodecreatinamonoidratadaat2035crescimentoimpulsionadope": 1795778419.272034,
+    "anvisaregistraohertuzobiossimilardopertuzumabeparacncerdemam": 1795864647.5588074
   },
   "entries": [
     {
@@ -2871,6 +2872,31 @@
             "pela",
             "por",
             "sticas"
+          ]
+        }
+      ]
+    },
+    {
+      "ts": 1795864647.5588074,
+      "date": "2026-11-28 08:17",
+      "kind": "carousel",
+      "title": "Rem\u00e9dio caro de c\u00e2ncer ganhou alternativa",
+      "stories": [
+        {
+          "key": "anvisaregistraohertuzobiossimilardopertuzumabeparacncerdemam",
+          "title": "Anvisa registra o Hertuzo, biossimilar do pertuzumabe, para c\u00e2ncer de mama HER2-positivo - Agora RN",
+          "tokens": [
+            "agora",
+            "anvisa",
+            "biossimilar",
+            "her2",
+            "hertuzo",
+            "mama",
+            "ncer",
+            "para",
+            "pertuzumabe",
+            "positivo",
+            "registra"
           ]
         }
       ]
